@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Coursework
 {
-    public partial class RegsiterPFP : Form
+    public partial class RegisterPFP : Form
     {
-        public RegsiterPFP()
+        public RegisterPFP()
         {
             InitializeComponent();
         }
-    }
+     }
 }
