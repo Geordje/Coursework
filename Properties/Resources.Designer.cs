@@ -83,6 +83,16 @@ namespace Coursework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Crossed_Eye {
+            get {
+                object obj = ResourceManager.GetObject("Crossed Eye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Dog {
             get {
                 object obj = ResourceManager.GetObject("Dog", resourceCulture);
@@ -146,6 +156,16 @@ namespace Coursework.Properties {
         public static System.Drawing.Bitmap icons8_back_128 {
             get {
                 object obj = ResourceManager.GetObject("icons8_back_128", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap icons8_eye_240 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-eye-240", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

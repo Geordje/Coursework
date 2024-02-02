@@ -39,10 +39,12 @@
             this.pDisclaimer = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.Hide = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Hide)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -167,12 +169,24 @@
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
             // 
+            // Hide
+            // 
+            this.Hide.Image = global::Coursework.Properties.Resources.Crossed_Eye;
+            this.Hide.Location = new System.Drawing.Point(694, 358);
+            this.Hide.Name = "Hide";
+            this.Hide.Size = new System.Drawing.Size(50, 50);
+            this.Hide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Hide.TabIndex = 14;
+            this.Hide.TabStop = false;
+            this.Hide.Click += new System.EventHandler(this.Hide_Click);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.Hide);
             this.Controls.Add(this.pDisclaimer);
             this.Controls.Add(this.CPasswordF);
             this.Controls.Add(this.PasswordF);
@@ -189,6 +203,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Hide)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,5 +221,6 @@
         private Label pDisclaimer;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
+        private PictureBox Hide;
     }
 }

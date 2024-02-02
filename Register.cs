@@ -16,5 +16,13 @@ namespace Coursework
         {
             InitializeComponent();
         }
+
+        private void Hide_Click(object sender, EventArgs e)
+        {
+            if ((Control.MouseButtons & MouseButtons.Left) != 0)
+            {
+                // Left button is down.
+            }
+        }
     }
 }
