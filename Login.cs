@@ -16,5 +16,23 @@ namespace Coursework
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Prompt().Show();
+        }
+
+        private void Hide_MouseDown(object sender, MouseEventArgs e)
+        {
+            PasswordF.UseSystemPasswordChar = false;
+            Hide.Image = Coursework.Properties.Resources.icons8_eye_240;
+        }
+
+        private void Hide_MouseCaptureChanged(object sender, EventArgs e)
+        {
+            PasswordF.UseSystemPasswordChar = true;
+            Hide.Image = Coursework.Properties.Resources.Crossed_Eye;
+        }
     }
 }

@@ -72,6 +72,7 @@
             this.registerButton.TabIndex = 4;
             this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = false;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // logInButton
             // 
@@ -87,6 +88,7 @@
             this.logInButton.TabIndex = 5;
             this.logInButton.Text = "Log In";
             this.logInButton.UseVisualStyleBackColor = false;
+            this.logInButton.Click += new System.EventHandler(this.logInButton_Click);
             // 
             // Prompt
             // 

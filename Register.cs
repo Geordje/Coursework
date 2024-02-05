@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.Devices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +18,30 @@ namespace Coursework
             InitializeComponent();
         }
 
-        private void Hide_Click(object sender, EventArgs e)
+        private void Hide_Hold(object sender, MouseEventArgs e)
+        { 
+            PasswordF.UseSystemPasswordChar = false;
+            CPasswordF.UseSystemPasswordChar = false;
+            Hide.Image = Coursework.Properties.Resources.icons8_eye_240;
+        }
+        private void Hide_MouseCaptureChanged(object sender, EventArgs e)
         {
-            if ((Control.MouseButtons & MouseButtons.Left) != 0)
+            PasswordF.UseSystemPasswordChar = true;
+            CPasswordF.UseSystemPasswordChar = true;
+            Hide.Image = Coursework.Properties.Resources.Crossed_Eye;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Prompt().Show();
+        }
+
+        private void coolButton1_Click(object sender, EventArgs e)
+        {
+            if(PasswordF.Text != CPasswordF.Text)
             {
-                // Left button is down.
+
             }
         }
     }

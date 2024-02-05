@@ -49,6 +49,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 41);
             this.pictureBox1.Name = "pictureBox1";
@@ -56,6 +57,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Title
             // 
@@ -83,6 +85,7 @@
             // coolButton1
             // 
             this.coolButton1.BackColor = System.Drawing.Color.White;
+            this.coolButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.coolButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
             this.coolButton1.FlatAppearance.BorderSize = 5;
             this.coolButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -95,6 +98,7 @@
             this.coolButton1.TabIndex = 7;
             this.coolButton1.Text = "Register";
             this.coolButton1.UseVisualStyleBackColor = false;
+            this.coolButton1.Click += new System.EventHandler(this.coolButton1_Click);
             // 
             // UsernameF
             // 
@@ -171,6 +175,7 @@
             // 
             // Hide
             // 
+            this.Hide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Hide.Image = global::Coursework.Properties.Resources.Crossed_Eye;
             this.Hide.Location = new System.Drawing.Point(694, 358);
             this.Hide.Name = "Hide";
@@ -178,7 +183,8 @@
             this.Hide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Hide.TabIndex = 14;
             this.Hide.TabStop = false;
-            this.Hide.Click += new System.EventHandler(this.Hide_Click);
+            this.Hide.MouseCaptureChanged += new System.EventHandler(this.Hide_MouseCaptureChanged);
+            this.Hide.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Hide_Hold);
             // 
             // Register
             // 

@@ -16,5 +16,18 @@ namespace Coursework
         {
             InitializeComponent();
         }
+
+        private void logInButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Login().Show();
+        }
+
+        private void registerButton_Click(object sender, EventArgs e)
+        {
+            
+            new Register().Show();
+            this.Close();
+        }
     }
 }

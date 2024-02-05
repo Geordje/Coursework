@@ -18,8 +18,8 @@ namespace Coursework
                 LoadClock.Stop();
                 this.Hide();
                 new Prompt().Show();
-                progressBar.BackColor = Color.Red; 
             }
         }
+
     }
 }
