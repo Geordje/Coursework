@@ -17,6 +17,8 @@ namespace Coursework
         public double topBaseScore;
         public char defaultPFP;
         public string pathToCustomPFP;
+        public Image ProfilePicture;
+        
         public player(string name, string pass)
         {
             this.username = name;
@@ -24,6 +26,7 @@ namespace Coursework
             this.currentScore = 0;
             this.topWildScore = 0;
             this.topBaseScore = 0;
+            this.pathToCustomPFP = "none";
 
         }
         public void AccumulativeReset()
@@ -33,6 +36,10 @@ namespace Coursework
         public void Accumulate()
         {
             this.score++;
+        }
+        public void AddToDatabase()
+        {
+            File.AppendAllText("userDatabase.csv", (this.username + ", " + this.password + "," + this.topWildScore + "," + this.topBaseScore + "," + this.defaultPFP + "," + this.pathToCustomPFP + Environment.NewLine));
         }
 
     }

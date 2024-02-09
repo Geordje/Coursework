@@ -33,7 +33,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PasswordF = new System.Windows.Forms.TextBox();
             this.UsernameF = new System.Windows.Forms.TextBox();
-            this.coolButton1 = new Coursework.CoolButton();
+            this.logInButton = new Coursework.CoolButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.Hide = new System.Windows.Forms.PictureBox();
@@ -76,7 +76,7 @@
             this.PasswordF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PasswordF.Name = "PasswordF";
             this.PasswordF.PlaceholderText = "Password";
-            this.PasswordF.Size = new System.Drawing.Size(467, 32);
+            this.PasswordF.Size = new System.Drawing.Size(571, 32);
             this.PasswordF.TabIndex = 21;
             this.PasswordF.UseSystemPasswordChar = true;
             // 
@@ -92,22 +92,23 @@
             this.UsernameF.Size = new System.Drawing.Size(571, 32);
             this.UsernameF.TabIndex = 20;
             // 
-            // coolButton1
+            // logInButton
             // 
-            this.coolButton1.BackColor = System.Drawing.Color.White;
-            this.coolButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.coolButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
-            this.coolButton1.FlatAppearance.BorderSize = 5;
-            this.coolButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.coolButton1.Font = new System.Drawing.Font("Itim", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.coolButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.coolButton1.Location = new System.Drawing.Point(490, 420);
-            this.coolButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.coolButton1.Name = "coolButton1";
-            this.coolButton1.Size = new System.Drawing.Size(202, 68);
-            this.coolButton1.TabIndex = 19;
-            this.coolButton1.Text = "Register";
-            this.coolButton1.UseVisualStyleBackColor = false;
+            this.logInButton.BackColor = System.Drawing.Color.White;
+            this.logInButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logInButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
+            this.logInButton.FlatAppearance.BorderSize = 5;
+            this.logInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logInButton.Font = new System.Drawing.Font("Itim", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.logInButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.logInButton.Location = new System.Drawing.Point(490, 420);
+            this.logInButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.logInButton.Name = "logInButton";
+            this.logInButton.Size = new System.Drawing.Size(202, 68);
+            this.logInButton.TabIndex = 19;
+            this.logInButton.Text = "Log In";
+            this.logInButton.UseVisualStyleBackColor = false;
+            this.logInButton.Click += new System.EventHandler(this.logInButton_Click);
             // 
             // pictureBox2
             // 
@@ -153,7 +154,7 @@
             this.Controls.Add(this.Hide);
             this.Controls.Add(this.PasswordF);
             this.Controls.Add(this.UsernameF);
-            this.Controls.Add(this.coolButton1);
+            this.Controls.Add(this.logInButton);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
@@ -174,7 +175,7 @@
         private PictureBox pictureBox1;
         private TextBox PasswordF;
         private TextBox UsernameF;
-        private CoolButton coolButton1;
+        private CoolButton logInButton;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private PictureBox Hide;

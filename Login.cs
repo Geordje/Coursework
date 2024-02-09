@@ -34,5 +34,48 @@ namespace Coursework
             PasswordF.UseSystemPasswordChar = true;
             Hide.Image = Coursework.Properties.Resources.Crossed_Eye;
         }
+
+        private void logInButton_Click(object sender, EventArgs e)
+        {
+            bool done = false;
+            int i = 0;
+
+            foreach (string itemline in File.ReadLines("userDatabase.csv"))
+            {
+                if (!done)
+                {
+                    if (itemline.Split(',')[0] == UsernameF.Text.ToLower())
+                    { 
+                        if (itemline.Split(',')[1] == PasswordF.Text)
+                        {
+                            done = true;
+                            player activeplayer = new player(UsernameF.Text, PasswordF.Text);
+                            activeplayer.topWildScore = double.Parse(itemline.Split(',')[2]);
+                            activeplayer.topBaseScore = double.Parse(itemline.Split(',')[3]);
+                            activeplayer.defaultPFP = Convert.ToChar((itemline.Split(',')[4]));
+                            activeplayer.pathToCustomPFP = itemline.Split(',')[5];
+                            Hide();
+                            new Home(activeplayer).Show();
+                            this.Close();
+                        }
+                    }
+                }
+
+            }
+            if (!done)
+            {
+                DialogResult result = MessageBox.Show("User details not found!", "Username or password incorrect", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                if (result == DialogResult.OK)
+                {
+                    PasswordF.Text = "";
+                }
+                if (result == DialogResult.Cancel)
+                {
+                    this.Close();
+                    new Prompt().Show();
+                }
+            }
+
+        }
     }
 }

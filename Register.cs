@@ -35,8 +35,51 @@ namespace Coursework
             string title = "Error in Register";
             MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
 
+            bool usernameUsed = false;
+            string filePath = "userDatabase.csv";
+            if (File.Exists(filePath))
+            {
+                foreach (string itemline in File.ReadLines("userDatabase.csv"))
+                {
+                    if (itemline.Split(',')[0] == UsernameF.Text && itemline.Split(',')[0] != "")
+                    {
+                        usernameUsed = true;
+                        DialogResult result = MessageBox.Show("Username already in use", title, buttons, MessageBoxIcon.Error);
+                        if (result == DialogResult.OK) { }
+                        if (result == DialogResult.Cancel)
+                        {
+                            this.Close();
+                            new Prompt().Show();
+                        }
+                    }
+                }
+            }
+                
+            if (usernameUsed){}
+            //If username isn't present
+            else if (UsernameF.Text=="")
+            {
+                DialogResult result = MessageBox.Show("Username not present!", title, buttons, MessageBoxIcon.Error);
+                if (result == DialogResult.OK) { }
+                if (result == DialogResult.Cancel)
+                {
+                    this.Close();
+                    new Prompt().Show();
+                }
+            }
+            //If password isnt present
+            else if (PasswordF.Text == "")
+            {
+                DialogResult result = MessageBox.Show("Password not present!", title, buttons, MessageBoxIcon.Error);
+                if (result == DialogResult.OK) { }
+                if (result == DialogResult.Cancel)
+                {
+                    this.Close();
+                    new Prompt().Show();
+                }
+            }
             //If passwords don't match
-            if (PasswordF.Text != CPasswordF.Text)
+            else if (PasswordF.Text != CPasswordF.Text)
             {
                 DialogResult result = MessageBox.Show("Passwords are not matching!", title, buttons, MessageBoxIcon.Error);
                 if (result == DialogResult.OK)
@@ -109,10 +152,10 @@ namespace Coursework
                     new Prompt().Show();
                 }
             }
+
+            //If details fit all condititons
             else
             {
-
-                string filePath = "userDatabase.csv";
                 player activePlayer = new player(UsernameF.Text, PasswordF.Text);
 
                 try
@@ -120,14 +163,14 @@ namespace Coursework
                     if (!File.Exists(filePath))
                     {
                         MessageBox.Show($"User database missing, will be recreated with {activePlayer.username} being the first user.", "No other users", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        File.WriteAllText(filePath, (activePlayer.username + "," + activePlayer.password + "," + activePlayer.topWildScore + "," + activePlayer.topBaseScore + "," + activePlayer.defaultPFP + "," + activePlayer.pathToCustomPFP + Environment.NewLine));
+                        File.WriteAllText(filePath, (activePlayer.username.ToLower() + "," + activePlayer.password + "," + activePlayer.topWildScore + "," + activePlayer.topBaseScore + "," + activePlayer.defaultPFP + "," + activePlayer.pathToCustomPFP + Environment.NewLine));
                     }
                     else
                     {
-                        File.AppendAllText(filePath, (activePlayer.username + "," + activePlayer.password + "," + activePlayer.topWildScore + "," + activePlayer.topBaseScore + "," + activePlayer.defaultPFP + "," + activePlayer.pathToCustomPFP + Environment.NewLine));
+                        activePlayer.AddToDatabase();
                     }
                     Hide();
-                    new RegisterPFP().Show();
+                    new RegisterPFP(activePlayer).Show();
                 }
                 catch
                 {
@@ -139,7 +182,7 @@ namespace Coursework
 
 
 
-        }
+            }
         }
     }
 }

@@ -32,12 +32,12 @@
             this.logInButton = new Coursework.CoolButton();
             this.registerButton = new Coursework.CoolButton();
             this.coolButton1 = new Coursework.CoolButton();
-            this.coolButton2 = new Coursework.CoolButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.Start = new Coursework.CoolButton();
+            this.logOut = new System.Windows.Forms.PictureBox();
+            this.ProfilePicture = new System.Windows.Forms.PictureBox();
+            this.usernameSpot = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.logOut)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
             // Title
@@ -100,55 +100,57 @@
             this.coolButton1.Text = "Runner";
             this.coolButton1.UseVisualStyleBackColor = false;
             // 
-            // coolButton2
+            // Start
             // 
-            this.coolButton2.BackColor = System.Drawing.Color.White;
-            this.coolButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.coolButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
-            this.coolButton2.FlatAppearance.BorderSize = 5;
-            this.coolButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.coolButton2.Font = new System.Drawing.Font("Itim", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.coolButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.coolButton2.Location = new System.Drawing.Point(90, 215);
-            this.coolButton2.Name = "coolButton2";
-            this.coolButton2.Size = new System.Drawing.Size(604, 111);
-            this.coolButton2.TabIndex = 17;
-            this.coolButton2.Text = "Start Quiz!";
-            this.coolButton2.UseVisualStyleBackColor = false;
+            this.Start.BackColor = System.Drawing.Color.White;
+            this.Start.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Start.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
+            this.Start.FlatAppearance.BorderSize = 5;
+            this.Start.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Start.Font = new System.Drawing.Font("Itim", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Start.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.Start.Location = new System.Drawing.Point(90, 215);
+            this.Start.Name = "Start";
+            this.Start.Size = new System.Drawing.Size(604, 111);
+            this.Start.TabIndex = 17;
+            this.Start.Text = "Start Quiz!";
+            this.Start.UseVisualStyleBackColor = false;
+            this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
-            // pictureBox1
+            // logOut
             // 
-            this.pictureBox1.Image = global::Coursework.Properties.Resources.Exit;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 48);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(84, 79);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            this.logOut.Image = global::Coursework.Properties.Resources.Exit;
+            this.logOut.Location = new System.Drawing.Point(12, 48);
+            this.logOut.Name = "logOut";
+            this.logOut.Size = new System.Drawing.Size(84, 79);
+            this.logOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logOut.TabIndex = 18;
+            this.logOut.TabStop = false;
+            this.logOut.Click += new System.EventHandler(this.logOut_Click);
             // 
-            // pictureBox2
+            // ProfilePicture
             // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::Coursework.Properties.Resources.Hippo;
-            this.pictureBox2.Location = new System.Drawing.Point(686, 48);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(86, 79);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 19;
-            this.pictureBox2.TabStop = false;
+            this.ProfilePicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ProfilePicture.Image = global::Coursework.Properties.Resources.Hippo;
+            this.ProfilePicture.Location = new System.Drawing.Point(686, 48);
+            this.ProfilePicture.Name = "ProfilePicture";
+            this.ProfilePicture.Size = new System.Drawing.Size(86, 79);
+            this.ProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ProfilePicture.TabIndex = 19;
+            this.ProfilePicture.TabStop = false;
             // 
-            // label1
+            // usernameSpot
             // 
-            this.label1.AutoEllipsis = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Itim", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(578, 130);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 17);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "NamePlaceholder";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.usernameSpot.AutoEllipsis = true;
+            this.usernameSpot.BackColor = System.Drawing.Color.Transparent;
+            this.usernameSpot.Font = new System.Drawing.Font("Itim", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.usernameSpot.ForeColor = System.Drawing.Color.White;
+            this.usernameSpot.Location = new System.Drawing.Point(542, 130);
+            this.usernameSpot.Name = "usernameSpot";
+            this.usernameSpot.Size = new System.Drawing.Size(230, 17);
+            this.usernameSpot.TabIndex = 20;
+            this.usernameSpot.Text = "NamePlaceholder";
+            this.usernameSpot.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Home
             // 
@@ -156,18 +158,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.coolButton2);
+            this.Controls.Add(this.usernameSpot);
+            this.Controls.Add(this.ProfilePicture);
+            this.Controls.Add(this.logOut);
+            this.Controls.Add(this.Start);
             this.Controls.Add(this.coolButton1);
             this.Controls.Add(this.logInButton);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.Title);
             this.Name = "Home";
             this.Text = "Home";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logOut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,9 +181,9 @@
         private CoolButton logInButton;
         private CoolButton registerButton;
         private CoolButton coolButton1;
-        private CoolButton coolButton2;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private Label label1;
+        private CoolButton Start;
+        private PictureBox logOut;
+        private PictureBox ProfilePicture;
+        private Label usernameSpot;
     }
 }
