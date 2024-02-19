@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 
 namespace Coursework
 {
-    internal class QuestionData
+    public class QuestionData
     {
-        public string Question { get; set; }
-        public string CorrectAnswer { get; set; }
-        public List<string> IncorrectAnswers { get; set; }
+        public int response_code { get; set; }
+        public List<questionInfo> questions { get; set; }
+
     }
+    public class questionInfo
+    {
+        public string type { get; set; }
+        public string category { get; set; }
+        public string question { get; set; }
+        public string correct_answer { get; set; }
+        public List<string> incorrect_answers { get; set; }
+    }
+
 }

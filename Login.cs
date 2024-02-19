@@ -40,38 +40,56 @@ namespace Coursework
             bool done = false;
             int i = 0;
 
-            foreach (string itemline in File.ReadLines("userDatabase.csv"))
+            try
             {
-                if (!done)
+                foreach (string itemline in File.ReadLines("userDatabase.csv"))
                 {
-                    if (itemline.Split(',')[0] == UsernameF.Text)
-                    { 
-                        if (itemline.Split(',')[1] == PasswordF.Text)
+                    if (!done)
+                    {
+                        if (itemline.Split(',')[0] == UsernameF.Text)
                         {
-                            done = true;
-                            player activeplayer = new player(UsernameF.Text, PasswordF.Text);
-                            activeplayer.topWildScore = double.Parse(itemline.Split(',')[2]);
-                            activeplayer.topBaseScore = double.Parse(itemline.Split(',')[3]);
-                            activeplayer.defaultPFP = Convert.ToChar((itemline.Split(',')[4]));
-                            activeplayer.pathToCustomPFP = itemline.Split(',')[5];
-                            new Home(activeplayer).Show();
-                            this.Close();
+                            if (itemline.Split(',')[1] == PasswordF.Text)
+                            {
+                                done = true;
+                                player activeplayer = new player(UsernameF.Text, PasswordF.Text);
+                                activeplayer.topWildScore = double.Parse(itemline.Split(',')[2]);
+                                activeplayer.topBaseScore = double.Parse(itemline.Split(',')[3]);
+                                activeplayer.defaultPFP = Convert.ToChar((itemline.Split(',')[4]));
+                                activeplayer.pathToCustomPFP = itemline.Split(',')[5];
+                                new Home(activeplayer).Show();
+                                this.Close();
+                            }
                         }
                     }
-                }
 
-            }
-            if (!done)
-            {
-                DialogResult result = MessageBox.Show("User details not found!", "Username or password incorrect", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                if (result == DialogResult.OK)
-                {
-                    PasswordF.Text = "";
                 }
-                if (result == DialogResult.Cancel)
+            
+            
+                if (!done)
+                {
+                    DialogResult result = MessageBox.Show("User details not found!", "Username or password incorrect", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                    if (result == DialogResult.OK)
+                    {
+                        PasswordF.Text = "";
+                    }
+                    if (result == DialogResult.Cancel)
+                    {
+                        this.Close();
+                        new Prompt().Show();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+                DialogResult result = MessageBox.Show("Database not present, register a user?", "Database Missing", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                if (result == DialogResult.Yes)
                 {
                     this.Close();
-                    new Prompt().Show();
+                    new Register().Show();
+                }
+                if (result == DialogResult.No)
+                {
                 }
             }
 

@@ -32,10 +32,11 @@ namespace Coursework
             InitializeComponent();
 
             var json = new WebClient().DownloadString("https://opentdb.com/api.php?amount=10&category=23&difficulty=medium");
-            var data = JsonConvert.DeserializeObject<dynamic>(json);
-            System.Web.Script.Serialization.JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
-            serializer.Deserialize<T>(json);
-
+            QuestionData questionData = JsonConvert.DeserializeObject<QuestionData>(json);
+            foreach(var questionStuff in questionData.questions)
+            {
+                MessageBox.Show($"{questionStuff.question}");
+            }
 
         }
     }
