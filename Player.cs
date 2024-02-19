@@ -39,7 +39,7 @@ namespace Coursework
         }
         public void AddToDatabase()
         {
-            File.AppendAllText("userDatabase.csv", (this.username + ", " + this.password + "," + this.topWildScore + "," + this.topBaseScore + "," + this.defaultPFP + "," + this.pathToCustomPFP + Environment.NewLine));
+            File.AppendAllText("userDatabase.csv",(this.username.ToLower() + "," + this.password + "," + this.topWildScore + "," + this.topBaseScore + "," + this.defaultPFP + "," + this.pathToCustomPFP + Environment.NewLine));
         }
 
     }

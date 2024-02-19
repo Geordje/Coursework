@@ -28,7 +28,7 @@ namespace Coursework
             PasswordF.UseSystemPasswordChar = false;
             Hide.Image = Coursework.Properties.Resources.icons8_eye_240;
         }
-
+           
         private void Hide_MouseCaptureChanged(object sender, EventArgs e)
         {
             PasswordF.UseSystemPasswordChar = true;
@@ -44,7 +44,7 @@ namespace Coursework
             {
                 if (!done)
                 {
-                    if (itemline.Split(',')[0] == UsernameF.Text.ToLower())
+                    if (itemline.Split(',')[0] == UsernameF.Text)
                     { 
                         if (itemline.Split(',')[1] == PasswordF.Text)
                         {
@@ -54,7 +54,6 @@ namespace Coursework
                             activeplayer.topBaseScore = double.Parse(itemline.Split(',')[3]);
                             activeplayer.defaultPFP = Convert.ToChar((itemline.Split(',')[4]));
                             activeplayer.pathToCustomPFP = itemline.Split(',')[5];
-                            Hide();
                             new Home(activeplayer).Show();
                             this.Close();
                         }

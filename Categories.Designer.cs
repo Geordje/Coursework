@@ -29,241 +29,249 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Categories));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.coolButton7 = new Coursework.CoolButton();
-            this.coolButton8 = new Coursework.CoolButton();
-            this.coolButton9 = new Coursework.CoolButton();
-            this.coolButton1 = new Coursework.CoolButton();
-            this.coolButton2 = new Coursework.CoolButton();
-            this.coolButton3 = new Coursework.CoolButton();
-            this.coolButton4 = new Coursework.CoolButton();
-            this.coolButton5 = new Coursework.CoolButton();
-            this.coolButton6 = new Coursework.CoolButton();
-            this.Title = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            Music = new CoolButton();
+            Everything = new CoolButton();
+            Gaming = new CoolButton();
+            Films = new CoolButton();
+            Knowledge = new CoolButton();
+            Computers = new CoolButton();
+            Sports = new CoolButton();
+            Television = new CoolButton();
+            History = new CoolButton();
+            Title = new Label();
+            label1 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(84, 79);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(12, 41);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(84, 79);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 18;
+            pictureBox1.TabStop = false;
             // 
-            // coolButton7
+            // Music
             // 
-            this.coolButton7.BackColor = System.Drawing.Color.White;
-            this.coolButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.coolButton7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
-            this.coolButton7.FlatAppearance.BorderSize = 5;
-            this.coolButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.coolButton7.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.coolButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.coolButton7.Location = new System.Drawing.Point(527, 277);
-            this.coolButton7.Name = "coolButton7";
-            this.coolButton7.Size = new System.Drawing.Size(192, 58);
-            this.coolButton7.TabIndex = 31;
-            this.coolButton7.Text = "Music";
-            this.coolButton7.UseVisualStyleBackColor = false;
+            Music.BackColor = Color.White;
+            Music.Cursor = Cursors.Hand;
+            Music.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
+            Music.FlatAppearance.BorderSize = 5;
+            Music.FlatStyle = FlatStyle.Flat;
+            Music.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            Music.ForeColor = Color.FromArgb(179, 63, 38);
+            Music.Location = new Point(527, 277);
+            Music.Name = "Music";
+            Music.Size = new Size(192, 58);
+            Music.TabIndex = 31;
+            Music.Text = "Music";
+            Music.UseVisualStyleBackColor = false;
+            Music.Click += Music_Click;
             // 
-            // coolButton8
+            // Everything
             // 
-            this.coolButton8.BackColor = System.Drawing.Color.White;
-            this.coolButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.coolButton8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
-            this.coolButton8.FlatAppearance.BorderSize = 5;
-            this.coolButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.coolButton8.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.coolButton8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.coolButton8.Location = new System.Drawing.Point(280, 254);
-            this.coolButton8.Name = "coolButton8";
-            this.coolButton8.Size = new System.Drawing.Size(225, 105);
-            this.coolButton8.TabIndex = 30;
-            this.coolButton8.Text = "Everything!";
-            this.coolButton8.UseVisualStyleBackColor = false;
+            Everything.BackColor = Color.White;
+            Everything.Cursor = Cursors.Hand;
+            Everything.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
+            Everything.FlatAppearance.BorderSize = 5;
+            Everything.FlatStyle = FlatStyle.Flat;
+            Everything.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            Everything.ForeColor = Color.FromArgb(179, 63, 38);
+            Everything.Location = new Point(280, 254);
+            Everything.Name = "Everything";
+            Everything.Size = new Size(225, 105);
+            Everything.TabIndex = 30;
+            Everything.Text = "Everything!";
+            Everything.UseVisualStyleBackColor = false;
+            Everything.Click += Everything_Click;
             // 
-            // coolButton9
+            // Gaming
             // 
-            this.coolButton9.BackColor = System.Drawing.Color.White;
-            this.coolButton9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.coolButton9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
-            this.coolButton9.FlatAppearance.BorderSize = 5;
-            this.coolButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.coolButton9.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.coolButton9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.coolButton9.Location = new System.Drawing.Point(65, 277);
-            this.coolButton9.Name = "coolButton9";
-            this.coolButton9.Size = new System.Drawing.Size(192, 58);
-            this.coolButton9.TabIndex = 29;
-            this.coolButton9.Text = "Gaming";
-            this.coolButton9.UseVisualStyleBackColor = false;
+            Gaming.BackColor = Color.White;
+            Gaming.Cursor = Cursors.Hand;
+            Gaming.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
+            Gaming.FlatAppearance.BorderSize = 5;
+            Gaming.FlatStyle = FlatStyle.Flat;
+            Gaming.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            Gaming.ForeColor = Color.FromArgb(179, 63, 38);
+            Gaming.Location = new Point(65, 277);
+            Gaming.Name = "Gaming";
+            Gaming.Size = new Size(192, 58);
+            Gaming.TabIndex = 29;
+            Gaming.Text = "Gaming";
+            Gaming.UseVisualStyleBackColor = false;
+            Gaming.Click += Gaming_Click;
             // 
-            // coolButton1
+            // Films
             // 
-            this.coolButton1.BackColor = System.Drawing.Color.White;
-            this.coolButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.coolButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
-            this.coolButton1.FlatAppearance.BorderSize = 5;
-            this.coolButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.coolButton1.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.coolButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.coolButton1.Location = new System.Drawing.Point(527, 159);
-            this.coolButton1.Name = "coolButton1";
-            this.coolButton1.Size = new System.Drawing.Size(192, 58);
-            this.coolButton1.TabIndex = 34;
-            this.coolButton1.Text = "Films";
-            this.coolButton1.UseVisualStyleBackColor = false;
+            Films.BackColor = Color.White;
+            Films.Cursor = Cursors.Hand;
+            Films.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
+            Films.FlatAppearance.BorderSize = 5;
+            Films.FlatStyle = FlatStyle.Flat;
+            Films.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            Films.ForeColor = Color.FromArgb(179, 63, 38);
+            Films.Location = new Point(527, 159);
+            Films.Name = "Films";
+            Films.Size = new Size(192, 58);
+            Films.TabIndex = 34;
+            Films.Text = "Films";
+            Films.UseVisualStyleBackColor = false;
+            Films.Click += Films_Click;
             // 
-            // coolButton2
+            // Knowledge
             // 
-            this.coolButton2.BackColor = System.Drawing.Color.White;
-            this.coolButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.coolButton2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
-            this.coolButton2.FlatAppearance.BorderSize = 5;
-            this.coolButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.coolButton2.Font = new System.Drawing.Font("Itim", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.coolButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.coolButton2.Location = new System.Drawing.Point(296, 159);
-            this.coolButton2.Name = "coolButton2";
-            this.coolButton2.Size = new System.Drawing.Size(192, 58);
-            this.coolButton2.TabIndex = 33;
-            this.coolButton2.Text = "General Knowledge";
-            this.coolButton2.UseVisualStyleBackColor = false;
+            Knowledge.BackColor = Color.White;
+            Knowledge.Cursor = Cursors.Hand;
+            Knowledge.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
+            Knowledge.FlatAppearance.BorderSize = 5;
+            Knowledge.FlatStyle = FlatStyle.Flat;
+            Knowledge.Font = new Font("Itim", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            Knowledge.ForeColor = Color.FromArgb(179, 63, 38);
+            Knowledge.Location = new Point(296, 159);
+            Knowledge.Name = "Knowledge";
+            Knowledge.Size = new Size(192, 58);
+            Knowledge.TabIndex = 33;
+            Knowledge.Text = "General Knowledge";
+            Knowledge.UseVisualStyleBackColor = false;
+            Knowledge.Click += Knowledge_Click;
             // 
-            // coolButton3
+            // Computers
             // 
-            this.coolButton3.BackColor = System.Drawing.Color.White;
-            this.coolButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.coolButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
-            this.coolButton3.FlatAppearance.BorderSize = 5;
-            this.coolButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.coolButton3.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.coolButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.coolButton3.Location = new System.Drawing.Point(65, 159);
-            this.coolButton3.Name = "coolButton3";
-            this.coolButton3.Size = new System.Drawing.Size(192, 58);
-            this.coolButton3.TabIndex = 32;
-            this.coolButton3.Text = "Computers";
-            this.coolButton3.UseVisualStyleBackColor = false;
+            Computers.BackColor = Color.White;
+            Computers.Cursor = Cursors.Hand;
+            Computers.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
+            Computers.FlatAppearance.BorderSize = 5;
+            Computers.FlatStyle = FlatStyle.Flat;
+            Computers.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            Computers.ForeColor = Color.FromArgb(179, 63, 38);
+            Computers.Location = new Point(65, 159);
+            Computers.Name = "Computers";
+            Computers.Size = new Size(192, 58);
+            Computers.TabIndex = 32;
+            Computers.Text = "Computers";
+            Computers.UseVisualStyleBackColor = false;
+            Computers.Click += Computers_Click;
             // 
-            // coolButton4
+            // Sports
             // 
-            this.coolButton4.BackColor = System.Drawing.Color.White;
-            this.coolButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.coolButton4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
-            this.coolButton4.FlatAppearance.BorderSize = 5;
-            this.coolButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.coolButton4.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.coolButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.coolButton4.Location = new System.Drawing.Point(527, 395);
-            this.coolButton4.Name = "coolButton4";
-            this.coolButton4.Size = new System.Drawing.Size(192, 58);
-            this.coolButton4.TabIndex = 37;
-            this.coolButton4.Text = "Sports";
-            this.coolButton4.UseVisualStyleBackColor = false;
+            Sports.BackColor = Color.White;
+            Sports.Cursor = Cursors.Hand;
+            Sports.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
+            Sports.FlatAppearance.BorderSize = 5;
+            Sports.FlatStyle = FlatStyle.Flat;
+            Sports.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            Sports.ForeColor = Color.FromArgb(179, 63, 38);
+            Sports.Location = new Point(527, 395);
+            Sports.Name = "Sports";
+            Sports.Size = new Size(192, 58);
+            Sports.TabIndex = 37;
+            Sports.Text = "Sports";
+            Sports.UseVisualStyleBackColor = false;
+            Sports.Click += Sports_Click;
             // 
-            // coolButton5
+            // Television
             // 
-            this.coolButton5.BackColor = System.Drawing.Color.White;
-            this.coolButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.coolButton5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
-            this.coolButton5.FlatAppearance.BorderSize = 5;
-            this.coolButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.coolButton5.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.coolButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.coolButton5.Location = new System.Drawing.Point(296, 395);
-            this.coolButton5.Name = "coolButton5";
-            this.coolButton5.Size = new System.Drawing.Size(192, 58);
-            this.coolButton5.TabIndex = 36;
-            this.coolButton5.Text = "Television";
-            this.coolButton5.UseVisualStyleBackColor = false;
+            Television.BackColor = Color.White;
+            Television.Cursor = Cursors.Hand;
+            Television.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
+            Television.FlatAppearance.BorderSize = 5;
+            Television.FlatStyle = FlatStyle.Flat;
+            Television.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            Television.ForeColor = Color.FromArgb(179, 63, 38);
+            Television.Location = new Point(296, 395);
+            Television.Name = "Television";
+            Television.Size = new Size(192, 58);
+            Television.TabIndex = 36;
+            Television.Text = "Television";
+            Television.UseVisualStyleBackColor = false;
+            Television.Click += Television_Click;
             // 
-            // coolButton6
+            // History
             // 
-            this.coolButton6.BackColor = System.Drawing.Color.White;
-            this.coolButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.coolButton6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
-            this.coolButton6.FlatAppearance.BorderSize = 5;
-            this.coolButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.coolButton6.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.coolButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.coolButton6.Location = new System.Drawing.Point(65, 395);
-            this.coolButton6.Name = "coolButton6";
-            this.coolButton6.Size = new System.Drawing.Size(192, 58);
-            this.coolButton6.TabIndex = 35;
-            this.coolButton6.Text = "History";
-            this.coolButton6.UseVisualStyleBackColor = false;
+            History.BackColor = Color.White;
+            History.Cursor = Cursors.Hand;
+            History.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
+            History.FlatAppearance.BorderSize = 5;
+            History.FlatStyle = FlatStyle.Flat;
+            History.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            History.ForeColor = Color.FromArgb(179, 63, 38);
+            History.Location = new Point(65, 395);
+            History.Name = "History";
+            History.Size = new Size(192, 58);
+            History.TabIndex = 35;
+            History.Text = "History";
+            History.UseVisualStyleBackColor = false;
+            History.Click += History_Click;
             // 
             // Title
             // 
-            this.Title.AutoSize = true;
-            this.Title.BackColor = System.Drawing.Color.Transparent;
-            this.Title.Font = new System.Drawing.Font("Itim", 44F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Title.ForeColor = System.Drawing.Color.White;
-            this.Title.Location = new System.Drawing.Point(257, 41);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(271, 71);
-            this.Title.TabIndex = 38;
-            this.Title.Text = "Wildcard!";
+            Title.AutoSize = true;
+            Title.BackColor = Color.Transparent;
+            Title.Font = new Font("Itim", 44F, FontStyle.Regular, GraphicsUnit.Point);
+            Title.ForeColor = Color.White;
+            Title.Location = new Point(257, 41);
+            Title.Name = "Title";
+            Title.Size = new Size(271, 71);
+            Title.TabIndex = 38;
+            Title.Text = "Wildcard!";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Itim", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(226, 478);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(332, 48);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Choose a category";
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Itim", 30F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(226, 478);
+            label1.Name = "label1";
+            label1.Size = new Size(332, 48);
+            label1.TabIndex = 39;
+            label1.Text = "Choose a category";
             // 
             // Categories
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.BackgroundImage = global::Coursework.Properties.Resources.Background;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Title);
-            this.Controls.Add(this.coolButton4);
-            this.Controls.Add(this.coolButton5);
-            this.Controls.Add(this.coolButton6);
-            this.Controls.Add(this.coolButton1);
-            this.Controls.Add(this.coolButton2);
-            this.Controls.Add(this.coolButton3);
-            this.Controls.Add(this.coolButton7);
-            this.Controls.Add(this.coolButton8);
-            this.Controls.Add(this.coolButton9);
-            this.Controls.Add(this.pictureBox1);
-            this.DoubleBuffered = true;
-            this.Name = "Categories";
-            this.Text = "Categories";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(179, 63, 38);
+            BackgroundImage = Properties.Resources.Background;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(784, 561);
+            Controls.Add(label1);
+            Controls.Add(Title);
+            Controls.Add(Sports);
+            Controls.Add(Television);
+            Controls.Add(History);
+            Controls.Add(Films);
+            Controls.Add(Knowledge);
+            Controls.Add(Computers);
+            Controls.Add(Music);
+            Controls.Add(Everything);
+            Controls.Add(Gaming);
+            Controls.Add(pictureBox1);
+            DoubleBuffered = true;
+            Name = "Categories";
+            Text = "Categories";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private PictureBox pictureBox1;
-        private CoolButton coolButton7;
-        private CoolButton coolButton8;
-        private CoolButton coolButton9;
-        private CoolButton coolButton1;
-        private CoolButton coolButton2;
-        private CoolButton coolButton3;
-        private CoolButton coolButton4;
-        private CoolButton coolButton5;
-        private CoolButton coolButton6;
+        private CoolButton Music;
+        private CoolButton Everything;
+        private CoolButton Gaming;
+        private CoolButton Films;
+        private CoolButton Knowledge;
+        private CoolButton Computers;
+        private CoolButton Sports;
+        private CoolButton Television;
+        private CoolButton History;
         private Label Title;
         private Label label1;
     }

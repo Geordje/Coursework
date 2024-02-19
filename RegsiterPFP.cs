@@ -14,9 +14,10 @@ namespace Coursework
     public partial class RegisterPFP : Form
     {
         public player activePlayer;
-        public RegisterPFP(player activeplayer )
+        public RegisterPFP(player activePassthrough)
         {
            InitializeComponent();
+           activePlayer = activePassthrough;
 
         }
         private void Back_Click(object sender, EventArgs e)

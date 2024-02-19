@@ -163,7 +163,7 @@ namespace Coursework
                     if (!File.Exists(filePath))
                     {
                         MessageBox.Show($"User database missing, will be recreated with {activePlayer.username} being the first user.", "No other users", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        File.WriteAllText(filePath, (activePlayer.username.ToLower() + "," + activePlayer.password + "," + activePlayer.topWildScore + "," + activePlayer.topBaseScore + "," + activePlayer.defaultPFP + "," + activePlayer.pathToCustomPFP + Environment.NewLine));
+                        File.WriteAllText(filePath,(activePlayer.username.ToLower() + "," + activePlayer.password + "," + activePlayer.topWildScore + "," + activePlayer.topBaseScore + "," + activePlayer.defaultPFP + "," + activePlayer.pathToCustomPFP + Environment.NewLine));
                     }
                     else
                     {
