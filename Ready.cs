@@ -11,7 +11,6 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-JavaScriptSerializer serializer;
 
 namespace Coursework
 {
