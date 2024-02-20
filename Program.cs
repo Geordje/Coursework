@@ -10,7 +10,7 @@ namespace Coursework
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            Application.EnableVisualStyles();
+            //Application.EnableVisualStyles();
             ApplicationConfiguration.Initialize();
             Application.Run(new Splashscreen());
         }

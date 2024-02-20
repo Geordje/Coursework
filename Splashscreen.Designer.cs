@@ -28,71 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.LoadClock = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.loadingIndicator = new System.Windows.Forms.Label();
-            this.progressBar = new System.Windows.Forms.ProgressBar();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            LoadClock = new System.Windows.Forms.Timer(components);
+            pictureBox1 = new PictureBox();
+            loadingIndicator = new Label();
+            progressBar = new ProgressBar();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // LoadClock
             // 
-            this.LoadClock.Enabled = true;
-            this.LoadClock.Interval = 10;
-            this.LoadClock.Tick += new System.EventHandler(this.LoadClock_Tick);
+            LoadClock.Enabled = true;
+            LoadClock.Interval = 10;
+            LoadClock.Tick += LoadClock_Tick;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.pictureBox1.Image = global::Coursework.Properties.Resources.LoadingAnimation;
-            this.pictureBox1.Location = new System.Drawing.Point(118, 71);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(549, 354);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.BackColor = Color.FromArgb(179, 63, 38);
+            pictureBox1.Image = Properties.Resources.LoadingAnimation;
+            pictureBox1.Location = new Point(118, 71);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(549, 354);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // loadingIndicator
             // 
-            this.loadingIndicator.AutoSize = true;
-            this.loadingIndicator.BackColor = System.Drawing.Color.Transparent;
-            this.loadingIndicator.Font = new System.Drawing.Font("Itim", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.loadingIndicator.ForeColor = System.Drawing.Color.White;
-            this.loadingIndicator.Location = new System.Drawing.Point(310, 465);
-            this.loadingIndicator.Name = "loadingIndicator";
-            this.loadingIndicator.Size = new System.Drawing.Size(164, 48);
-            this.loadingIndicator.TabIndex = 1;
-            this.loadingIndicator.Text = "Loading.";
+            loadingIndicator.AutoSize = true;
+            loadingIndicator.BackColor = Color.Transparent;
+            loadingIndicator.Font = new Font("Itim", 30F, FontStyle.Regular, GraphicsUnit.Point);
+            loadingIndicator.ForeColor = Color.White;
+            loadingIndicator.Location = new Point(310, 465);
+            loadingIndicator.Name = "loadingIndicator";
+            loadingIndicator.Size = new Size(164, 48);
+            loadingIndicator.TabIndex = 1;
+            loadingIndicator.Text = "Loading.";
             // 
             // progressBar
             // 
-            this.progressBar.ForeColor = System.Drawing.Color.RosyBrown;
-            this.progressBar.Location = new System.Drawing.Point(217, 439);
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(351, 23);
-            this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progressBar.TabIndex = 3;
+            progressBar.ForeColor = Color.RosyBrown;
+            progressBar.Location = new Point(217, 439);
+            progressBar.Name = "progressBar";
+            progressBar.Size = new Size(351, 23);
+            progressBar.Style = ProgressBarStyle.Continuous;
+            progressBar.TabIndex = 3;
             // 
             // Splashscreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.progressBar);
-            this.Controls.Add(this.loadingIndicator);
-            this.Controls.Add(this.pictureBox1);
-            this.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.Font = new System.Drawing.Font("Itim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Splashscreen";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Trivia Deck Loading";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(9F, 19F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(179, 63, 38);
+            ClientSize = new Size(784, 561);
+            Controls.Add(progressBar);
+            Controls.Add(loadingIndicator);
+            Controls.Add(pictureBox1);
+            Cursor = Cursors.AppStarting;
+            Font = new Font("Itim", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Margin = new Padding(4);
+            Name = "Splashscreen";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Trivia Deck Loading";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

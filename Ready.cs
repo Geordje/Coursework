@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Net;
@@ -10,6 +11,7 @@ using System.Text;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 
 namespace Coursework
@@ -31,11 +33,18 @@ namespace Coursework
             category = categoryPassthrough;
             InitializeComponent();
 
-            var json = new WebClient().DownloadString("https://opentdb.com/api.php?amount=10&category=23&difficulty=medium");
+            var json = new WebClient().DownloadString("https://opentdb.com/api.php?amount=10");
+            json = HttpUtility.HtmlDecode(json);
             QuestionData questionData = JsonConvert.DeserializeObject<QuestionData>(json);
-            foreach(var questionStuff in questionData.questions)
+
+            foreach (var questionItem in questionData.results)
             {
-                MessageBox.Show($"{questionStuff.question}");
+                questionItem.question = HttpUtility.HtmlDecode(questionItem.question);
+                questionItem.correct_answer = HttpUtility.HtmlDecode(questionItem.correct_answer);
+                for (int i = 0; i < questionItem.incorrect_answers.Count; i++)
+                {
+                    questionItem.incorrect_answers[i] = HttpUtility.HtmlDecode(questionItem.incorrect_answers[i]);
+                }
             }
 
         }
