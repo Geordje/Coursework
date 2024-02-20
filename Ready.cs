@@ -34,7 +34,6 @@ namespace Coursework
             InitializeComponent();
 
             var json = new WebClient().DownloadString("https://opentdb.com/api.php?amount=10");
-            json = HttpUtility.HtmlDecode(json);
             QuestionData questionData = JsonConvert.DeserializeObject<QuestionData>(json);
 
             foreach (var questionItem in questionData.results)
