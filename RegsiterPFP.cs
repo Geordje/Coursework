@@ -18,16 +18,18 @@ namespace Coursework
         {
            InitializeComponent();
            activePlayer = activePassthrough;
+            activePlayer.defaultPFP = 'x';
 
         }
         private void Back_Click(object sender, EventArgs e)
         {
+            //doesn't work as of yet, known bug
             DialogResult result = MessageBox.Show($"Cancel registering this user?", "Changed your mind?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 var lines = System.IO.File.ReadAllLines("userDatabase.csv");
                 System.IO.File.WriteAllLines("userDatabase.csv", lines.Take(lines.Length - 1).ToArray());
-                Hide();
+                this.Close();
                 new Prompt().Show();
 
             }
@@ -111,19 +113,28 @@ namespace Coursework
 
         private void Confirm_Click(object sender, EventArgs e)
         {
-            string filePath = "userDatabase.csv";
-            string itemline = File.ReadLines(filePath).ToArray().Last();
-            string[] items = itemline.Split(",");
-            items[4]=activePlayer.defaultPFP.ToString();
-            if(activePlayer.pathToCustomPFP != null)
+            if (activePlayer.defaultPFP != 'x')
             {
-                items[5] = activePlayer.pathToCustomPFP;
+                string filePath = "userDatabase.csv";
+                string itemline = File.ReadLines(filePath).ToArray().Last();
+                string[] items = itemline.Split(",");
+                items[4] = activePlayer.defaultPFP.ToString();
+                if (activePlayer.pathToCustomPFP != null)
+                {
+                    items[5] = activePlayer.pathToCustomPFP;
+                }
+                var lines = File.ReadAllLines("userDatabase.csv");
+                File.WriteAllLines("userDatabase.csv", lines.Take(lines.Length - 1).ToArray());
+                File.AppendAllText(filePath, string.Join(",", items) + Environment.NewLine);
+                Hide();
+                new Home(activePlayer).Show();
             }
-            var lines = File.ReadAllLines("userDatabase.csv");
-            File.WriteAllLines("userDatabase.csv", lines.Take(lines.Length - 1).ToArray());
-            File.AppendAllText(filePath, string.Join(",", items) +Environment.NewLine);
-            Hide();
-            new Home(activePlayer).Show();
+            else
+            {
+                DialogResult result = MessageBox.Show("Please select or upload a picture!", "Error continuing", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (result == DialogResult.OK) { }
+            }
+            
         }
     }
 }

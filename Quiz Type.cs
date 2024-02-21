@@ -12,7 +12,7 @@ namespace Coursework
 {
     public partial class Quiz_Type : Form
     {
-        public player activePlayer;
+        player activePlayer;
         public Quiz_Type(player activepassthrough)
         {
             InitializeComponent();
@@ -28,19 +28,19 @@ namespace Coursework
         private void eWildcard_Click(object sender, EventArgs e)
         {
             this.Close();
-            new Categories(activePlayer, 'e').Show();
+            new Categories(activePlayer, "easy").Show();
         }
 
         private void mWildcard_Click(object sender, EventArgs e)
         {
             this.Close();
-            new Categories(activePlayer, 'm').Show();
+            new Categories(activePlayer, "medium").Show();
         }
 
         private void hWildcard_Click(object sender, EventArgs e)
         {
             this.Close();
-            new Categories(activePlayer, 'h').Show();
+            new Categories(activePlayer, "hard").Show();
         }
     }
 }
