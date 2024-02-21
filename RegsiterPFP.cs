@@ -23,12 +23,13 @@ namespace Coursework
         }
         private void Back_Click(object sender, EventArgs e)
         {
+            //doesn't work as of yet, known bug
             DialogResult result = MessageBox.Show($"Cancel registering this user?", "Changed your mind?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 var lines = System.IO.File.ReadAllLines("userDatabase.csv");
                 System.IO.File.WriteAllLines("userDatabase.csv", lines.Take(lines.Length - 1).ToArray());
-                Hide();
+                this.Close();
                 new Prompt().Show();
 
             }

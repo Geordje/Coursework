@@ -26,6 +26,7 @@ namespace Coursework
         {
             //ready screen for the base quiz
             InitializeComponent();
+            
         }
         public Ready(player activePassthrough, string difficultyPassthrough, int categoryPassthrough)
         {
@@ -67,6 +68,7 @@ namespace Coursework
                     questionItem.incorrect_answers[i] = HttpUtility.HtmlDecode(questionItem.incorrect_answers[i]);
                 }
             }
+
         }
     }
 }
