@@ -10,11 +10,6 @@ namespace Coursework
     {
         public int response_code { get; set; }
         public List<questionInfo> results { get; set; }
-        public override string ToString()
-        {
-            return $"Response Code: {response_code}, Number of Questions: {results?.Count}";
-        }
-
     }
     public class questionInfo
     {

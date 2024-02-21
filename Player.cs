@@ -9,16 +9,16 @@ namespace Coursework
     [Serializable]
     public class player
     {
-        public string username;
-        public string password;
-        public int score;
-        public int currentScore;
-        public double topWildScore;
-        public double topBaseScore;
-        public char defaultPFP;
-        public string pathToCustomPFP;
-        public Image ProfilePicture;
-        
+        public string username { get; set; }
+        public string password { get; set; }
+        public int score { get; set; }
+        public int currentScore { get; set; }
+        public double topWildScore { get; set; }
+        public double topBaseScore { get; set; }
+        public char defaultPFP { get; set; }
+        public string pathToCustomPFP { get; set; }
+        public Image ProfilePicture { get; set; }
+
         public player(string name, string pass)
         {
             this.username = name;
