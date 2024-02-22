@@ -12,9 +12,21 @@ namespace Coursework
 {
     public partial class TrueFalse : Form
     {
-        public TrueFalse()
+        public static bool chosenAnswer;
+        public TrueFalse(questionInfo currentQ, player activePlayer)
         {
             InitializeComponent();
+            questionText.Text = currentQ.question;
+        }
+
+        private void trueCard_Click(object sender, EventArgs e)
+        {
+            chosenAnswer = true;
+        }
+
+        private void falseCard_Click(object sender, EventArgs e)
+        {
+            chosenAnswer= false;
         }
     }
 }

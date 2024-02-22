@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
+            this.questionText = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.answer1txt = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.answer2txt = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.answer3txt = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.answer4txt = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -47,19 +47,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
+            // questionText
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Itim", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(40, 127);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(704, 149);
-            this.label2.TabIndex = 50;
-            this.label2.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
+            this.questionText.BackColor = System.Drawing.Color.Transparent;
+            this.questionText.Font = new System.Drawing.Font("Itim", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.questionText.ForeColor = System.Drawing.Color.White;
+            this.questionText.Location = new System.Drawing.Point(40, 127);
+            this.questionText.Name = "questionText";
+            this.questionText.Size = new System.Drawing.Size(704, 149);
+            this.questionText.TabIndex = 50;
+            this.questionText.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
     "cididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud" +
     " exercitation ullamco";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.questionText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -120,17 +120,17 @@
             this.answer1txt.Text = "Answer1";
             this.answer1txt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label3
+            // answer2txt
             // 
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.label3.Location = new System.Drawing.Point(236, 356);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 160);
-            this.label3.TabIndex = 57;
-            this.label3.Text = "Answer2";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.answer2txt.BackColor = System.Drawing.Color.White;
+            this.answer2txt.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.answer2txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.answer2txt.Location = new System.Drawing.Point(236, 356);
+            this.answer2txt.Name = "answer2txt";
+            this.answer2txt.Size = new System.Drawing.Size(125, 160);
+            this.answer2txt.TabIndex = 57;
+            this.answer2txt.Text = "Answer2";
+            this.answer2txt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox4
             // 
@@ -143,17 +143,17 @@
             this.pictureBox4.TabIndex = 56;
             this.pictureBox4.TabStop = false;
             // 
-            // label4
+            // answer3txt
             // 
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.label4.Location = new System.Drawing.Point(424, 356);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 160);
-            this.label4.TabIndex = 59;
-            this.label4.Text = "Answer3";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.answer3txt.BackColor = System.Drawing.Color.White;
+            this.answer3txt.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.answer3txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.answer3txt.Location = new System.Drawing.Point(424, 356);
+            this.answer3txt.Name = "answer3txt";
+            this.answer3txt.Size = new System.Drawing.Size(125, 160);
+            this.answer3txt.TabIndex = 59;
+            this.answer3txt.Text = "Answer3";
+            this.answer3txt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox5
             // 
@@ -166,17 +166,17 @@
             this.pictureBox5.TabIndex = 58;
             this.pictureBox5.TabStop = false;
             // 
-            // label5
+            // answer4txt
             // 
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.label5.Location = new System.Drawing.Point(612, 356);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 160);
-            this.label5.TabIndex = 61;
-            this.label5.Text = "Answer4";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.answer4txt.BackColor = System.Drawing.Color.White;
+            this.answer4txt.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.answer4txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.answer4txt.Location = new System.Drawing.Point(612, 356);
+            this.answer4txt.Name = "answer4txt";
+            this.answer4txt.Size = new System.Drawing.Size(125, 160);
+            this.answer4txt.TabIndex = 61;
+            this.answer4txt.Text = "Answer4";
+            this.answer4txt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox6
             // 
@@ -197,15 +197,15 @@
             this.BackgroundImage = global::Coursework.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.answer4txt);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.answer3txt);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.answer2txt);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.answer1txt);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.questionText);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Title);
             this.Controls.Add(this.pictureBox1);
@@ -224,17 +224,17 @@
 
         #endregion
 
-        private Label label2;
+        private Label questionText;
         private Label label1;
         private Label Title;
         private PictureBox pictureBox1;
         private PictureBox pictureBox3;
         private Label answer1txt;
-        private Label label3;
+        private Label answer2txt;
         private PictureBox pictureBox4;
-        private Label label4;
+        private Label answer3txt;
         private PictureBox pictureBox5;
-        private Label label5;
+        private Label answer4txt;
         private PictureBox pictureBox6;
     }
 }

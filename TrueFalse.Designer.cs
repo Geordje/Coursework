@@ -28,117 +28,122 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
-            Title = new Label();
-            label1 = new Label();
-            label2 = new Label();
-            pictureBox3 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Title = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.questionText = new System.Windows.Forms.Label();
+            this.trueCard = new System.Windows.Forms.PictureBox();
+            this.falseCard = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trueCard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.falseCard)).BeginInit();
+            this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = Properties.Resources.image__8_;
-            pictureBox1.Location = new Point(0, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(131, 90);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 42;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Coursework.Properties.Resources.image__8_;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(131, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 42;
+            this.pictureBox1.TabStop = false;
             // 
             // Title
             // 
-            Title.AutoSize = true;
-            Title.BackColor = Color.Transparent;
-            Title.Font = new Font("Itim", 46F, FontStyle.Regular, GraphicsUnit.Point);
-            Title.ForeColor = Color.White;
-            Title.Location = new Point(225, 29);
-            Title.Name = "Title";
-            Title.Size = new Size(334, 74);
-            Title.TabIndex = 43;
-            Title.Text = "Question x.";
+            this.Title.AutoSize = true;
+            this.Title.BackColor = System.Drawing.Color.Transparent;
+            this.Title.Font = new System.Drawing.Font("Itim", 46F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Title.ForeColor = System.Drawing.Color.White;
+            this.Title.Location = new System.Drawing.Point(225, 29);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(334, 74);
+            this.Title.TabIndex = 43;
+            this.Title.Text = "Question x.";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Itim", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(37, 45);
-            label1.Name = "label1";
-            label1.Size = new Size(59, 33);
-            label1.TabIndex = 44;
-            label1.Text = "150";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Itim", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(37, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 33);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "150";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // questionText
             // 
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Itim", 30F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(40, 127);
-            label2.Name = "label2";
-            label2.Size = new Size(704, 149);
-            label2.TabIndex = 45;
-            label2.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            this.questionText.BackColor = System.Drawing.Color.Transparent;
+            this.questionText.Font = new System.Drawing.Font("Itim", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.questionText.ForeColor = System.Drawing.Color.White;
+            this.questionText.Location = new System.Drawing.Point(40, 127);
+            this.questionText.Name = "questionText";
+            this.questionText.Size = new System.Drawing.Size(704, 149);
+            this.questionText.TabIndex = 45;
+            this.questionText.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
+    "cididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud" +
+    " exercitation ullamco";
+            this.questionText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox3
+            // trueCard
             // 
-            pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.Image = Properties.Resources.image__9_;
-            pictureBox3.Location = new Point(93, 287);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(224, 272);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 46;
-            pictureBox3.TabStop = false;
+            this.trueCard.BackColor = System.Drawing.Color.Transparent;
+            this.trueCard.Image = global::Coursework.Properties.Resources.image__9_;
+            this.trueCard.Location = new System.Drawing.Point(93, 287);
+            this.trueCard.Name = "trueCard";
+            this.trueCard.Size = new System.Drawing.Size(224, 272);
+            this.trueCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.trueCard.TabIndex = 46;
+            this.trueCard.TabStop = false;
+            this.trueCard.Click += new System.EventHandler(this.trueCard_Click);
             // 
-            // pictureBox4
+            // falseCard
             // 
-            pictureBox4.BackColor = Color.Transparent;
-            pictureBox4.Image = Properties.Resources.False1;
-            pictureBox4.Location = new Point(470, 279);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(244, 288);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 47;
-            pictureBox4.TabStop = false;
+            this.falseCard.BackColor = System.Drawing.Color.Transparent;
+            this.falseCard.Image = global::Coursework.Properties.Resources.False1;
+            this.falseCard.Location = new System.Drawing.Point(470, 279);
+            this.falseCard.Name = "falseCard";
+            this.falseCard.Size = new System.Drawing.Size(244, 288);
+            this.falseCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.falseCard.TabIndex = 47;
+            this.falseCard.TabStop = false;
+            this.falseCard.Click += new System.EventHandler(this.falseCard_Click);
             // 
             // TrueFalse
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(179, 63, 38);
-            BackgroundImage = Properties.Resources.Background;
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(784, 561);
-            Controls.Add(pictureBox4);
-            Controls.Add(pictureBox3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(Title);
-            Controls.Add(pictureBox1);
-            DoubleBuffered = true;
-            Name = "TrueFalse";
-            Text = "TrueFalse";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.BackgroundImage = global::Coursework.Properties.Resources.Background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.falseCard);
+            this.Controls.Add(this.trueCard);
+            this.Controls.Add(this.questionText);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Title);
+            this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
+            this.Name = "TrueFalse";
+            this.Text = "TrueFalse";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trueCard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.falseCard)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
         private PictureBox pictureBox1;
         private Label Title;
         private Label label1;
-        private Label label2;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
+        private Label questionText;
+        private PictureBox trueCard;
+        private PictureBox falseCard;
     }
 }

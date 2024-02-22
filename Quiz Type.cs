@@ -12,11 +12,11 @@ namespace Coursework
 {
     public partial class Quiz_Type : Form
     {
-        player activePlayer;
+        public static player activePlayer;
         public Quiz_Type(player activepassthrough)
         {
             InitializeComponent();
-            player activePlayer = activepassthrough;
+            activePlayer = activepassthrough;
         }
 
         private void Back_Click(object sender, EventArgs e)

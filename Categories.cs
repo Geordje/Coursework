@@ -1,24 +1,14 @@
-﻿ using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Coursework
+﻿namespace Coursework
 {
     public partial class Categories : Form
     {
-        player activePlayer;
-        string Difficulty;
+        public static player activePlayer;
+        public static string Difficulty;
         public Categories(player activePassthrough, string difficultyPassthrough)
         {
-            InitializeComponent();
             activePlayer = activePassthrough;
             Difficulty = difficultyPassthrough;
+            InitializeComponent();
         }
 
         //everything: none
@@ -31,58 +21,68 @@ namespace Coursework
         //general knowledge : 9
         //films : 11
 
+
         private void Everything_Click(object sender, EventArgs e)
         {
             this.Close();
-            new Ready(activePlayer, Difficulty).Show();
+            Ready readyForm = new Ready(activePlayer, Difficulty);
+            readyForm.Show();
         }
 
         private void Music_Click(object sender, EventArgs e)
         {
             this.Close();
-            new Ready(activePlayer, Difficulty, 12).Show();
+            Ready ready = new Ready(activePlayer,Difficulty,12);
+            ready.Show();
         }
 
         private void Sports_Click(object sender, EventArgs e)
         {
-            this.Close();
             new Ready(activePlayer, Difficulty, 21).Show();
+            this.Close();
         }
 
         private void Television_Click(object sender, EventArgs e)
         {
             this.Close();
-            new Ready(activePlayer, Difficulty, 14).Show();
+            Ready readyForm = new Ready(activePlayer, Difficulty, 14);
+            readyForm.Show();
         }
 
         private void History_Click(object sender, EventArgs e)
         {
             this.Close();
-            new Ready(activePlayer, Difficulty, 23).Show();
+            Ready readyForm = new Ready(activePlayer, Difficulty, 23);
+            readyForm.Show();
         }
 
         private void Gaming_Click(object sender, EventArgs e)
         {
             this.Close();
-            new Ready(activePlayer, Difficulty, 15).Show();
+            Ready readyForm = new Ready(activePlayer, Difficulty, 15);
+            readyForm.Show();
         }
 
         private void Computers_Click(object sender, EventArgs e)
         {
             this.Close();
-            new Ready(activePlayer, Difficulty, 18).Show();
+            Ready readyForm = new Ready(activePlayer, Difficulty, 18);
+            readyForm.Show();
         }
 
         private void Knowledge_Click(object sender, EventArgs e)
         {
             this.Close();
-            new Ready(activePlayer, Difficulty, 9).Show();
+            Ready readyForm = new Ready(activePlayer, Difficulty, 9);
+            readyForm.Show();
+
         }
 
         private void Films_Click(object sender, EventArgs e)
         {
             this.Close();
-            new Ready(activePlayer, Difficulty, 11).Show();
+            Ready readyForm = new Ready(activePlayer, Difficulty, 11);
+            readyForm.Show();
         }
     }
 }

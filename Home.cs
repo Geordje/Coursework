@@ -12,11 +12,12 @@ namespace Coursework
 {
     public partial class Home : Form
     {
-        public player activePlayer;
+        public static player activePlayer;
+        
         public Home(player activePassthrough)
         {
             InitializeComponent();
-            player activePlayer = activePassthrough;
+            activePlayer = activePassthrough;
             usernameSpot.Text = activePlayer.username;
             switch (activePlayer.defaultPFP)
             {
@@ -42,11 +43,17 @@ namespace Coursework
             }
             ProfilePicture.Image = activePlayer.ProfilePicture;
         }
-
         private void logOut_Click(object sender, EventArgs e)
         {
-            this.Close();
-            new Prompt().Show();
+            DialogResult result = MessageBox.Show($"Log out of {activePlayer.username}?", "Are you sure?", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+                new Prompt().Show();
+            }
+            else { }
+            
+
         }
 
         private void Start_Click(object sender, EventArgs e)
