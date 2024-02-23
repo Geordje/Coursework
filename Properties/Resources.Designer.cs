@@ -81,6 +81,15 @@ namespace Coursework.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Correct_Ding {
+            get {
+                return ResourceManager.GetStream("Correct Ding", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap Crossed_Eye {
@@ -267,6 +276,25 @@ namespace Coursework.Properties {
             get {
                 object obj = ResourceManager.GetObject("Tick", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream ticking_clock_10_seconds {
+            get {
+                return ResourceManager.GetStream("ticking-clock 10 seconds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] ticking_clock_10_seconds_mp3 {
+            get {
+                object obj = ResourceManager.GetObject("ticking-clock 10 seconds.mp3", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,12 +13,17 @@ namespace Coursework
 {
     public partial class multipleChoice : Form
     {
-        public multipleChoice(questionInfo currentQ, player activePlayer)
+        Random randint = new Random();
+        static int r;
+        static player activePlayer;
+        public multipleChoice(questionInfo currentQ, player activePassthrough)
         {
+            r = randint.Next(0, 3);
             InitializeComponent();
+            activePlayer = activePassthrough;
             questionText.Text = currentQ.question;
-            Random rnd = new Random();
-            int r = rnd.Next(3);
+            Title.Text = $"Question {currentQ.questionNo}";
+            
             if (r == 0)
             {
                 answer1txt.Text = currentQ.correct_answer;
@@ -46,7 +52,47 @@ namespace Coursework
                 answer3txt.Text = currentQ.incorrect_answers[2];
                 answer4txt.Text = currentQ.correct_answer;
             }
-
         }
+
+        private void answer1txt_Click(object sender, EventArgs e)
+        {
+            if (r == 0)
+            {
+                activePlayer.Accumulate();
+            }
+            this.Close();
+            QuestionData.PlayQuestion(Ready.thisQuestionData, activePlayer);
+        }
+
+        private void answer2txt_Click(object sender, EventArgs e)
+        {
+            if (r == 1)
+            {
+                activePlayer.Accumulate();
+            }
+            this.Close();
+            QuestionData.PlayQuestion(Ready.thisQuestionData, activePlayer);
+        }
+
+        private void answer3txt_Click(object sender, EventArgs e)
+        {
+            if (r == 2)
+            {
+                activePlayer.Accumulate();
+            }
+            this.Close();
+            QuestionData.PlayQuestion(Ready.thisQuestionData, activePlayer);
+        }
+
+        private void answer4txt_Click(object sender, EventArgs e)
+        {
+            if (r == 4)
+            {
+                activePlayer.Accumulate();
+            }
+            this.Close();
+            QuestionData.PlayQuestion(Ready.thisQuestionData, activePlayer);
+        }
+
     }
 }

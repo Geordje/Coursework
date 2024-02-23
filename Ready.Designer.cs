@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             readyText = new Label();
             pictureBox1 = new PictureBox();
+            startTimer = new System.Windows.Forms.Timer(components);
+            mainTimer = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // readyText
             // 
-            readyText.AutoSize = true;
             readyText.BackColor = Color.Transparent;
             readyText.Font = new Font("Itim", 30F, FontStyle.Regular, GraphicsUnit.Point);
             readyText.ForeColor = Color.White;
@@ -44,6 +46,7 @@
             readyText.Size = new Size(142, 48);
             readyText.TabIndex = 3;
             readyText.Text = "Ready?";
+            readyText.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -55,6 +58,15 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
+            // 
+            // startTimer
+            // 
+            startTimer.Interval = 1000;
+            startTimer.Tick += startTimer_Tick;
+            // 
+            // mainTimer
+            // 
+            mainTimer.Tick += mainTimer_Tick;
             // 
             // Ready
             // 
@@ -68,12 +80,13 @@
             Text = "Ready";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Label readyText;
         private PictureBox pictureBox1;
+        private System.Windows.Forms.Timer startTimer;
+        private System.Windows.Forms.Timer mainTimer;
     }
 }

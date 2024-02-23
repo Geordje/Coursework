@@ -12,21 +12,39 @@ namespace Coursework
 {
     public partial class TrueFalse : Form
     {
-        public static bool chosenAnswer;
-        public TrueFalse(questionInfo currentQ, player activePlayer)
+        static questionInfo currentQ;
+        static player activePlayer;
+
+        public TrueFalse(questionInfo currentPassthrough, player activePassthrough)
         {
             InitializeComponent();
+            currentQ = currentPassthrough;
+            activePlayer = activePassthrough;
             questionText.Text = currentQ.question;
         }
 
         private void trueCard_Click(object sender, EventArgs e)
         {
-            chosenAnswer = true;
+            if (currentQ.correct_answer == "True")
+            {
+                activePlayer.Accumulate();
+            }
+            this.Close();
+            QuestionData.PlayQuestion(Ready.thisQuestionData, activePlayer);
         }
 
         private void falseCard_Click(object sender, EventArgs e)
         {
-            chosenAnswer= false;
+            if (currentQ.correct_answer == "False")
+            {
+                activePlayer.Accumulate();
+            }
+            this.Close();
+            QuestionData.PlayQuestion(Ready.thisQuestionData, activePlayer);
+        }
+        public void updateTimer(int timePassthrough)
+        {
+            timeLeft.Text = timePassthrough.ToString();
         }
     }
 }

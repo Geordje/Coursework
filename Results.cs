@@ -12,9 +12,20 @@ namespace Coursework
 {
     public partial class Results : Form
     {
-        public Results()
+        player activePlayer;
+        public Results(player activePassthrough, string difficulty)
         {
             InitializeComponent();
+            activePlayer = activePassthrough;
+            correctIndicator.Text = $"{activePlayer.score.ToString()}/20";
+            activePlayer.score = 0;
+
+        }
+
+        private void returnHome_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Home(activePlayer).Show();
         }
     }
 }

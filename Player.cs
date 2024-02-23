@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Coursework.Properties;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,10 +37,15 @@ namespace Coursework
         public void Accumulate()
         {
             this.score++;
+            new System.Media.SoundPlayer(Resources.Correct_Ding).Play();
         }
         public void AddToDatabase()
         {
             File.AppendAllText("userDatabase.csv",(this.username.ToLower() + "," + this.password + "," + this.topWildScore + "," + this.topBaseScore + "," + this.defaultPFP + "," + this.pathToCustomPFP + Environment.NewLine));
+        }
+        public void UpdateTopScore(int newscore, int secondsTaken, string difficulty)
+        {
+
         }
 
     }

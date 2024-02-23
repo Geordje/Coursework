@@ -28,187 +28,184 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Title = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.coolButton1 = new Coursework.CoolButton();
-            this.placing = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.SuspendLayout();
+            correctIndicator = new Label();
+            timeTaken = new Label();
+            Title = new Label();
+            pictureBox1 = new PictureBox();
+            scoreIndicator = new Label();
+            label4 = new Label();
+            placementIndicator = new Label();
+            pictureBox3 = new PictureBox();
+            returnHome = new CoolButton();
+            placingAgain = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            SuspendLayout();
             // 
-            // label2
+            // correctIndicator
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Itim", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(320, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 57);
-            this.label2.TabIndex = 50;
-            this.label2.Text = "xx/20";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            correctIndicator.BackColor = Color.Transparent;
+            correctIndicator.Font = new Font("Itim", 35F, FontStyle.Regular, GraphicsUnit.Point);
+            correctIndicator.ForeColor = Color.White;
+            correctIndicator.Location = new Point(299, 129);
+            correctIndicator.Name = "correctIndicator";
+            correctIndicator.Size = new Size(187, 57);
+            correctIndicator.TabIndex = 50;
+            correctIndicator.Text = "xx/20";
+            correctIndicator.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // timeTaken
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Itim", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(363, 439);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 33);
-            this.label1.TabIndex = 49;
-            this.label1.Text = "150";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            timeTaken.AutoSize = true;
+            timeTaken.BackColor = Color.Transparent;
+            timeTaken.Font = new Font("Itim", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            timeTaken.ForeColor = Color.White;
+            timeTaken.Location = new Point(363, 439);
+            timeTaken.Name = "timeTaken";
+            timeTaken.Size = new Size(59, 33);
+            timeTaken.TabIndex = 49;
+            timeTaken.Text = "150";
+            timeTaken.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Title
             // 
-            this.Title.AutoSize = true;
-            this.Title.BackColor = System.Drawing.Color.Transparent;
-            this.Title.Font = new System.Drawing.Font("Itim", 46F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Title.ForeColor = System.Drawing.Color.White;
-            this.Title.Location = new System.Drawing.Point(277, 29);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(230, 74);
-            this.Title.TabIndex = 48;
-            this.Title.Text = "Results";
+            Title.AutoSize = true;
+            Title.BackColor = Color.Transparent;
+            Title.Font = new Font("Itim", 46F, FontStyle.Regular, GraphicsUnit.Point);
+            Title.ForeColor = Color.White;
+            Title.Location = new Point(277, 29);
+            Title.Name = "Title";
+            Title.Size = new Size(230, 74);
+            Title.TabIndex = 48;
+            Title.Text = "Results";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Coursework.Properties.Resources.image__8_;
-            this.pictureBox1.Location = new System.Drawing.Point(327, 406);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 90);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 47;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.image__8_;
+            pictureBox1.Location = new Point(327, 406);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(131, 90);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 47;
+            pictureBox1.TabStop = false;
             // 
-            // label3
+            // scoreIndicator
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Itim", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(247, 185);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(290, 57);
-            this.label3.TabIndex = 51;
-            this.label3.Text = "Score:  XXXX";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            scoreIndicator.BackColor = Color.Transparent;
+            scoreIndicator.Font = new Font("Itim", 35F, FontStyle.Regular, GraphicsUnit.Point);
+            scoreIndicator.ForeColor = Color.White;
+            scoreIndicator.Location = new Point(247, 185);
+            scoreIndicator.Name = "scoreIndicator";
+            scoreIndicator.Size = new Size(290, 57);
+            scoreIndicator.TabIndex = 51;
+            scoreIndicator.Text = "Score:  XXXX";
+            scoreIndicator.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Itim", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(320, 267);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(160, 40);
-            this.label4.TabIndex = 52;
-            this.label4.Text = "Rankings:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Itim", 25F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(320, 267);
+            label4.Name = "label4";
+            label4.Size = new Size(145, 40);
+            label4.TabIndex = 52;
+            label4.Text = "Ranking:";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // placementIndicator
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Itim", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(199, 312);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(387, 80);
-            this.label5.TabIndex = 53;
-            this.label5.Text = "xth in Wildcard Difficulty\r\nxth in Wildcard";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            placementIndicator.BackColor = Color.Transparent;
+            placementIndicator.Font = new Font("Itim", 25F, FontStyle.Regular, GraphicsUnit.Point);
+            placementIndicator.ForeColor = Color.White;
+            placementIndicator.Location = new Point(197, 319);
+            placementIndicator.Name = "placementIndicator";
+            placementIndicator.Size = new Size(387, 80);
+            placementIndicator.TabIndex = 53;
+            placementIndicator.Text = "xth place in Wildcard";
+            placementIndicator.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::Coursework.Properties.Resources.Trophy;
-            this.pictureBox3.Location = new System.Drawing.Point(8, 439);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(153, 118);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 54;
-            this.pictureBox3.TabStop = false;
+            pictureBox3.BackColor = Color.Transparent;
+            pictureBox3.Image = Properties.Resources.Trophy;
+            pictureBox3.Location = new Point(8, 439);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(153, 118);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 54;
+            pictureBox3.TabStop = false;
             // 
-            // coolButton1
+            // returnHome
             // 
-            this.coolButton1.BackColor = System.Drawing.Color.White;
-            this.coolButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
-            this.coolButton1.FlatAppearance.BorderSize = 5;
-            this.coolButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.coolButton1.Font = new System.Drawing.Font("Itim", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.coolButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.coolButton1.Location = new System.Drawing.Point(559, 482);
-            this.coolButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.coolButton1.Name = "coolButton1";
-            this.coolButton1.Size = new System.Drawing.Size(202, 68);
-            this.coolButton1.TabIndex = 55;
-            this.coolButton1.Text = "Return Home";
-            this.coolButton1.UseVisualStyleBackColor = false;
+            returnHome.BackColor = Color.White;
+            returnHome.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
+            returnHome.FlatAppearance.BorderSize = 5;
+            returnHome.FlatStyle = FlatStyle.Flat;
+            returnHome.Font = new Font("Itim", 22F, FontStyle.Regular, GraphicsUnit.Point);
+            returnHome.ForeColor = Color.FromArgb(179, 63, 38);
+            returnHome.Location = new Point(559, 482);
+            returnHome.Margin = new Padding(3, 2, 3, 2);
+            returnHome.Name = "returnHome";
+            returnHome.Size = new Size(202, 68);
+            returnHome.TabIndex = 55;
+            returnHome.Text = "Return Home";
+            returnHome.UseVisualStyleBackColor = false;
+            returnHome.Click += returnHome_Click;
             // 
-            // placing
+            // placingAgain
             // 
-            this.placing.AutoSize = true;
-            this.placing.BackColor = System.Drawing.Color.Transparent;
-            this.placing.Font = new System.Drawing.Font("Itim", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.placing.ForeColor = System.Drawing.Color.White;
-            this.placing.Location = new System.Drawing.Point(55, 463);
-            this.placing.Name = "placing";
-            this.placing.Size = new System.Drawing.Size(59, 33);
-            this.placing.TabIndex = 56;
-            this.placing.Text = "150";
-            this.placing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            placingAgain.AutoSize = true;
+            placingAgain.BackColor = Color.Transparent;
+            placingAgain.Font = new Font("Itim", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            placingAgain.ForeColor = Color.White;
+            placingAgain.Location = new Point(55, 463);
+            placingAgain.Name = "placingAgain";
+            placingAgain.Size = new Size(59, 33);
+            placingAgain.TabIndex = 56;
+            placingAgain.Text = "150";
+            placingAgain.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Results
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.BackgroundImage = global::Coursework.Properties.Resources.Background;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.placing);
-            this.Controls.Add(this.coolButton1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Title);
-            this.Controls.Add(this.pictureBox1);
-            this.DoubleBuffered = true;
-            this.Name = "Results";
-            this.Text = "Results";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(179, 63, 38);
+            BackgroundImage = Properties.Resources.Background;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(784, 561);
+            Controls.Add(placingAgain);
+            Controls.Add(returnHome);
+            Controls.Add(pictureBox3);
+            Controls.Add(placementIndicator);
+            Controls.Add(label4);
+            Controls.Add(scoreIndicator);
+            Controls.Add(correctIndicator);
+            Controls.Add(timeTaken);
+            Controls.Add(Title);
+            Controls.Add(pictureBox1);
+            DoubleBuffered = true;
+            Name = "Results";
+            Text = "Results";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Label label2;
-        private Label label1;
+        private Label correctIndicator;
+        private Label timeTaken;
         private Label Title;
         private PictureBox pictureBox1;
-        private Label label3;
+        private Label scoreIndicator;
         private Label label4;
-        private Label label5;
+        private Label placementIndicator;
         private PictureBox pictureBox3;
-        private CoolButton coolButton1;
-        private Label placing;
+        private CoolButton returnHome;
+        private Label placingAgain;
     }
 }
