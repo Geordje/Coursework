@@ -15,6 +15,7 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 
 namespace Coursework
 {
@@ -23,9 +24,10 @@ namespace Coursework
         public static player activePlayer;
         public static string difficulty;
         public static int category;
-        public static int seconds;
+        private static int seconds;
         public static QuestionData thisQuestionData = new QuestionData();
-        public static int totalTime = 150;
+        public static timeKeeper timeKeeperInstance = new timeKeeper();
+
 
         public Ready(player activePassthrough)
         {
@@ -36,6 +38,7 @@ namespace Coursework
             FileStream aFile = new FileStream("baseQuiz.csv", FileMode.Open);
             StreamReader s = new StreamReader(aFile);
             int i = 0;
+            seconds = 0;
             while (s.ReadLine() != null)
             {
                 if (i != 0)
@@ -59,6 +62,8 @@ namespace Coursework
             activePlayer = activePassthrough;
             difficulty = difficultyPassthrough;
             category = categoryPassthrough;
+            seconds = 0;
+
             var json = new WebClient().DownloadString($"https://opentdb.com/api.php?amount=20&category={category}&difficulty={difficulty}");
             thisQuestionData = JsonConvert.DeserializeObject<QuestionData>(json);
 
@@ -77,52 +82,42 @@ namespace Coursework
             //ready screen for uncategorised
             activePlayer = activePassthrough;
             difficulty = difficultyPassthrough;
+            seconds = 0;
             InitializeComponent();
             var json = new WebClient().DownloadString($"https://opentdb.com/api.php?amount=20&difficulty={difficulty}");
             thisQuestionData = JsonConvert.DeserializeObject<QuestionData>(json);
-            int qnum = 1;
             foreach (var questionItem in thisQuestionData.results)
             {
                 questionItem.question = HttpUtility.HtmlDecode(questionItem.question);
                 questionItem.correct_answer = HttpUtility.HtmlDecode(questionItem.correct_answer);
-                questionItem.questionNo = qnum;
                 for (int i = 0; i < questionItem.incorrect_answers.Count; i++)
                 {
                     questionItem.incorrect_answers[i] = HttpUtility.HtmlDecode(questionItem.incorrect_answers[i]);
                 }
-                qnum++;
 
             }
         }
 
-        private void startTimer_Tick(object sender, EventArgs e)
+        public void startTimer_Tick(object sender, EventArgs e)
         {
-            if (seconds < 6)
+            if (seconds < 5)
             {
                 switch (seconds)
                 {
                     case 2: readyText.Text = "3"; break;
                     case 3: readyText.Text = "2"; break;
                     case 4: readyText.Text = "1"; break;
-                    case 5: readyText.Text = "0"; break;
-
                 }
+                seconds++;
             }
 
             else
             {
+                timeKeeperInstance.Start();
                 startTimer.Stop();
-                mainTimer.Start();
                 QuestionData.PlayQuestion(thisQuestionData, activePlayer);
-                this.Close();
+                this.Hide();
             }
-            seconds++;
-        }
-
-        private void mainTimer_Tick(object sender, EventArgs e)
-        {
-            totalTime--;
-            
         }
     }
 }

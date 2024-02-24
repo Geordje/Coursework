@@ -56,13 +56,12 @@
             // 
             // timeTaken
             // 
-            timeTaken.AutoSize = true;
             timeTaken.BackColor = Color.Transparent;
             timeTaken.Font = new Font("Itim", 20F, FontStyle.Regular, GraphicsUnit.Point);
             timeTaken.ForeColor = Color.White;
-            timeTaken.Location = new Point(363, 439);
+            timeTaken.Location = new Point(362, 439);
             timeTaken.Name = "timeTaken";
-            timeTaken.Size = new Size(59, 33);
+            timeTaken.Size = new Size(60, 33);
             timeTaken.TabIndex = 49;
             timeTaken.Text = "150";
             timeTaken.TextAlign = ContentAlignment.MiddleCenter;
@@ -95,9 +94,9 @@
             scoreIndicator.BackColor = Color.Transparent;
             scoreIndicator.Font = new Font("Itim", 35F, FontStyle.Regular, GraphicsUnit.Point);
             scoreIndicator.ForeColor = Color.White;
-            scoreIndicator.Location = new Point(247, 185);
+            scoreIndicator.Location = new Point(187, 175);
             scoreIndicator.Name = "scoreIndicator";
-            scoreIndicator.Size = new Size(290, 57);
+            scoreIndicator.Size = new Size(410, 92);
             scoreIndicator.TabIndex = 51;
             scoreIndicator.Text = "Score:  XXXX";
             scoreIndicator.TextAlign = ContentAlignment.MiddleCenter;

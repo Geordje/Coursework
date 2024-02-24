@@ -36,7 +36,7 @@ namespace Coursework
         }
         public void Accumulate()
         {
-            this.score++;
+            this.currentScore++;
             new System.Media.SoundPlayer(Resources.Correct_Ding).Play();
         }
         public void AddToDatabase()

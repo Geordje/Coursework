@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Coursework
 {
@@ -11,23 +12,31 @@ namespace Coursework
     {
         public int response_code { get; set; }
         public List<questionInfo> results { get; set; }
-        public int secondsLeft { get; set; }
+        public static Form newMulti;
+        public static Form newTrueFalse;
+        static int qnum=1;
+        
         public static void PlayQuestion(QuestionData thisQuestionData, player activePlayer)
         {
             try
             {
+                timeKeeper timeKeeperInstance = Ready.timeKeeperInstance;
                 Random rnd = new Random();
                 int r = rnd.Next(thisQuestionData.results.Count);
                 questionInfo currentQ = thisQuestionData.results[r];
+                currentQ.questionNo = qnum;
+                qnum++;
                 thisQuestionData.results.RemoveAt(r);
                 if (currentQ.type == "multiple")
                 {
-                    new multipleChoice(currentQ, activePlayer).Show();
+                    newMulti = new multipleChoice(currentQ, activePlayer);
+                    newMulti.Show();
 
                 }
                 else if (currentQ.type == "boolean")
                 {
-                    new TrueFalse(currentQ, activePlayer).Show();
+                    newTrueFalse = new TrueFalse(currentQ, activePlayer);
+                    newTrueFalse.Show();
 
                 }
                 else if (currentQ.type == "written")
@@ -41,6 +50,7 @@ namespace Coursework
             }
             catch(Exception)
             {
+                Ready.timeKeeperInstance.Stop();
                 new Results(activePlayer, Categories.Difficulty).Show();
 
             }

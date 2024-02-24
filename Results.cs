@@ -17,8 +17,10 @@ namespace Coursework
         {
             InitializeComponent();
             activePlayer = activePassthrough;
-            correctIndicator.Text = $"{activePlayer.score.ToString()}/20";
+            correctIndicator.Text = $"{activePlayer.currentScore.ToString()}/20";
             activePlayer.score = 0;
+            timeTaken.Text = (180 - timeKeeper.remainingTimeInSeconds).ToString();
+            scoreIndicator.Text = $"Score: {scoreGenerator.GenerateScore(timeKeeper.remainingTimeInSeconds, difficulty, activePlayer).ToString()}";
 
         }
 

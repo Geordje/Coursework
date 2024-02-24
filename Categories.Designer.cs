@@ -29,240 +29,241 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Categories));
-            pictureBox1 = new PictureBox();
-            Music = new CoolButton();
-            Everything = new CoolButton();
-            Gaming = new CoolButton();
-            Films = new CoolButton();
-            Knowledge = new CoolButton();
-            Computers = new CoolButton();
-            Sports = new CoolButton();
-            Television = new CoolButton();
-            History = new CoolButton();
-            Title = new Label();
-            label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.backButton = new System.Windows.Forms.PictureBox();
+            this.Music = new Coursework.CoolButton();
+            this.Everything = new Coursework.CoolButton();
+            this.Gaming = new Coursework.CoolButton();
+            this.Films = new Coursework.CoolButton();
+            this.Knowledge = new Coursework.CoolButton();
+            this.Computers = new Coursework.CoolButton();
+            this.Sports = new Coursework.CoolButton();
+            this.Television = new Coursework.CoolButton();
+            this.History = new Coursework.CoolButton();
+            this.Title = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.backButton)).BeginInit();
+            this.SuspendLayout();
             // 
-            // pictureBox1
+            // backButton
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 41);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(84, 79);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 18;
-            pictureBox1.TabStop = false;
+            this.backButton.BackColor = System.Drawing.Color.Transparent;
+            this.backButton.Image = ((System.Drawing.Image)(resources.GetObject("backButton.Image")));
+            this.backButton.Location = new System.Drawing.Point(12, 41);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(84, 79);
+            this.backButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.backButton.TabIndex = 18;
+            this.backButton.TabStop = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // Music
             // 
-            Music.BackColor = Color.White;
-            Music.Cursor = Cursors.Hand;
-            Music.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
-            Music.FlatAppearance.BorderSize = 5;
-            Music.FlatStyle = FlatStyle.Flat;
-            Music.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            Music.ForeColor = Color.FromArgb(179, 63, 38);
-            Music.Location = new Point(527, 277);
-            Music.Name = "Music";
-            Music.Size = new Size(192, 58);
-            Music.TabIndex = 31;
-            Music.Text = "Music";
-            Music.UseVisualStyleBackColor = false;
-            Music.Click += Music_Click;
+            this.Music.BackColor = System.Drawing.Color.White;
+            this.Music.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Music.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
+            this.Music.FlatAppearance.BorderSize = 5;
+            this.Music.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Music.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Music.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.Music.Location = new System.Drawing.Point(527, 277);
+            this.Music.Name = "Music";
+            this.Music.Size = new System.Drawing.Size(192, 58);
+            this.Music.TabIndex = 31;
+            this.Music.Text = "Music";
+            this.Music.UseVisualStyleBackColor = false;
+            this.Music.Click += new System.EventHandler(this.Music_Click);
             // 
             // Everything
             // 
-            Everything.BackColor = Color.White;
-            Everything.Cursor = Cursors.Hand;
-            Everything.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
-            Everything.FlatAppearance.BorderSize = 5;
-            Everything.FlatStyle = FlatStyle.Flat;
-            Everything.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            Everything.ForeColor = Color.FromArgb(179, 63, 38);
-            Everything.Location = new Point(280, 254);
-            Everything.Name = "Everything";
-            Everything.Size = new Size(225, 105);
-            Everything.TabIndex = 30;
-            Everything.Text = "Everything!";
-            Everything.UseVisualStyleBackColor = false;
-            Everything.Click += Everything_Click;
+            this.Everything.BackColor = System.Drawing.Color.White;
+            this.Everything.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Everything.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
+            this.Everything.FlatAppearance.BorderSize = 5;
+            this.Everything.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Everything.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Everything.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.Everything.Location = new System.Drawing.Point(280, 254);
+            this.Everything.Name = "Everything";
+            this.Everything.Size = new System.Drawing.Size(225, 105);
+            this.Everything.TabIndex = 30;
+            this.Everything.Text = "Everything!";
+            this.Everything.UseVisualStyleBackColor = false;
+            this.Everything.Click += new System.EventHandler(this.Everything_Click);
             // 
             // Gaming
             // 
-            Gaming.BackColor = Color.White;
-            Gaming.Cursor = Cursors.Hand;
-            Gaming.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
-            Gaming.FlatAppearance.BorderSize = 5;
-            Gaming.FlatStyle = FlatStyle.Flat;
-            Gaming.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            Gaming.ForeColor = Color.FromArgb(179, 63, 38);
-            Gaming.Location = new Point(65, 277);
-            Gaming.Name = "Gaming";
-            Gaming.Size = new Size(192, 58);
-            Gaming.TabIndex = 29;
-            Gaming.Text = "Gaming";
-            Gaming.UseVisualStyleBackColor = false;
-            Gaming.Click += Gaming_Click;
+            this.Gaming.BackColor = System.Drawing.Color.White;
+            this.Gaming.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Gaming.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
+            this.Gaming.FlatAppearance.BorderSize = 5;
+            this.Gaming.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Gaming.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Gaming.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.Gaming.Location = new System.Drawing.Point(65, 277);
+            this.Gaming.Name = "Gaming";
+            this.Gaming.Size = new System.Drawing.Size(192, 58);
+            this.Gaming.TabIndex = 29;
+            this.Gaming.Text = "Gaming";
+            this.Gaming.UseVisualStyleBackColor = false;
+            this.Gaming.Click += new System.EventHandler(this.Gaming_Click);
             // 
             // Films
             // 
-            Films.BackColor = Color.White;
-            Films.Cursor = Cursors.Hand;
-            Films.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
-            Films.FlatAppearance.BorderSize = 5;
-            Films.FlatStyle = FlatStyle.Flat;
-            Films.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            Films.ForeColor = Color.FromArgb(179, 63, 38);
-            Films.Location = new Point(527, 159);
-            Films.Name = "Films";
-            Films.Size = new Size(192, 58);
-            Films.TabIndex = 34;
-            Films.Text = "Films";
-            Films.UseVisualStyleBackColor = false;
-            Films.Click += Films_Click;
+            this.Films.BackColor = System.Drawing.Color.White;
+            this.Films.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Films.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
+            this.Films.FlatAppearance.BorderSize = 5;
+            this.Films.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Films.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Films.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.Films.Location = new System.Drawing.Point(527, 159);
+            this.Films.Name = "Films";
+            this.Films.Size = new System.Drawing.Size(192, 58);
+            this.Films.TabIndex = 34;
+            this.Films.Text = "Films";
+            this.Films.UseVisualStyleBackColor = false;
+            this.Films.Click += new System.EventHandler(this.Films_Click);
             // 
             // Knowledge
             // 
-            Knowledge.BackColor = Color.White;
-            Knowledge.Cursor = Cursors.Hand;
-            Knowledge.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
-            Knowledge.FlatAppearance.BorderSize = 5;
-            Knowledge.FlatStyle = FlatStyle.Flat;
-            Knowledge.Font = new Font("Itim", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            Knowledge.ForeColor = Color.FromArgb(179, 63, 38);
-            Knowledge.Location = new Point(296, 159);
-            Knowledge.Name = "Knowledge";
-            Knowledge.Size = new Size(192, 58);
-            Knowledge.TabIndex = 33;
-            Knowledge.Text = "General Knowledge";
-            Knowledge.UseVisualStyleBackColor = false;
-            Knowledge.Click += Knowledge_Click;
+            this.Knowledge.BackColor = System.Drawing.Color.White;
+            this.Knowledge.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Knowledge.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
+            this.Knowledge.FlatAppearance.BorderSize = 5;
+            this.Knowledge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Knowledge.Font = new System.Drawing.Font("Itim", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Knowledge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.Knowledge.Location = new System.Drawing.Point(296, 159);
+            this.Knowledge.Name = "Knowledge";
+            this.Knowledge.Size = new System.Drawing.Size(192, 58);
+            this.Knowledge.TabIndex = 33;
+            this.Knowledge.Text = "General Knowledge";
+            this.Knowledge.UseVisualStyleBackColor = false;
             // 
             // Computers
             // 
-            Computers.BackColor = Color.White;
-            Computers.Cursor = Cursors.Hand;
-            Computers.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
-            Computers.FlatAppearance.BorderSize = 5;
-            Computers.FlatStyle = FlatStyle.Flat;
-            Computers.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            Computers.ForeColor = Color.FromArgb(179, 63, 38);
-            Computers.Location = new Point(65, 159);
-            Computers.Name = "Computers";
-            Computers.Size = new Size(192, 58);
-            Computers.TabIndex = 32;
-            Computers.Text = "Computers";
-            Computers.UseVisualStyleBackColor = false;
-            Computers.Click += Computers_Click;
+            this.Computers.BackColor = System.Drawing.Color.White;
+            this.Computers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Computers.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
+            this.Computers.FlatAppearance.BorderSize = 5;
+            this.Computers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Computers.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Computers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.Computers.Location = new System.Drawing.Point(65, 159);
+            this.Computers.Name = "Computers";
+            this.Computers.Size = new System.Drawing.Size(192, 58);
+            this.Computers.TabIndex = 32;
+            this.Computers.Text = "Computers";
+            this.Computers.UseVisualStyleBackColor = false;
+            this.Computers.Click += new System.EventHandler(this.Computers_Click);
             // 
             // Sports
             // 
-            Sports.BackColor = Color.White;
-            Sports.Cursor = Cursors.Hand;
-            Sports.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
-            Sports.FlatAppearance.BorderSize = 5;
-            Sports.FlatStyle = FlatStyle.Flat;
-            Sports.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            Sports.ForeColor = Color.FromArgb(179, 63, 38);
-            Sports.Location = new Point(527, 395);
-            Sports.Name = "Sports";
-            Sports.Size = new Size(192, 58);
-            Sports.TabIndex = 37;
-            Sports.Text = "Sports";
-            Sports.UseVisualStyleBackColor = false;
-            Sports.Click += Sports_Click;
+            this.Sports.BackColor = System.Drawing.Color.White;
+            this.Sports.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Sports.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
+            this.Sports.FlatAppearance.BorderSize = 5;
+            this.Sports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sports.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Sports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.Sports.Location = new System.Drawing.Point(527, 395);
+            this.Sports.Name = "Sports";
+            this.Sports.Size = new System.Drawing.Size(192, 58);
+            this.Sports.TabIndex = 37;
+            this.Sports.Text = "Sports";
+            this.Sports.UseVisualStyleBackColor = false;
+            this.Sports.Click += new System.EventHandler(this.Sports_Click);
             // 
             // Television
             // 
-            Television.BackColor = Color.White;
-            Television.Cursor = Cursors.Hand;
-            Television.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
-            Television.FlatAppearance.BorderSize = 5;
-            Television.FlatStyle = FlatStyle.Flat;
-            Television.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            Television.ForeColor = Color.FromArgb(179, 63, 38);
-            Television.Location = new Point(296, 395);
-            Television.Name = "Television";
-            Television.Size = new Size(192, 58);
-            Television.TabIndex = 36;
-            Television.Text = "Television";
-            Television.UseVisualStyleBackColor = false;
-            Television.Click += Television_Click;
+            this.Television.BackColor = System.Drawing.Color.White;
+            this.Television.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Television.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
+            this.Television.FlatAppearance.BorderSize = 5;
+            this.Television.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Television.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Television.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.Television.Location = new System.Drawing.Point(296, 395);
+            this.Television.Name = "Television";
+            this.Television.Size = new System.Drawing.Size(192, 58);
+            this.Television.TabIndex = 36;
+            this.Television.Text = "Television";
+            this.Television.UseVisualStyleBackColor = false;
+            this.Television.Click += new System.EventHandler(this.Television_Click);
             // 
             // History
             // 
-            History.BackColor = Color.White;
-            History.Cursor = Cursors.Hand;
-            History.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
-            History.FlatAppearance.BorderSize = 5;
-            History.FlatStyle = FlatStyle.Flat;
-            History.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            History.ForeColor = Color.FromArgb(179, 63, 38);
-            History.Location = new Point(65, 395);
-            History.Name = "History";
-            History.Size = new Size(192, 58);
-            History.TabIndex = 35;
-            History.Text = "History";
-            History.UseVisualStyleBackColor = false;
-            History.Click += History_Click;
+            this.History.BackColor = System.Drawing.Color.White;
+            this.History.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.History.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
+            this.History.FlatAppearance.BorderSize = 5;
+            this.History.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.History.Font = new System.Drawing.Font("Itim", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.History.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.History.Location = new System.Drawing.Point(65, 395);
+            this.History.Name = "History";
+            this.History.Size = new System.Drawing.Size(192, 58);
+            this.History.TabIndex = 35;
+            this.History.Text = "History";
+            this.History.UseVisualStyleBackColor = false;
+            this.History.Click += new System.EventHandler(this.History_Click);
             // 
             // Title
             // 
-            Title.AutoSize = true;
-            Title.BackColor = Color.Transparent;
-            Title.Font = new Font("Itim", 44F, FontStyle.Regular, GraphicsUnit.Point);
-            Title.ForeColor = Color.White;
-            Title.Location = new Point(257, 41);
-            Title.Name = "Title";
-            Title.Size = new Size(271, 71);
-            Title.TabIndex = 38;
-            Title.Text = "Wildcard!";
+            this.Title.AutoSize = true;
+            this.Title.BackColor = System.Drawing.Color.Transparent;
+            this.Title.Font = new System.Drawing.Font("Itim", 44F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Title.ForeColor = System.Drawing.Color.White;
+            this.Title.Location = new System.Drawing.Point(257, 41);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(271, 71);
+            this.Title.TabIndex = 38;
+            this.Title.Text = "Wildcard!";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Itim", 30F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(226, 478);
-            label1.Name = "label1";
-            label1.Size = new Size(332, 48);
-            label1.TabIndex = 39;
-            label1.Text = "Choose a category";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Itim", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(226, 478);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(332, 48);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Choose a category";
             // 
             // Categories
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(179, 63, 38);
-            BackgroundImage = Properties.Resources.Background;
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(784, 561);
-            Controls.Add(label1);
-            Controls.Add(Title);
-            Controls.Add(Sports);
-            Controls.Add(Television);
-            Controls.Add(History);
-            Controls.Add(Films);
-            Controls.Add(Knowledge);
-            Controls.Add(Computers);
-            Controls.Add(Music);
-            Controls.Add(Everything);
-            Controls.Add(Gaming);
-            Controls.Add(pictureBox1);
-            DoubleBuffered = true;
-            Name = "Categories";
-            Text = "Categories";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.BackgroundImage = global::Coursework.Properties.Resources.Background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Title);
+            this.Controls.Add(this.Sports);
+            this.Controls.Add(this.Television);
+            this.Controls.Add(this.History);
+            this.Controls.Add(this.Films);
+            this.Controls.Add(this.Knowledge);
+            this.Controls.Add(this.Computers);
+            this.Controls.Add(this.Music);
+            this.Controls.Add(this.Everything);
+            this.Controls.Add(this.Gaming);
+            this.Controls.Add(this.backButton);
+            this.DoubleBuffered = true;
+            this.Name = "Categories";
+            this.Text = "Categories";
+            ((System.ComponentModel.ISupportInitialize)(this.backButton)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private PictureBox backButton;
         private CoolButton Music;
         private CoolButton Everything;
         private CoolButton Gaming;

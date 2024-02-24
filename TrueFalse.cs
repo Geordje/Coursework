@@ -21,6 +21,9 @@ namespace Coursework
             currentQ = currentPassthrough;
             activePlayer = activePassthrough;
             questionText.Text = currentQ.question;
+            //timeLeft.Text = Ready.timeKeeperInstance.GetRemainingTimeInSeconds().ToString();
+            Title.Text = $"Question {currentQ.questionNo}";
+            Ready.timeKeeperInstance.TimeUpdated += TimerInstance_TimeUpdated;
         }
 
         private void trueCard_Click(object sender, EventArgs e)
@@ -42,9 +45,9 @@ namespace Coursework
             this.Close();
             QuestionData.PlayQuestion(Ready.thisQuestionData, activePlayer);
         }
-        public void updateTimer(int timePassthrough)
+        private void TimerInstance_TimeUpdated(object sender, int remainingTimeInSeconds)
         {
-            timeLeft.Text = timePassthrough.ToString();
+            timeLeft.Text = remainingTimeInSeconds.ToString();
         }
     }
 }

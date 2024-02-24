@@ -64,10 +64,6 @@
             startTimer.Interval = 1000;
             startTimer.Tick += startTimer_Tick;
             // 
-            // mainTimer
-            // 
-            mainTimer.Tick += mainTimer_Tick;
-            // 
             // Ready
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);

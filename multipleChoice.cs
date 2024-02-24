@@ -13,17 +13,21 @@ namespace Coursework
 {
     public partial class multipleChoice : Form
     {
+       
         Random randint = new Random();
         static int r;
         static player activePlayer;
         public multipleChoice(questionInfo currentQ, player activePassthrough)
         {
+            //subscribe to the TimeUpdated event
+            Ready.timeKeeperInstance.TimeUpdated += TimerInstance_TimeUpdated;
             r = randint.Next(0, 3);
             InitializeComponent();
             activePlayer = activePassthrough;
             questionText.Text = currentQ.question;
             Title.Text = $"Question {currentQ.questionNo}";
-            
+            timeLeft.Text = Ready.timeKeeperInstance.GetRemainingTimeInSeconds().ToString();
+
             if (r == 0)
             {
                 answer1txt.Text = currentQ.correct_answer;
@@ -93,6 +97,17 @@ namespace Coursework
             this.Close();
             QuestionData.PlayQuestion(Ready.thisQuestionData, activePlayer);
         }
+
+        void TimerInstance_TimeUpdated(object sender, int remainingTimeInSeconds)
+        {
+            timeLeft.Text = remainingTimeInSeconds.ToString();
+        }
+        void Timeup()
+        {
+            this.Close();
+            new Results(activePlayer, Categories.Difficulty).Show();
+        }
+
 
     }
 }

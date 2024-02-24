@@ -64,9 +64,9 @@
             timeLeft.BackColor = Color.Transparent;
             timeLeft.Font = new Font("Itim", 20F, FontStyle.Regular, GraphicsUnit.Point);
             timeLeft.ForeColor = Color.White;
-            timeLeft.Location = new Point(37, 45);
+            timeLeft.Location = new Point(25, 45);
             timeLeft.Name = "timeLeft";
-            timeLeft.Size = new Size(59, 33);
+            timeLeft.Size = new Size(83, 33);
             timeLeft.TabIndex = 49;
             timeLeft.Text = "150";
             timeLeft.TextAlign = ContentAlignment.MiddleCenter;
@@ -198,6 +198,7 @@
             BackgroundImage = Properties.Resources.Background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(784, 561);
+            Controls.Add(timeLeft);
             Controls.Add(answer4txt);
             Controls.Add(pictureBox6);
             Controls.Add(answer3txt);
@@ -207,7 +208,6 @@
             Controls.Add(answer1txt);
             Controls.Add(pictureBox3);
             Controls.Add(questionText);
-            Controls.Add(timeLeft);
             Controls.Add(Title);
             Controls.Add(pictureBox1);
             DoubleBuffered = true;

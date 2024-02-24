@@ -84,5 +84,11 @@
             Ready readyForm = new Ready(activePlayer, Difficulty, 11);
             readyForm.Show();
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Quiz_Type(activePlayer).Show();
+        }
     }
 }
