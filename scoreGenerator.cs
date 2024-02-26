@@ -10,8 +10,8 @@ namespace Coursework
 {
     internal class scoreGenerator
     {
-        static double difficultyMultiplier;
-        public static double GenerateScore(int timeSaved, string difficulty, player activePlayer)
+        public static double difficultyMultiplier;
+        public static int GenerateScore(int timeSaved, string difficulty, player activePlayer)
         {
             //generate a score based on time taken, difficulty and the players score
             
@@ -27,25 +27,7 @@ namespace Coursework
             {
                 difficultyMultiplier = 1.8;
             }
-            double finalScore = (activePlayer.currentScore * difficultyMultiplier * 90) * (1+ timeSaved * 0.005);
-
-            if (finalScore > activePlayer.topWildScore)
-            {
-                activePlayer.topWildScore = finalScore;
-            }
-            if(!File.Exists("scores.bin"))
-            {
-                BinaryWriter bw = new BinaryWriter(File.Open("scores.bin", FileMode.Create));
-                bw.Write(activePlayer.username + "," + finalScore);
-                bw.Close();
-            }
-            else
-            {
-                BinaryWriter bw = new BinaryWriter(File.Open("scores.bin", FileMode.Append));
-                bw.Write(activePlayer.username + "," + finalScore);
-                bw.Close();
-            }
-            return finalScore;
+            return Convert.ToInt32((activePlayer.currentScore * 90) * (1 + timeSaved * 0.02) * difficultyMultiplier);
         }
     }
 }

@@ -25,9 +25,14 @@ namespace Coursework
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            
+
             new Register().Show();
             this.Close();
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

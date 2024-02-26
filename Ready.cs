@@ -79,13 +79,16 @@ namespace Coursework
         }
         public Ready(player activePassthrough, string difficultyPassthrough)
         {
-            //ready screen for uncategorised
+            InitializeComponent();
+            //ready screen for wildcardUncategorised
+            startTimer.Start();
             activePlayer = activePassthrough;
             difficulty = difficultyPassthrough;
             seconds = 0;
-            InitializeComponent();
+
             var json = new WebClient().DownloadString($"https://opentdb.com/api.php?amount=20&difficulty={difficulty}");
             thisQuestionData = JsonConvert.DeserializeObject<QuestionData>(json);
+
             foreach (var questionItem in thisQuestionData.results)
             {
                 questionItem.question = HttpUtility.HtmlDecode(questionItem.question);
@@ -94,7 +97,6 @@ namespace Coursework
                 {
                     questionItem.incorrect_answers[i] = HttpUtility.HtmlDecode(questionItem.incorrect_answers[i]);
                 }
-
             }
         }
 

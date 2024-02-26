@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,10 +53,8 @@ namespace Coursework
                             {
                                 done = true;
                                 player activeplayer = new player(UsernameF.Text, PasswordF.Text);
-                                activeplayer.topWildScore = double.Parse(itemline.Split(',')[2]);
-                                activeplayer.topBaseScore = double.Parse(itemline.Split(',')[3]);
-                                activeplayer.defaultPFP = Convert.ToChar((itemline.Split(',')[4]));
-                                activeplayer.pathToCustomPFP = itemline.Split(',')[5];
+                                activeplayer.defaultPFP = Convert.ToChar((itemline.Split(',')[2]));
+                                activeplayer.pathToCustomPFP = itemline.Split(',')[3];
                                 new Home(activeplayer).Show();
                                 this.Close();
                             }
@@ -79,7 +78,7 @@ namespace Coursework
                     }
                 }
             }
-            catch (Exception)
+            catch (FileNotFoundException)
             {
 
                 DialogResult result = MessageBox.Show("Database not present, register a user?", "Database Missing", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
@@ -90,6 +89,44 @@ namespace Coursework
                 }
                 if (result == DialogResult.No)
                 {
+                }
+            }
+            catch (Exception)
+            {
+
+                DialogResult result = MessageBox.Show("Something went wrong with the database, would you like to try fix it?", "Database error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show($"Most commonly, database error occur because it is open in another program{Environment.NewLine}Be sure to check if this is the case before taking further measure", "File may be open elsewhere", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult result2 = MessageBox.Show("Wipe and recreate database?","Wipe Database", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                    if (result2 == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            File.WriteAllText("userDatabase.csv", "");
+                            this.Close();
+                            new Register().Show();
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show("Databaes cannot be changed, likely opened elsewhere", "Database cannot be changed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    if (result2 == DialogResult.No)
+                    {
+                        MessageBox.Show("If not wiped, database may need manual tweaking; open database?", "Open database?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
+                        {
+                            try
+                            {
+                                System.Diagnostics.Process.Start("explorer", "\"" + "userDatabase.csv" + "\"" );
+                            }
+                            catch (Exception)
+                            {
+                                MessageBox.Show("Database cannot be opened, likely opened elsewhere", "Database cannot be opened", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
                 }
             }
 

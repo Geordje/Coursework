@@ -29,189 +29,189 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterPFP));
-            this.Hippo = new System.Windows.Forms.PictureBox();
-            this.Tiger = new System.Windows.Forms.PictureBox();
-            this.Dog = new System.Windows.Forms.PictureBox();
-            this.Elephant = new System.Windows.Forms.PictureBox();
-            this.Pig = new System.Windows.Forms.PictureBox();
-            this.Custom = new System.Windows.Forms.PictureBox();
-            this.Confirm = new System.Windows.Forms.PictureBox();
-            this.ChoosePFP = new System.Windows.Forms.Label();
-            this.RegisterPrompt = new System.Windows.Forms.Label();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.Back = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.Hippo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tiger)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Dog)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Elephant)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pig)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Custom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Confirm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Back)).BeginInit();
-            this.SuspendLayout();
+            Hippo = new PictureBox();
+            Tiger = new PictureBox();
+            Dog = new PictureBox();
+            Elephant = new PictureBox();
+            Pig = new PictureBox();
+            Custom = new PictureBox();
+            Confirm = new PictureBox();
+            ChoosePFP = new Label();
+            RegisterPrompt = new Label();
+            openFileDialog1 = new OpenFileDialog();
+            Back = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)Hippo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Tiger).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Dog).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Elephant).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Pig).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Custom).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Confirm).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Back).BeginInit();
+            SuspendLayout();
             // 
             // Hippo
             // 
-            this.Hippo.BackColor = System.Drawing.Color.Transparent;
-            this.Hippo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Hippo.Image = global::Coursework.Properties.Resources.Hippo;
-            this.Hippo.Location = new System.Drawing.Point(53, 200);
-            this.Hippo.Name = "Hippo";
-            this.Hippo.Size = new System.Drawing.Size(116, 116);
-            this.Hippo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Hippo.TabIndex = 0;
-            this.Hippo.TabStop = false;
-            this.Hippo.Click += new System.EventHandler(this.Hippo_Click);
+            Hippo.BackColor = Color.Transparent;
+            Hippo.Cursor = Cursors.Hand;
+            Hippo.Image = Properties.Resources.Hippo;
+            Hippo.Location = new Point(53, 200);
+            Hippo.Name = "Hippo";
+            Hippo.Size = new Size(116, 116);
+            Hippo.SizeMode = PictureBoxSizeMode.Zoom;
+            Hippo.TabIndex = 0;
+            Hippo.TabStop = false;
+            Hippo.Click += Hippo_Click;
             // 
             // Tiger
             // 
-            this.Tiger.BackColor = System.Drawing.Color.Transparent;
-            this.Tiger.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Tiger.Image = global::Coursework.Properties.Resources.Tiger;
-            this.Tiger.Location = new System.Drawing.Point(193, 200);
-            this.Tiger.Name = "Tiger";
-            this.Tiger.Size = new System.Drawing.Size(116, 116);
-            this.Tiger.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Tiger.TabIndex = 1;
-            this.Tiger.TabStop = false;
-            this.Tiger.Click += new System.EventHandler(this.Tiger_Click);
+            Tiger.BackColor = Color.Transparent;
+            Tiger.Cursor = Cursors.Hand;
+            Tiger.Image = Properties.Resources.Tiger;
+            Tiger.Location = new Point(193, 200);
+            Tiger.Name = "Tiger";
+            Tiger.Size = new Size(116, 116);
+            Tiger.SizeMode = PictureBoxSizeMode.Zoom;
+            Tiger.TabIndex = 1;
+            Tiger.TabStop = false;
+            Tiger.Click += Tiger_Click;
             // 
             // Dog
             // 
-            this.Dog.BackColor = System.Drawing.Color.Transparent;
-            this.Dog.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Dog.Image = global::Coursework.Properties.Resources.Dog;
-            this.Dog.Location = new System.Drawing.Point(333, 200);
-            this.Dog.Name = "Dog";
-            this.Dog.Size = new System.Drawing.Size(116, 116);
-            this.Dog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Dog.TabIndex = 2;
-            this.Dog.TabStop = false;
-            this.Dog.Click += new System.EventHandler(this.Dog_Click);
+            Dog.BackColor = Color.Transparent;
+            Dog.Cursor = Cursors.Hand;
+            Dog.Image = Properties.Resources.Dog;
+            Dog.Location = new Point(333, 200);
+            Dog.Name = "Dog";
+            Dog.Size = new Size(116, 116);
+            Dog.SizeMode = PictureBoxSizeMode.Zoom;
+            Dog.TabIndex = 2;
+            Dog.TabStop = false;
+            Dog.Click += Dog_Click;
             // 
             // Elephant
             // 
-            this.Elephant.BackColor = System.Drawing.Color.Transparent;
-            this.Elephant.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Elephant.Image = global::Coursework.Properties.Resources.Elephant;
-            this.Elephant.Location = new System.Drawing.Point(473, 200);
-            this.Elephant.Name = "Elephant";
-            this.Elephant.Size = new System.Drawing.Size(116, 116);
-            this.Elephant.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Elephant.TabIndex = 3;
-            this.Elephant.TabStop = false;
-            this.Elephant.Click += new System.EventHandler(this.Elephant_Click);
+            Elephant.BackColor = Color.Transparent;
+            Elephant.Cursor = Cursors.Hand;
+            Elephant.Image = Properties.Resources.Elephant;
+            Elephant.Location = new Point(473, 200);
+            Elephant.Name = "Elephant";
+            Elephant.Size = new Size(116, 116);
+            Elephant.SizeMode = PictureBoxSizeMode.Zoom;
+            Elephant.TabIndex = 3;
+            Elephant.TabStop = false;
+            Elephant.Click += Elephant_Click;
             // 
             // Pig
             // 
-            this.Pig.BackColor = System.Drawing.Color.Transparent;
-            this.Pig.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Pig.Image = global::Coursework.Properties.Resources.Pig;
-            this.Pig.Location = new System.Drawing.Point(613, 200);
-            this.Pig.Name = "Pig";
-            this.Pig.Size = new System.Drawing.Size(116, 116);
-            this.Pig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Pig.TabIndex = 4;
-            this.Pig.TabStop = false;
-            this.Pig.Click += new System.EventHandler(this.Pig_Click);
+            Pig.BackColor = Color.Transparent;
+            Pig.Cursor = Cursors.Hand;
+            Pig.Image = Properties.Resources.Pig;
+            Pig.Location = new Point(613, 200);
+            Pig.Name = "Pig";
+            Pig.Size = new Size(116, 116);
+            Pig.SizeMode = PictureBoxSizeMode.Zoom;
+            Pig.TabIndex = 4;
+            Pig.TabStop = false;
+            Pig.Click += Pig_Click;
             // 
             // Custom
             // 
-            this.Custom.BackColor = System.Drawing.Color.Transparent;
-            this.Custom.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Custom.Image = global::Coursework.Properties.Resources.Plus;
-            this.Custom.Location = new System.Drawing.Point(53, 322);
-            this.Custom.Name = "Custom";
-            this.Custom.Size = new System.Drawing.Size(116, 116);
-            this.Custom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Custom.TabIndex = 5;
-            this.Custom.TabStop = false;
-            this.Custom.Click += new System.EventHandler(this.Custom_Click);
+            Custom.BackColor = Color.Transparent;
+            Custom.Cursor = Cursors.Hand;
+            Custom.Image = Properties.Resources.Plus;
+            Custom.Location = new Point(53, 322);
+            Custom.Name = "Custom";
+            Custom.Size = new Size(116, 116);
+            Custom.SizeMode = PictureBoxSizeMode.Zoom;
+            Custom.TabIndex = 5;
+            Custom.TabStop = false;
+            Custom.Click += Custom_Click;
             // 
             // Confirm
             // 
-            this.Confirm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Confirm.Image = global::Coursework.Properties.Resources.Tick;
-            this.Confirm.Location = new System.Drawing.Point(466, 322);
-            this.Confirm.Name = "Confirm";
-            this.Confirm.Size = new System.Drawing.Size(264, 116);
-            this.Confirm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Confirm.TabIndex = 6;
-            this.Confirm.TabStop = false;
-            this.Confirm.Click += new System.EventHandler(this.Confirm_Click);
+            Confirm.Cursor = Cursors.Hand;
+            Confirm.Image = Properties.Resources.Tick;
+            Confirm.Location = new Point(466, 322);
+            Confirm.Name = "Confirm";
+            Confirm.Size = new Size(264, 116);
+            Confirm.SizeMode = PictureBoxSizeMode.Zoom;
+            Confirm.TabIndex = 6;
+            Confirm.TabStop = false;
+            Confirm.Click += Confirm_Click;
             // 
             // ChoosePFP
             // 
-            this.ChoosePFP.AutoSize = true;
-            this.ChoosePFP.BackColor = System.Drawing.Color.Transparent;
-            this.ChoosePFP.Font = new System.Drawing.Font("Itim", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ChoosePFP.ForeColor = System.Drawing.Color.White;
-            this.ChoosePFP.Location = new System.Drawing.Point(61, 149);
-            this.ChoosePFP.Name = "ChoosePFP";
-            this.ChoosePFP.Size = new System.Drawing.Size(299, 33);
-            this.ChoosePFP.TabIndex = 7;
-            this.ChoosePFP.Text = "Choose a profile picture!";
+            ChoosePFP.AutoSize = true;
+            ChoosePFP.BackColor = Color.Transparent;
+            ChoosePFP.Font = new Font("Itim", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            ChoosePFP.ForeColor = Color.White;
+            ChoosePFP.Location = new Point(61, 149);
+            ChoosePFP.Name = "ChoosePFP";
+            ChoosePFP.Size = new Size(299, 33);
+            ChoosePFP.TabIndex = 7;
+            ChoosePFP.Text = "Choose a profile picture!";
             // 
             // RegisterPrompt
             // 
-            this.RegisterPrompt.AutoSize = true;
-            this.RegisterPrompt.BackColor = System.Drawing.Color.Transparent;
-            this.RegisterPrompt.Font = new System.Drawing.Font("Itim", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RegisterPrompt.ForeColor = System.Drawing.Color.White;
-            this.RegisterPrompt.Location = new System.Drawing.Point(281, 21);
-            this.RegisterPrompt.Name = "RegisterPrompt";
-            this.RegisterPrompt.Size = new System.Drawing.Size(220, 65);
-            this.RegisterPrompt.TabIndex = 8;
-            this.RegisterPrompt.Text = "Register";
+            RegisterPrompt.AutoSize = true;
+            RegisterPrompt.BackColor = Color.Transparent;
+            RegisterPrompt.Font = new Font("Itim", 40F, FontStyle.Regular, GraphicsUnit.Point);
+            RegisterPrompt.ForeColor = Color.White;
+            RegisterPrompt.Location = new Point(281, 21);
+            RegisterPrompt.Name = "RegisterPrompt";
+            RegisterPrompt.Size = new Size(220, 65);
+            RegisterPrompt.TabIndex = 8;
+            RegisterPrompt.Text = "Register";
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "Image files(*.jpeg; *.bmp; *.png; *.jpg)| *.jpeg; *.bmp; *.png; *.jpg";
-            this.openFileDialog1.Title = "Choose a profile picture!";
+            openFileDialog1.FileName = "openFileDialog1";
+            openFileDialog1.Filter = "Image files(*.jpeg; *.bmp; *.png; *.jpg)| *.jpeg; *.bmp; *.png; *.jpg";
+            openFileDialog1.Title = "Choose a profile picture!";
             // 
             // Back
             // 
-            this.Back.Image = ((System.Drawing.Image)(resources.GetObject("Back.Image")));
-            this.Back.Location = new System.Drawing.Point(12, 21);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(84, 79);
-            this.Back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Back.TabIndex = 19;
-            this.Back.TabStop = false;
-            this.Back.Click += new System.EventHandler(this.Back_Click);
+            Back.Cursor = Cursors.Hand;
+            Back.Image = (Image)resources.GetObject("Back.Image");
+            Back.Location = new Point(12, 21);
+            Back.Name = "Back";
+            Back.Size = new Size(84, 79);
+            Back.SizeMode = PictureBoxSizeMode.Zoom;
+            Back.TabIndex = 19;
+            Back.TabStop = false;
+            Back.Click += Back_Click;
             // 
             // RegisterPFP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(782, 553);
-            this.Controls.Add(this.Back);
-            this.Controls.Add(this.RegisterPrompt);
-            this.Controls.Add(this.ChoosePFP);
-            this.Controls.Add(this.Confirm);
-            this.Controls.Add(this.Custom);
-            this.Controls.Add(this.Pig);
-            this.Controls.Add(this.Elephant);
-            this.Controls.Add(this.Dog);
-            this.Controls.Add(this.Tiger);
-            this.Controls.Add(this.Hippo);
-            this.Font = new System.Drawing.Font("Itim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Name = "RegisterPFP";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "RegsiterPFP";
-            ((System.ComponentModel.ISupportInitialize)(this.Hippo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Tiger)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Dog)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Elephant)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Pig)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Custom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Confirm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Back)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 14F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(179, 63, 38);
+            ClientSize = new Size(782, 553);
+            Controls.Add(Back);
+            Controls.Add(RegisterPrompt);
+            Controls.Add(ChoosePFP);
+            Controls.Add(Confirm);
+            Controls.Add(Custom);
+            Controls.Add(Pig);
+            Controls.Add(Elephant);
+            Controls.Add(Dog);
+            Controls.Add(Tiger);
+            Controls.Add(Hippo);
+            Font = new Font("Itim", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Name = "RegisterPFP";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "RegsiterPFP";
+            ((System.ComponentModel.ISupportInitialize)Hippo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Tiger).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Dog).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Elephant).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Pig).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Custom).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Confirm).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Back).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

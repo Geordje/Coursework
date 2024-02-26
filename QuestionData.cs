@@ -48,13 +48,29 @@ namespace Coursework
 
                 }
             }
-            catch(Exception)
+            catch(ArgumentOutOfRangeException)
+            {
+
+                QuizEnd(activePlayer);
+            }
+            catch (Exception e)
             {
                 Ready.timeKeeperInstance.Stop();
-                new Results(activePlayer, Categories.Difficulty).Show();
-
+                MessageBox.Show($"An error has occured, please try again{Environment.NewLine}Error: {e}","Error with quiz");
+                new Home(activePlayer).Show();
+                qnum = 1;
             }
 
+        }
+        private static void QuizEnd(player activePlayer)
+        {
+            Ready.timeKeeperInstance.Stop();
+            new Results(activePlayer, Categories.Difficulty).Show();
+            qnum = 1;
+        }
+        public static void TimeUp(player activePlayer)
+        {
+            QuizEnd(activePlayer);
         }
 
     }
@@ -68,5 +84,4 @@ namespace Coursework
         public List<string> incorrect_answers { get; set; }
         public int questionNo { get; set; }
     }
-
 }

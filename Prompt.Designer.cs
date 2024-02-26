@@ -28,83 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Title = new System.Windows.Forms.Label();
-            this.Subheading = new System.Windows.Forms.Label();
-            this.registerButton = new Coursework.CoolButton();
-            this.logInButton = new Coursework.CoolButton();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Prompt));
+            Title = new Label();
+            Subheading = new Label();
+            registerButton = new CoolButton();
+            logInButton = new CoolButton();
+            close = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)close).BeginInit();
+            SuspendLayout();
             // 
             // Title
             // 
-            this.Title.AutoSize = true;
-            this.Title.BackColor = System.Drawing.Color.Transparent;
-            this.Title.Font = new System.Drawing.Font("Itim", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Title.ForeColor = System.Drawing.Color.White;
-            this.Title.Location = new System.Drawing.Point(216, 68);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(352, 81);
-            this.Title.TabIndex = 2;
-            this.Title.Text = "Trivia Deck";
+            Title.AutoSize = true;
+            Title.BackColor = Color.Transparent;
+            Title.Font = new Font("Itim", 50F, FontStyle.Regular, GraphicsUnit.Point);
+            Title.ForeColor = Color.White;
+            Title.Location = new Point(216, 68);
+            Title.Name = "Title";
+            Title.Size = new Size(352, 81);
+            Title.TabIndex = 2;
+            Title.Text = "Trivia Deck";
             // 
             // Subheading
             // 
-            this.Subheading.AutoSize = true;
-            this.Subheading.BackColor = System.Drawing.Color.Transparent;
-            this.Subheading.Font = new System.Drawing.Font("Itim", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Subheading.ForeColor = System.Drawing.Color.White;
-            this.Subheading.Location = new System.Drawing.Point(225, 140);
-            this.Subheading.Name = "Subheading";
-            this.Subheading.Size = new System.Drawing.Size(335, 40);
-            this.Subheading.TabIndex = 3;
-            this.Subheading.Text = "Welcome To The Quiz!";
+            Subheading.AutoSize = true;
+            Subheading.BackColor = Color.Transparent;
+            Subheading.Font = new Font("Itim", 25F, FontStyle.Regular, GraphicsUnit.Point);
+            Subheading.ForeColor = Color.White;
+            Subheading.Location = new Point(225, 140);
+            Subheading.Name = "Subheading";
+            Subheading.Size = new Size(335, 40);
+            Subheading.TabIndex = 3;
+            Subheading.Text = "Welcome To The Quiz!";
             // 
             // registerButton
             // 
-            this.registerButton.BackColor = System.Drawing.Color.White;
-            this.registerButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
-            this.registerButton.FlatAppearance.BorderSize = 5;
-            this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registerButton.Font = new System.Drawing.Font("Itim", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.registerButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.registerButton.Location = new System.Drawing.Point(135, 348);
-            this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(195, 67);
-            this.registerButton.TabIndex = 4;
-            this.registerButton.Text = "Register";
-            this.registerButton.UseVisualStyleBackColor = false;
-            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
+            registerButton.BackColor = Color.White;
+            registerButton.Cursor = Cursors.Hand;
+            registerButton.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
+            registerButton.FlatAppearance.BorderSize = 5;
+            registerButton.FlatStyle = FlatStyle.Flat;
+            registerButton.Font = new Font("Itim", 25F, FontStyle.Regular, GraphicsUnit.Point);
+            registerButton.ForeColor = Color.FromArgb(179, 63, 38);
+            registerButton.Location = new Point(135, 348);
+            registerButton.Name = "registerButton";
+            registerButton.Size = new Size(195, 67);
+            registerButton.TabIndex = 4;
+            registerButton.Text = "Register";
+            registerButton.UseVisualStyleBackColor = false;
+            registerButton.Click += registerButton_Click;
             // 
             // logInButton
             // 
-            this.logInButton.BackColor = System.Drawing.Color.White;
-            this.logInButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
-            this.logInButton.FlatAppearance.BorderSize = 5;
-            this.logInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logInButton.Font = new System.Drawing.Font("Itim", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.logInButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.logInButton.Location = new System.Drawing.Point(454, 348);
-            this.logInButton.Name = "logInButton";
-            this.logInButton.Size = new System.Drawing.Size(195, 67);
-            this.logInButton.TabIndex = 5;
-            this.logInButton.Text = "Log In";
-            this.logInButton.UseVisualStyleBackColor = false;
-            this.logInButton.Click += new System.EventHandler(this.logInButton_Click);
+            logInButton.BackColor = Color.White;
+            logInButton.Cursor = Cursors.Hand;
+            logInButton.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
+            logInButton.FlatAppearance.BorderSize = 5;
+            logInButton.FlatStyle = FlatStyle.Flat;
+            logInButton.Font = new Font("Itim", 25F, FontStyle.Regular, GraphicsUnit.Point);
+            logInButton.ForeColor = Color.FromArgb(179, 63, 38);
+            logInButton.Location = new Point(454, 348);
+            logInButton.Name = "logInButton";
+            logInButton.Size = new Size(195, 67);
+            logInButton.TabIndex = 5;
+            logInButton.Text = "Log In";
+            logInButton.UseVisualStyleBackColor = false;
+            logInButton.Click += logInButton_Click;
+            // 
+            // close
+            // 
+            close.Cursor = Cursors.Hand;
+            close.Image = (Image)resources.GetObject("close.Image");
+            close.Location = new Point(12, 47);
+            close.Name = "close";
+            close.Size = new Size(84, 79);
+            close.SizeMode = PictureBoxSizeMode.Zoom;
+            close.TabIndex = 19;
+            close.TabStop = false;
+            close.Click += close_Click;
             // 
             // Prompt
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.logInButton);
-            this.Controls.Add(this.registerButton);
-            this.Controls.Add(this.Subheading);
-            this.Controls.Add(this.Title);
-            this.Name = "Prompt";
-            this.Text = "Prompt";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(179, 63, 38);
+            ClientSize = new Size(784, 561);
+            Controls.Add(close);
+            Controls.Add(logInButton);
+            Controls.Add(registerButton);
+            Controls.Add(Subheading);
+            Controls.Add(Title);
+            Name = "Prompt";
+            Text = "Prompt";
+            ((System.ComponentModel.ISupportInitialize)close).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -113,5 +131,6 @@
         private Label Subheading;
         private CoolButton registerButton;
         private CoolButton logInButton;
+        private PictureBox close;
     }
 }

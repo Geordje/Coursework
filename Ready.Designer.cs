@@ -52,7 +52,7 @@
             // 
             pictureBox1.BackColor = Color.FromArgb(179, 63, 38);
             pictureBox1.Image = Properties.Resources.loadinggif;
-            pictureBox1.Location = new Point(128, 83);
+            pictureBox1.Location = new Point(118, 83);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(549, 354);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -72,8 +72,9 @@
             ClientSize = new Size(784, 561);
             Controls.Add(readyText);
             Controls.Add(pictureBox1);
+            Cursor = Cursors.AppStarting;
             Name = "Ready";
-            Text = "Ready";
+            Text = " ";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }

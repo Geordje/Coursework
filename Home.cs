@@ -18,7 +18,6 @@ namespace Coursework
         {
             InitializeComponent();
             activePlayer = activePassthrough;
-            MessageBox.Show(activePlayer.topWildScore.ToString());
             usernameSpot.Text = activePlayer.username;
             switch (activePlayer.defaultPFP)
             {

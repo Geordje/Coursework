@@ -54,7 +54,7 @@
             questionText.ForeColor = Color.White;
             questionText.Location = new Point(40, 127);
             questionText.Name = "questionText";
-            questionText.Size = new Size(704, 149);
+            questionText.Size = new Size(704, 199);
             questionText.TabIndex = 50;
             questionText.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco";
             questionText.TextAlign = ContentAlignment.MiddleCenter;
@@ -64,11 +64,11 @@
             timeLeft.BackColor = Color.Transparent;
             timeLeft.Font = new Font("Itim", 20F, FontStyle.Regular, GraphicsUnit.Point);
             timeLeft.ForeColor = Color.White;
-            timeLeft.Location = new Point(25, 45);
+            timeLeft.Location = new Point(38, 45);
             timeLeft.Name = "timeLeft";
-            timeLeft.Size = new Size(83, 33);
+            timeLeft.Size = new Size(57, 33);
             timeLeft.TabIndex = 49;
-            timeLeft.Text = "150";
+            timeLeft.Text = "90";
             timeLeft.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Title
@@ -108,11 +108,12 @@
             // answer1txt
             // 
             answer1txt.BackColor = Color.White;
-            answer1txt.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            answer1txt.Cursor = Cursors.Hand;
+            answer1txt.Font = new Font("Itim", 14F, FontStyle.Regular, GraphicsUnit.Point);
             answer1txt.ForeColor = Color.FromArgb(179, 63, 38);
-            answer1txt.Location = new Point(48, 356);
+            answer1txt.Location = new Point(48, 353);
             answer1txt.Name = "answer1txt";
-            answer1txt.Size = new Size(125, 160);
+            answer1txt.Size = new Size(125, 168);
             answer1txt.TabIndex = 55;
             answer1txt.Text = "Answer1";
             answer1txt.TextAlign = ContentAlignment.MiddleCenter;
@@ -121,11 +122,12 @@
             // answer2txt
             // 
             answer2txt.BackColor = Color.White;
-            answer2txt.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            answer2txt.Cursor = Cursors.Hand;
+            answer2txt.Font = new Font("Itim", 14F, FontStyle.Regular, GraphicsUnit.Point);
             answer2txt.ForeColor = Color.FromArgb(179, 63, 38);
-            answer2txt.Location = new Point(236, 356);
+            answer2txt.Location = new Point(236, 353);
             answer2txt.Name = "answer2txt";
-            answer2txt.Size = new Size(125, 160);
+            answer2txt.Size = new Size(125, 168);
             answer2txt.TabIndex = 57;
             answer2txt.Text = "Answer2";
             answer2txt.TextAlign = ContentAlignment.MiddleCenter;
@@ -145,11 +147,12 @@
             // answer3txt
             // 
             answer3txt.BackColor = Color.White;
-            answer3txt.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            answer3txt.Cursor = Cursors.Hand;
+            answer3txt.Font = new Font("Itim", 14F, FontStyle.Regular, GraphicsUnit.Point);
             answer3txt.ForeColor = Color.FromArgb(179, 63, 38);
-            answer3txt.Location = new Point(424, 356);
+            answer3txt.Location = new Point(424, 353);
             answer3txt.Name = "answer3txt";
-            answer3txt.Size = new Size(125, 160);
+            answer3txt.Size = new Size(125, 168);
             answer3txt.TabIndex = 59;
             answer3txt.Text = "Answer3";
             answer3txt.TextAlign = ContentAlignment.MiddleCenter;
@@ -169,11 +172,12 @@
             // answer4txt
             // 
             answer4txt.BackColor = Color.White;
-            answer4txt.Font = new Font("Itim", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            answer4txt.Cursor = Cursors.Hand;
+            answer4txt.Font = new Font("Itim", 14F, FontStyle.Regular, GraphicsUnit.Point);
             answer4txt.ForeColor = Color.FromArgb(179, 63, 38);
-            answer4txt.Location = new Point(612, 356);
+            answer4txt.Location = new Point(612, 353);
             answer4txt.Name = "answer4txt";
-            answer4txt.Size = new Size(125, 160);
+            answer4txt.Size = new Size(125, 168);
             answer4txt.TabIndex = 61;
             answer4txt.Text = "Answer4";
             answer4txt.TextAlign = ContentAlignment.MiddleCenter;

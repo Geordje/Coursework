@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             correctIndicator = new Label();
             timeTaken = new Label();
             Title = new Label();
@@ -38,6 +39,9 @@
             pictureBox3 = new PictureBox();
             returnHome = new CoolButton();
             placingAgain = new Label();
+            topScore = new Label();
+            difficultyMultiplierSlot = new Label();
+            toolTip1 = new ToolTip(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
@@ -94,12 +98,13 @@
             scoreIndicator.BackColor = Color.Transparent;
             scoreIndicator.Font = new Font("Itim", 35F, FontStyle.Regular, GraphicsUnit.Point);
             scoreIndicator.ForeColor = Color.White;
-            scoreIndicator.Location = new Point(187, 175);
+            scoreIndicator.Location = new Point(217, 186);
             scoreIndicator.Name = "scoreIndicator";
-            scoreIndicator.Size = new Size(410, 92);
+            scoreIndicator.Size = new Size(350, 67);
             scoreIndicator.TabIndex = 51;
             scoreIndicator.Text = "Score:  XXXX";
             scoreIndicator.TextAlign = ContentAlignment.MiddleCenter;
+            scoreIndicator.MouseHover += scoreIndicator_MouseHover;
             // 
             // label4
             // 
@@ -107,7 +112,7 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Itim", 25F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(320, 267);
+            label4.Location = new Point(320, 279);
             label4.Name = "label4";
             label4.Size = new Size(145, 40);
             label4.TabIndex = 52;
@@ -140,6 +145,7 @@
             // returnHome
             // 
             returnHome.BackColor = Color.White;
+            returnHome.Cursor = Cursors.Hand;
             returnHome.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
             returnHome.FlatAppearance.BorderSize = 5;
             returnHome.FlatStyle = FlatStyle.Flat;
@@ -167,6 +173,34 @@
             placingAgain.Text = "150";
             placingAgain.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // topScore
+            // 
+            topScore.BackColor = Color.Transparent;
+            topScore.Font = new Font("Itim", 17F, FontStyle.Regular, GraphicsUnit.Point);
+            topScore.ForeColor = Color.White;
+            topScore.Location = new Point(513, 9);
+            topScore.Name = "topScore";
+            topScore.Size = new Size(266, 71);
+            topScore.TabIndex = 57;
+            topScore.Text = "placeholder";
+            topScore.TextAlign = ContentAlignment.TopRight;
+            // 
+            // difficultyMultiplierSlot
+            // 
+            difficultyMultiplierSlot.BackColor = Color.Transparent;
+            difficultyMultiplierSlot.Font = new Font("Itim", 17F, FontStyle.Regular, GraphicsUnit.Point);
+            difficultyMultiplierSlot.ForeColor = Color.White;
+            difficultyMultiplierSlot.Location = new Point(492, 65);
+            difficultyMultiplierSlot.Name = "difficultyMultiplierSlot";
+            difficultyMultiplierSlot.Size = new Size(287, 71);
+            difficultyMultiplierSlot.TabIndex = 58;
+            difficultyMultiplierSlot.Text = "Difficulty Multiplier: 1.4x";
+            difficultyMultiplierSlot.TextAlign = ContentAlignment.TopRight;
+            // 
+            // toolTip1
+            // 
+            toolTip1.Popup += toolTip1_Popup;
+            // 
             // Results
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -175,6 +209,8 @@
             BackgroundImage = Properties.Resources.Background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(784, 561);
+            Controls.Add(difficultyMultiplierSlot);
+            Controls.Add(topScore);
             Controls.Add(placingAgain);
             Controls.Add(returnHome);
             Controls.Add(pictureBox3);
@@ -206,5 +242,8 @@
         private PictureBox pictureBox3;
         private CoolButton returnHome;
         private Label placingAgain;
+        private Label topScore;
+        private Label difficultyMultiplierSlot;
+        private ToolTip toolTip1;
     }
 }

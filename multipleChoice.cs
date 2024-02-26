@@ -17,16 +17,19 @@ namespace Coursework
         Random randint = new Random();
         static int r;
         static player activePlayer;
+        private static bool timeUpRan = false;
         public multipleChoice(questionInfo currentQ, player activePassthrough)
         {
-            //subscribe to the TimeUpdated event
+            //subscribe to events
             Ready.timeKeeperInstance.TimeUpdated += TimerInstance_TimeUpdated;
+            Ready.timeKeeperInstance.TimeUp += Timeup;
             r = randint.Next(0, 3);
             InitializeComponent();
             activePlayer = activePassthrough;
             questionText.Text = currentQ.question;
             Title.Text = $"Question {currentQ.questionNo}";
             timeLeft.Text = Ready.timeKeeperInstance.GetRemainingTimeInSeconds().ToString();
+
 
             if (r == 0)
             {
@@ -102,12 +105,15 @@ namespace Coursework
         {
             timeLeft.Text = remainingTimeInSeconds.ToString();
         }
-        void Timeup()
+        void Timeup(object sender, EventArgs e)
         {
-            this.Close();
-            new Results(activePlayer, Categories.Difficulty).Show();
+           if (timeUpRan == false)
+            {
+                this.Close();
+                QuestionData.TimeUp(activePlayer);
+                timeUpRan = true;
+            }
         }
-
 
     }
 }

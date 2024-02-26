@@ -18,7 +18,7 @@ namespace Coursework
         {
            InitializeComponent();
            activePlayer = activePassthrough;
-            activePlayer.defaultPFP = 'x';
+           activePlayer.defaultPFP = 'x';
 
         }
         private void Back_Click(object sender, EventArgs e)
@@ -118,10 +118,10 @@ namespace Coursework
                 string filePath = "userDatabase.csv";
                 string itemline = File.ReadLines(filePath).ToArray().Last();
                 string[] items = itemline.Split(",");
-                items[4] = activePlayer.defaultPFP.ToString();
+                items[2] = activePlayer.defaultPFP.ToString();
                 if (activePlayer.pathToCustomPFP != null)
                 {
-                    items[5] = activePlayer.pathToCustomPFP;
+                    items[3] = activePlayer.pathToCustomPFP;
                 }
                 var lines = File.ReadAllLines("userDatabase.csv");
                 File.WriteAllLines("userDatabase.csv", lines.Take(lines.Length - 1).ToArray());

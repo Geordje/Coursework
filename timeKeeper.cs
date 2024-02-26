@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace Coursework
     public class timeKeeper
     {
         private System.Windows.Forms.Timer timer;
-        public static int remainingTimeInSeconds = 180;
+        private static int remainingTimeInSeconds;
         public event EventHandler TimeUp;
         public event EventHandler<int> TimeUpdated;
 
@@ -27,18 +28,19 @@ namespace Coursework
             //if the time is up, stop the timer and invoke the TimeUp event
             if (remainingTimeInSeconds == 0)
             {
-                timer.Stop();
                 TimeUp.Invoke(this, EventArgs.Empty);
-                return;
             }
-            //otherwise, decrement the time and invoke the TimeUpdated event
-            remainingTimeInSeconds--;
-            TimeUpdated.Invoke(this, remainingTimeInSeconds);
+            else
+            {
+                remainingTimeInSeconds--;
+                TimeUpdated.Invoke(this, remainingTimeInSeconds);
+            }   
         }
 
         public void Start()
         {
             timer.Start();
+            remainingTimeInSeconds = 90;
         }
 
         public void Stop()
