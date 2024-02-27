@@ -19,7 +19,7 @@ namespace Coursework
     {
         player activePlayer;
         int timeLeft = Ready.timeKeeperInstance.GetRemainingTimeInSeconds();
-        string popUpText = $"Your score is calculated by the time taken to complete the quiz, the difficulty of the quiz, and the amount of questions answered correctly!\nThis is done using the following formula: (Correct Guesses x 90) x(1 + Time Saved x 0.02) x Difficulty Multiplier";
+        string popUpText = $"Your score is calculated by the time taken to complete the quiz, the difficulty of the quiz, and the amount of questions answered correctly!\nThis is done using the following formula: (Correct Guesses x 90) x(1 + Time Saved x 0.01) x Difficulty Multiplier";
         private bool isShowing = false;
         public Results(player activePassthrough, string difficulty)
         {
@@ -43,6 +43,9 @@ namespace Coursework
             }
             activePlayer.UpdateScoresBinFile(thisScore, Quiz_Type.mode);
             difficultyMultiplierSlot.Text = $"Difficulty Multiplier: {scoreGenerator.difficultyMultiplier}X";
+
+            
+
         }
 
         private void returnHome_Click(object sender, EventArgs e)

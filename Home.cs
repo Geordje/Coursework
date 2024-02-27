@@ -13,7 +13,7 @@ namespace Coursework
     public partial class Home : Form
     {
         public static player activePlayer;
-        
+
         public Home(player activePassthrough)
         {
             InitializeComponent();
@@ -42,17 +42,18 @@ namespace Coursework
                     break;
             }
             ProfilePicture.Image = activePlayer.ProfilePicture;
+            QuizNumberIndicator.Text = $"Quizzes completed: {activePlayer.runCount}";
         }
         private void logOut_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show($"Log out of {activePlayer.username}?", "Are you sure?", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show($"Log out of {activePlayer.username}?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 this.Close();
                 new Prompt().Show();
             }
             else { }
-            
+
 
         }
 
@@ -60,6 +61,12 @@ namespace Coursework
         {
             Hide();
             new Quiz_Type(activePlayer).Show();
+        }
+
+        private void profilesButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Profiles(activePlayer).Show();
         }
     }
 }

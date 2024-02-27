@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Coursework.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,12 +18,10 @@ namespace Coursework
         Random randint = new Random();
         static int r;
         static player activePlayer;
-        private static bool timeUpRan = false;
         public multipleChoice(questionInfo currentQ, player activePassthrough)
         {
             //subscribe to events
             Ready.timeKeeperInstance.TimeUpdated += TimerInstance_TimeUpdated;
-            Ready.timeKeeperInstance.TimeUp += Timeup;
             r = randint.Next(0, 3);
             InitializeComponent();
             activePlayer = activePassthrough;
@@ -67,6 +66,10 @@ namespace Coursework
             {
                 activePlayer.Accumulate();
             }
+            else
+            {
+                new System.Media.SoundPlayer(Resources.Incorrect).Play();
+            }
             this.Close();
             QuestionData.PlayQuestion(Ready.thisQuestionData, activePlayer);
         }
@@ -76,6 +79,10 @@ namespace Coursework
             if (r == 1)
             {
                 activePlayer.Accumulate();
+            }
+            else
+            {
+                new System.Media.SoundPlayer(Resources.Incorrect).Play();
             }
             this.Close();
             QuestionData.PlayQuestion(Ready.thisQuestionData, activePlayer);
@@ -87,6 +94,10 @@ namespace Coursework
             {
                 activePlayer.Accumulate();
             }
+            else
+            {
+                new System.Media.SoundPlayer(Resources.Incorrect).Play();
+            }
             this.Close();
             QuestionData.PlayQuestion(Ready.thisQuestionData, activePlayer);
         }
@@ -97,6 +108,10 @@ namespace Coursework
             {
                 activePlayer.Accumulate();
             }
+            else
+            {
+                new System.Media.SoundPlayer(Resources.Incorrect).Play();
+            }
             this.Close();
             QuestionData.PlayQuestion(Ready.thisQuestionData, activePlayer);
         }
@@ -104,15 +119,6 @@ namespace Coursework
         void TimerInstance_TimeUpdated(object sender, int remainingTimeInSeconds)
         {
             timeLeft.Text = remainingTimeInSeconds.ToString();
-        }
-        void Timeup(object sender, EventArgs e)
-        {
-           if (timeUpRan == false)
-            {
-                this.Close();
-                QuestionData.TimeUp(activePlayer);
-                timeUpRan = true;
-            }
         }
 
     }

@@ -55,6 +55,7 @@ namespace Coursework
                                 player activeplayer = new player(UsernameF.Text, PasswordF.Text);
                                 activeplayer.defaultPFP = Convert.ToChar((itemline.Split(',')[2]));
                                 activeplayer.pathToCustomPFP = itemline.Split(',')[3];
+                                activeplayer.runCount = Convert.ToInt32(itemline.Split(',')[4]);
                                 new Home(activeplayer).Show();
                                 this.Close();
                             }

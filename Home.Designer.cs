@@ -30,12 +30,13 @@
         {
             Title = new Label();
             logInButton = new CoolButton();
-            registerButton = new CoolButton();
+            profilesButton = new CoolButton();
             coolButton1 = new CoolButton();
             Start = new CoolButton();
             logOut = new PictureBox();
             ProfilePicture = new PictureBox();
             usernameSpot = new Label();
+            QuizNumberIndicator = new Label();
             ((System.ComponentModel.ISupportInitialize)logOut).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ProfilePicture).BeginInit();
             SuspendLayout();
@@ -68,21 +69,22 @@
             logInButton.Text = "Leaderboard";
             logInButton.UseVisualStyleBackColor = false;
             // 
-            // registerButton
+            // profilesButton
             // 
-            registerButton.BackColor = Color.White;
-            registerButton.Cursor = Cursors.Hand;
-            registerButton.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
-            registerButton.FlatAppearance.BorderSize = 5;
-            registerButton.FlatStyle = FlatStyle.Flat;
-            registerButton.Font = new Font("Itim", 25F, FontStyle.Regular, GraphicsUnit.Point);
-            registerButton.ForeColor = Color.FromArgb(179, 63, 38);
-            registerButton.Location = new Point(90, 355);
-            registerButton.Name = "registerButton";
-            registerButton.Size = new Size(254, 73);
-            registerButton.TabIndex = 14;
-            registerButton.Text = "Profiles";
-            registerButton.UseVisualStyleBackColor = false;
+            profilesButton.BackColor = Color.White;
+            profilesButton.Cursor = Cursors.Hand;
+            profilesButton.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
+            profilesButton.FlatAppearance.BorderSize = 5;
+            profilesButton.FlatStyle = FlatStyle.Flat;
+            profilesButton.Font = new Font("Itim", 25F, FontStyle.Regular, GraphicsUnit.Point);
+            profilesButton.ForeColor = Color.FromArgb(179, 63, 38);
+            profilesButton.Location = new Point(90, 355);
+            profilesButton.Name = "profilesButton";
+            profilesButton.Size = new Size(254, 73);
+            profilesButton.TabIndex = 14;
+            profilesButton.Text = "Profiles";
+            profilesButton.UseVisualStyleBackColor = false;
+            profilesButton.Click += profilesButton_Click;
             // 
             // coolButton1
             // 
@@ -151,19 +153,33 @@
             usernameSpot.Text = "NamePlaceholder";
             usernameSpot.TextAlign = ContentAlignment.MiddleRight;
             // 
+            // QuizNumberIndicator
+            // 
+            QuizNumberIndicator.AutoEllipsis = true;
+            QuizNumberIndicator.BackColor = Color.Transparent;
+            QuizNumberIndicator.Font = new Font("Itim", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            QuizNumberIndicator.ForeColor = Color.White;
+            QuizNumberIndicator.Location = new Point(6, 511);
+            QuizNumberIndicator.Name = "QuizNumberIndicator";
+            QuizNumberIndicator.Size = new Size(258, 41);
+            QuizNumberIndicator.TabIndex = 21;
+            QuizNumberIndicator.Text = "Youve done XX quizzes!";
+            QuizNumberIndicator.TextAlign = ContentAlignment.MiddleLeft;
+            // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(179, 63, 38);
             ClientSize = new Size(784, 561);
+            Controls.Add(QuizNumberIndicator);
             Controls.Add(usernameSpot);
             Controls.Add(ProfilePicture);
             Controls.Add(logOut);
             Controls.Add(Start);
             Controls.Add(coolButton1);
             Controls.Add(logInButton);
-            Controls.Add(registerButton);
+            Controls.Add(profilesButton);
             Controls.Add(Title);
             Name = "Home";
             Text = "Home";
@@ -177,11 +193,12 @@
 
         private Label Title;
         private CoolButton logInButton;
-        private CoolButton registerButton;
+        private CoolButton profilesButton;
         private CoolButton coolButton1;
         private CoolButton Start;
         private PictureBox logOut;
         private PictureBox ProfilePicture;
         private Label usernameSpot;
+        private Label QuizNumberIndicator;
     }
 }

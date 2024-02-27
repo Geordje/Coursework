@@ -19,12 +19,14 @@ namespace Coursework
         public char defaultPFP { get; set; }
         public string pathToCustomPFP { get; set; }
         public Image ProfilePicture { get; set; }
+        public int runCount { get; set; }
 
         public player(string name, string pass)
         {
             this.username = name;
             this.password = pass;
             this.currentScore = 0;
+            this.runCount = 0;
             this.pathToCustomPFP = "none";
             using (StreamReader reader = new StreamReader("scores.bin"))
             {
@@ -51,10 +53,29 @@ namespace Coursework
 
 
 
+
+
         }
         public void AccumulativeReset()
         {
             this.currentScore = 0;
+            this.runCount++;
+            var lines = File.ReadAllLines("userDatabase.csv").ToList();
+            for (int i = 0; i < lines.Count; i++)
+            {
+                var columns = lines[i].Split(',');
+
+                if (columns[0] == this.username) // assuming username is in the first column
+                {
+                    int lastColumnIndex = columns.Length - 1;
+                    columns[lastColumnIndex] = (this.runCount).ToString();
+
+                    lines[i] = string.Join(",", columns);
+                    break;
+                }
+            }
+
+            File.WriteAllLines("userDatabase.csv", lines);
         }
         public void Accumulate()
         {
@@ -63,11 +84,11 @@ namespace Coursework
         }
         public void CreateDatabaseForPlayer()
         {
-            File.WriteAllText("userDatabase.csv",(this.username.ToLower() + "," + this.password + "," + this.defaultPFP + "," + this.pathToCustomPFP + Environment.NewLine));
+            File.WriteAllText("userDatabase.csv", (this.username.ToLower() + "," + this.password + "," + this.defaultPFP + "," + this.pathToCustomPFP + "," + "0" + Environment.NewLine));
         }
         public void AddToDatabase()
         {
-            File.AppendAllText("userDatabase.csv",(this.username.ToLower() + "," + this.password + ","  + this.defaultPFP + "," + this.pathToCustomPFP + Environment.NewLine));
+            File.AppendAllText("userDatabase.csv",(this.username.ToLower() + "," + this.password + ","  + this.defaultPFP + "," + this.pathToCustomPFP + ","+ "0" + Environment.NewLine));
         }
 
 
@@ -119,8 +140,9 @@ namespace Coursework
                 File.Delete("scores.bin");
                 File.Move(tempFile, "scores.bin");
             }
-                
             
+
+
         }
     }
 }

@@ -14,7 +14,6 @@ namespace Coursework
     {
         static questionInfo currentQ;
         static player activePlayer;
-        private static bool timeUpRan = false; 
 
         public TrueFalse(questionInfo currentPassthrough, player activePassthrough)
         {
@@ -24,7 +23,6 @@ namespace Coursework
             questionText.Text = currentQ.question;
             Title.Text = $"Question {currentQ.questionNo}";
             Ready.timeKeeperInstance.TimeUpdated += TimerInstance_TimeUpdated;
-            Ready.timeKeeperInstance.TimeUp += Timeup;
             timeLeft.Text = Ready.timeKeeperInstance.GetRemainingTimeInSeconds().ToString();
         }
 
@@ -50,15 +48,6 @@ namespace Coursework
         private void TimerInstance_TimeUpdated(object sender, int remainingTimeInSeconds)
         {
             timeLeft.Text = remainingTimeInSeconds.ToString();
-        }
-        void Timeup(object sender, EventArgs e)
-        {
-            if (timeUpRan == false)
-            {
-                this.Close();
-                QuestionData.TimeUp(activePlayer);
-                timeUpRan = true;
-            }
         }
     }
 }

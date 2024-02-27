@@ -25,14 +25,15 @@ namespace Coursework
         public static string difficulty;
         public static int category;
         private static int seconds;
+        public static bool timeOutRan = false;
         public static QuestionData thisQuestionData = new QuestionData();
         public static timeKeeper timeKeeperInstance = new timeKeeper();
-
 
         public Ready(player activePassthrough)
         {
             activePlayer = activePassthrough;
             //ready screen for the base quiz
+            timeKeeperInstance.TimeUp += TimeUp;
             InitializeComponent();
             string[] line;
             FileStream aFile = new FileStream("baseQuiz.csv", FileMode.Open);
@@ -58,6 +59,7 @@ namespace Coursework
         {
             InitializeComponent();
             //ready screen for wildcard
+            timeKeeperInstance.TimeUp += TimeUp;
             startTimer.Start();
             activePlayer = activePassthrough;
             difficulty = difficultyPassthrough;
@@ -81,6 +83,7 @@ namespace Coursework
         {
             InitializeComponent();
             //ready screen for wildcardUncategorised
+            timeKeeperInstance.TimeUp += TimeUp;
             startTimer.Start();
             activePlayer = activePassthrough;
             difficulty = difficultyPassthrough;
@@ -114,12 +117,17 @@ namespace Coursework
             }
 
             else
-            {
-                timeKeeperInstance.Start();
+            { 
                 startTimer.Stop();
+                timeKeeperInstance.Start();
                 QuestionData.PlayQuestion(thisQuestionData, activePlayer);
+                new System.Media.SoundPlayer(Resources.Game_Start).Play();
                 this.Hide();
             }
+        }
+        void TimeUp(object sender, EventArgs e)
+        {
+            QuestionData.QuizEnd(activePlayer);
         }
     }
 }

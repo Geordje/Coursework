@@ -120,6 +120,15 @@ namespace Coursework.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Done {
+            get {
+                return ResourceManager.GetStream("Done", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap Elephant {
@@ -156,6 +165,15 @@ namespace Coursework.Properties {
             get {
                 object obj = ResourceManager.GetObject("False1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Game_Start {
+            get {
+                return ResourceManager.GetStream("Game_Start", resourceCulture);
             }
         }
         
@@ -216,6 +234,15 @@ namespace Coursework.Properties {
             get {
                 object obj = ResourceManager.GetObject("image (9)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        public static System.IO.UnmanagedMemoryStream Incorrect {
+            get {
+                return ResourceManager.GetStream("Incorrect", resourceCulture);
             }
         }
         

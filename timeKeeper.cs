@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Coursework.Properties;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -28,19 +29,28 @@ namespace Coursework
             //if the time is up, stop the timer and invoke the TimeUp event
             if (remainingTimeInSeconds == 0)
             {
+                timer.Stop();
                 TimeUp.Invoke(this, EventArgs.Empty);
             }
             else
             {
                 remainingTimeInSeconds--;
                 TimeUpdated.Invoke(this, remainingTimeInSeconds);
+                if (remainingTimeInSeconds == 10)
+                {
+                    PlaySound();
+                }
             }   
         }
 
         public void Start()
         {
             timer.Start();
-            remainingTimeInSeconds = 90;
+            remainingTimeInSeconds = 150;
+        }
+        public void PlaySound()
+        {
+            new System.Media.SoundPlayer(Resources.ticking_clock_10_seconds).Play();
         }
 
         public void Stop()

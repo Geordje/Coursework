@@ -15,9 +15,10 @@ namespace Coursework
         public static Form newMulti;
         public static Form newTrueFalse;
         static int qnum=1;
-        
+        private static List<Form> openForms = new List<Form>();
         public static void PlayQuestion(QuestionData thisQuestionData, player activePlayer)
         {
+
             try
             {
                 timeKeeper timeKeeperInstance = Ready.timeKeeperInstance;
@@ -29,14 +30,16 @@ namespace Coursework
                 thisQuestionData.results.RemoveAt(r);
                 if (currentQ.type == "multiple")
                 {
-                    newMulti = new multipleChoice(currentQ, activePlayer);
-                    newMulti.Show();
+                    var multipleChoiceForm = new multipleChoice(currentQ, activePlayer);
+                    openForms.Add(multipleChoiceForm);
+                    multipleChoiceForm.Show();
 
                 }
                 else if (currentQ.type == "boolean")
                 {
-                    newTrueFalse = new TrueFalse(currentQ, activePlayer);
-                    newTrueFalse.Show();
+                    var trueeFalseForm = new TrueFalse(currentQ, activePlayer);
+                    openForms.Add(trueeFalseForm);
+                    trueeFalseForm.Show();
 
                 }
                 else if (currentQ.type == "written")
@@ -62,15 +65,14 @@ namespace Coursework
             }
 
         }
-        private static void QuizEnd(player activePlayer)
+        public static void QuizEnd(player activePlayer)
         {
-            Ready.timeKeeperInstance.Stop();
+            foreach (var form in openForms)
+            {
+                form.Close();
+            }
             new Results(activePlayer, Categories.Difficulty).Show();
             qnum = 1;
-        }
-        public static void TimeUp(player activePlayer)
-        {
-            QuizEnd(activePlayer);
         }
 
     }
