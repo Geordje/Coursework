@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Coursework.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,6 +33,10 @@ namespace Coursework
             {
                 activePlayer.Accumulate();
             }
+            else
+            {
+                new System.Media.SoundPlayer(Resources.Incorrect).Play();
+            }
             this.Close();
             QuestionData.PlayQuestion(Ready.thisQuestionData, activePlayer);
         }
@@ -41,6 +46,10 @@ namespace Coursework
             if (currentQ.correct_answer == "False")
             {
                 activePlayer.Accumulate();
+            }
+            else
+            {
+                new System.Media.SoundPlayer(Resources.Incorrect).Play();
             }
             this.Close();
             QuestionData.PlayQuestion(Ready.thisQuestionData, activePlayer);

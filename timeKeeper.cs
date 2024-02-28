@@ -61,6 +61,5 @@ namespace Coursework
         {
             return remainingTimeInSeconds;
         }
-        
     }
 }

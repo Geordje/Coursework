@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Coursework;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,14 +19,12 @@ namespace Coursework
         public player activePlayer;
         public RegisterPFP(player activePassthrough)
         {
-           InitializeComponent();
-           activePlayer = activePassthrough;
-           activePlayer.defaultPFP = 'x';
-
+            InitializeComponent();
+            activePlayer = activePassthrough;
+            activePlayer.defaultPFP = 'x'; 
         }
         private void Back_Click(object sender, EventArgs e)
         {
-            //doesn't work as of yet, known bug
             DialogResult result = MessageBox.Show($"Cancel registering this user?", "Changed your mind?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
@@ -33,8 +34,8 @@ namespace Coursework
                 new Prompt().Show();
 
             }
-
         }
+
         private void Hippo_Click(object sender, EventArgs e)
         {
             activePlayer.defaultPFP = 'h';
@@ -43,10 +44,10 @@ namespace Coursework
             Elephant.BackColor = Color.Transparent;
             Dog.BackColor = Color.Transparent;
             Pig.BackColor = Color.Transparent;
-            Pig.BackColor = Color.Transparent;
             Custom.BackColor = Color.Transparent;
             activePlayer.ProfilePicture = Properties.Resources.Hippo;
         }
+
         private void Tiger_Click(object sender, EventArgs e)
         {
             activePlayer.defaultPFP = 't';
@@ -106,35 +107,46 @@ namespace Coursework
                 Dog.BackColor = Color.Transparent;
                 Pig.BackColor = Color.Transparent;
                 Custom.BackColor = Color.White;
-                activePlayer.pathToCustomPFP = openFileDialog1.FileName;
-                Custom.Image = new Bitmap(activePlayer.pathToCustomPFP);
+                Custom.Image = activePlayer.ProfilePicture = Bitmap.FromFile($@"{openFileDialog1.FileName}");
             }
         }
 
-        private void Confirm_Click(object sender, EventArgs e)
+        public void Confirm_Click(object sender, EventArgs e)
         {
             if (activePlayer.defaultPFP != 'x')
             {
-                string filePath = "userDatabase.csv";
-                string itemline = File.ReadLines(filePath).ToArray().Last();
-                string[] items = itemline.Split(",");
-                items[2] = activePlayer.defaultPFP.ToString();
-                if (activePlayer.pathToCustomPFP != null)
-                {
-                    items[3] = activePlayer.pathToCustomPFP;
-                }
+
                 var lines = File.ReadAllLines("userDatabase.csv");
-                File.WriteAllLines("userDatabase.csv", lines.Take(lines.Length - 1).ToArray());
-                File.AppendAllText(filePath, string.Join(",", items) + Environment.NewLine);
-                Hide();
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    if (lines[i].Contains(activePlayer.username))
+                    {
+                        lines[i].Split(",")[2] = activePlayer.defaultPFP.ToString();
+                    }
+                }
+                File.WriteAllLines("userDatabase.csv", lines);
+                if(activePlayer.defaultPFP == 'c')
+                {
+                    string pathToImage = openFileDialog1.FileName;
+                    string destinationFilePath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ProfilePictures"), activePlayer.username.ToLower()+ Path.GetExtension(openFileDialog1.FileName));
+                    File.Copy(pathToImage, destinationFilePath, true);
+                }
                 new Home(activePlayer).Show();
+                this.Close();
+
             }
             else
             {
                 DialogResult result = MessageBox.Show("Please select or upload a picture!", "Error continuing", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 if (result == DialogResult.OK) { }
             }
-            
         }
     }
 }
+                
+            
+    
+
+
+
+

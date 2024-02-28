@@ -33,6 +33,7 @@ namespace Coursework
         {
             activePlayer = activePassthrough;
             //ready screen for the base quiz
+            timeKeeperInstance = new timeKeeper();
             timeKeeperInstance.TimeUp += TimeUp;
             InitializeComponent();
             string[] line;
@@ -59,6 +60,7 @@ namespace Coursework
         {
             InitializeComponent();
             //ready screen for wildcard
+            timeKeeperInstance = new timeKeeper();
             timeKeeperInstance.TimeUp += TimeUp;
             startTimer.Start();
             activePlayer = activePassthrough;
@@ -83,6 +85,7 @@ namespace Coursework
         {
             InitializeComponent();
             //ready screen for wildcardUncategorised
+            timeKeeperInstance = new timeKeeper();
             timeKeeperInstance.TimeUp += TimeUp;
             startTimer.Start();
             activePlayer = activePassthrough;

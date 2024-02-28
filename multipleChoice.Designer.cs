@@ -28,201 +28,204 @@
         /// </summary>
         private void InitializeComponent()
         {
-            questionText = new Label();
-            timeLeft = new Label();
-            Title = new Label();
-            pictureBox1 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            answer1txt = new Label();
-            answer2txt = new Label();
-            pictureBox4 = new PictureBox();
-            answer3txt = new Label();
-            pictureBox5 = new PictureBox();
-            answer4txt = new Label();
-            pictureBox6 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            SuspendLayout();
+            this.questionText = new System.Windows.Forms.Label();
+            this.timeLeft = new System.Windows.Forms.Label();
+            this.Title = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.answer1txt = new System.Windows.Forms.Label();
+            this.answer2txt = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.answer3txt = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.answer4txt = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.SuspendLayout();
             // 
             // questionText
             // 
-            questionText.BackColor = Color.Transparent;
-            questionText.Font = new Font("Itim", 30F, FontStyle.Regular, GraphicsUnit.Point);
-            questionText.ForeColor = Color.White;
-            questionText.Location = new Point(40, 127);
-            questionText.Name = "questionText";
-            questionText.Size = new Size(704, 199);
-            questionText.TabIndex = 50;
-            questionText.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco";
-            questionText.TextAlign = ContentAlignment.MiddleCenter;
+            this.questionText.BackColor = System.Drawing.Color.Transparent;
+            this.questionText.Font = new System.Drawing.Font("Itim", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.questionText.ForeColor = System.Drawing.Color.White;
+            this.questionText.Location = new System.Drawing.Point(40, 105);
+            this.questionText.Name = "questionText";
+            this.questionText.Size = new System.Drawing.Size(704, 221);
+            this.questionText.TabIndex = 50;
+            this.questionText.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
+    "cididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud" +
+    " exercitation ullamco";
+            this.questionText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timeLeft
             // 
-            timeLeft.BackColor = Color.Transparent;
-            timeLeft.Font = new Font("Itim", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            timeLeft.ForeColor = Color.White;
-            timeLeft.Location = new Point(38, 45);
-            timeLeft.Name = "timeLeft";
-            timeLeft.Size = new Size(57, 33);
-            timeLeft.TabIndex = 49;
-            timeLeft.Text = "90";
-            timeLeft.TextAlign = ContentAlignment.MiddleCenter;
+            this.timeLeft.BackColor = System.Drawing.Color.Transparent;
+            this.timeLeft.Font = new System.Drawing.Font("Itim", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.timeLeft.ForeColor = System.Drawing.Color.White;
+            this.timeLeft.Location = new System.Drawing.Point(38, 45);
+            this.timeLeft.Name = "timeLeft";
+            this.timeLeft.Size = new System.Drawing.Size(57, 33);
+            this.timeLeft.TabIndex = 49;
+            this.timeLeft.Text = "150";
+            this.timeLeft.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Title
             // 
-            Title.BackColor = Color.Transparent;
-            Title.Font = new Font("Itim", 46F, FontStyle.Regular, GraphicsUnit.Point);
-            Title.ForeColor = Color.White;
-            Title.Location = new Point(194, 28);
-            Title.Name = "Title";
-            Title.Size = new Size(397, 74);
-            Title.TabIndex = 48;
-            Title.Text = "Question x.";
-            Title.TextAlign = ContentAlignment.MiddleCenter;
+            this.Title.BackColor = System.Drawing.Color.Transparent;
+            this.Title.Font = new System.Drawing.Font("Itim", 46F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Title.ForeColor = System.Drawing.Color.White;
+            this.Title.Location = new System.Drawing.Point(194, 28);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(397, 74);
+            this.Title.TabIndex = 48;
+            this.Title.Text = "Question x.";
+            this.Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = Properties.Resources.image__8_;
-            pictureBox1.Location = new Point(0, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(131, 90);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 47;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Coursework.Properties.Resources.image__8_;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(131, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 47;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBox3
             // 
-            pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.Image = Properties.Resources.Card;
-            pictureBox3.Location = new Point(35, 339);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(150, 194);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 51;
-            pictureBox3.TabStop = false;
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::Coursework.Properties.Resources.Card;
+            this.pictureBox3.Location = new System.Drawing.Point(35, 339);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(150, 194);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 51;
+            this.pictureBox3.TabStop = false;
             // 
             // answer1txt
             // 
-            answer1txt.BackColor = Color.White;
-            answer1txt.Cursor = Cursors.Hand;
-            answer1txt.Font = new Font("Itim", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            answer1txt.ForeColor = Color.FromArgb(179, 63, 38);
-            answer1txt.Location = new Point(48, 353);
-            answer1txt.Name = "answer1txt";
-            answer1txt.Size = new Size(125, 168);
-            answer1txt.TabIndex = 55;
-            answer1txt.Text = "Answer1";
-            answer1txt.TextAlign = ContentAlignment.MiddleCenter;
-            answer1txt.Click += answer1txt_Click;
+            this.answer1txt.BackColor = System.Drawing.Color.White;
+            this.answer1txt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.answer1txt.Font = new System.Drawing.Font("Itim", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.answer1txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.answer1txt.Location = new System.Drawing.Point(48, 353);
+            this.answer1txt.Name = "answer1txt";
+            this.answer1txt.Size = new System.Drawing.Size(125, 168);
+            this.answer1txt.TabIndex = 55;
+            this.answer1txt.Text = "Answer1";
+            this.answer1txt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.answer1txt.Click += new System.EventHandler(this.answer1txt_Click);
             // 
             // answer2txt
             // 
-            answer2txt.BackColor = Color.White;
-            answer2txt.Cursor = Cursors.Hand;
-            answer2txt.Font = new Font("Itim", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            answer2txt.ForeColor = Color.FromArgb(179, 63, 38);
-            answer2txt.Location = new Point(236, 353);
-            answer2txt.Name = "answer2txt";
-            answer2txt.Size = new Size(125, 168);
-            answer2txt.TabIndex = 57;
-            answer2txt.Text = "Answer2";
-            answer2txt.TextAlign = ContentAlignment.MiddleCenter;
-            answer2txt.Click += answer2txt_Click;
+            this.answer2txt.BackColor = System.Drawing.Color.White;
+            this.answer2txt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.answer2txt.Font = new System.Drawing.Font("Itim", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.answer2txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.answer2txt.Location = new System.Drawing.Point(236, 353);
+            this.answer2txt.Name = "answer2txt";
+            this.answer2txt.Size = new System.Drawing.Size(125, 168);
+            this.answer2txt.TabIndex = 57;
+            this.answer2txt.Text = "Answer2";
+            this.answer2txt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.answer2txt.Click += new System.EventHandler(this.answer2txt_Click);
             // 
             // pictureBox4
             // 
-            pictureBox4.BackColor = Color.Transparent;
-            pictureBox4.Image = Properties.Resources.Card;
-            pictureBox4.Location = new Point(223, 339);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(150, 194);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 56;
-            pictureBox4.TabStop = false;
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = global::Coursework.Properties.Resources.Card;
+            this.pictureBox4.Location = new System.Drawing.Point(223, 339);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(150, 194);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 56;
+            this.pictureBox4.TabStop = false;
             // 
             // answer3txt
             // 
-            answer3txt.BackColor = Color.White;
-            answer3txt.Cursor = Cursors.Hand;
-            answer3txt.Font = new Font("Itim", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            answer3txt.ForeColor = Color.FromArgb(179, 63, 38);
-            answer3txt.Location = new Point(424, 353);
-            answer3txt.Name = "answer3txt";
-            answer3txt.Size = new Size(125, 168);
-            answer3txt.TabIndex = 59;
-            answer3txt.Text = "Answer3";
-            answer3txt.TextAlign = ContentAlignment.MiddleCenter;
-            answer3txt.Click += answer3txt_Click;
+            this.answer3txt.BackColor = System.Drawing.Color.White;
+            this.answer3txt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.answer3txt.Font = new System.Drawing.Font("Itim", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.answer3txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.answer3txt.Location = new System.Drawing.Point(424, 353);
+            this.answer3txt.Name = "answer3txt";
+            this.answer3txt.Size = new System.Drawing.Size(125, 168);
+            this.answer3txt.TabIndex = 59;
+            this.answer3txt.Text = "Answer3";
+            this.answer3txt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.answer3txt.Click += new System.EventHandler(this.answer3txt_Click);
             // 
             // pictureBox5
             // 
-            pictureBox5.BackColor = Color.Transparent;
-            pictureBox5.Image = Properties.Resources.Card;
-            pictureBox5.Location = new Point(411, 339);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(150, 194);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 58;
-            pictureBox5.TabStop = false;
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.Image = global::Coursework.Properties.Resources.Card;
+            this.pictureBox5.Location = new System.Drawing.Point(411, 339);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(150, 194);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 58;
+            this.pictureBox5.TabStop = false;
             // 
             // answer4txt
             // 
-            answer4txt.BackColor = Color.White;
-            answer4txt.Cursor = Cursors.Hand;
-            answer4txt.Font = new Font("Itim", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            answer4txt.ForeColor = Color.FromArgb(179, 63, 38);
-            answer4txt.Location = new Point(612, 353);
-            answer4txt.Name = "answer4txt";
-            answer4txt.Size = new Size(125, 168);
-            answer4txt.TabIndex = 61;
-            answer4txt.Text = "Answer4";
-            answer4txt.TextAlign = ContentAlignment.MiddleCenter;
-            answer4txt.Click += answer4txt_Click;
+            this.answer4txt.BackColor = System.Drawing.Color.White;
+            this.answer4txt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.answer4txt.Font = new System.Drawing.Font("Itim", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.answer4txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.answer4txt.Location = new System.Drawing.Point(612, 353);
+            this.answer4txt.Name = "answer4txt";
+            this.answer4txt.Size = new System.Drawing.Size(125, 168);
+            this.answer4txt.TabIndex = 61;
+            this.answer4txt.Text = "Answer4";
+            this.answer4txt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.answer4txt.Click += new System.EventHandler(this.answer4txt_Click);
             // 
             // pictureBox6
             // 
-            pictureBox6.BackColor = Color.Transparent;
-            pictureBox6.Image = Properties.Resources.Card;
-            pictureBox6.Location = new Point(599, 339);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(150, 194);
-            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox6.TabIndex = 60;
-            pictureBox6.TabStop = false;
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.Image = global::Coursework.Properties.Resources.Card;
+            this.pictureBox6.Location = new System.Drawing.Point(599, 339);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(150, 194);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 60;
+            this.pictureBox6.TabStop = false;
             // 
             // multipleChoice
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(179, 63, 38);
-            BackgroundImage = Properties.Resources.Background;
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(784, 561);
-            Controls.Add(timeLeft);
-            Controls.Add(answer4txt);
-            Controls.Add(pictureBox6);
-            Controls.Add(answer3txt);
-            Controls.Add(pictureBox5);
-            Controls.Add(answer2txt);
-            Controls.Add(pictureBox4);
-            Controls.Add(answer1txt);
-            Controls.Add(pictureBox3);
-            Controls.Add(questionText);
-            Controls.Add(Title);
-            Controls.Add(pictureBox1);
-            DoubleBuffered = true;
-            Name = "multipleChoice";
-            Text = "multipleChoice";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
+            this.BackgroundImage = global::Coursework.Properties.Resources.Background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.timeLeft);
+            this.Controls.Add(this.answer4txt);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.answer3txt);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.answer2txt);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.answer1txt);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.questionText);
+            this.Controls.Add(this.Title);
+            this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
+            this.Name = "multipleChoice";
+            this.Text = "multipleChoice";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

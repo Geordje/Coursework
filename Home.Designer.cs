@@ -37,6 +37,7 @@
             ProfilePicture = new PictureBox();
             usernameSpot = new Label();
             QuizNumberIndicator = new Label();
+            openFileDialog1 = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)logOut).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ProfilePicture).BeginInit();
             SuspendLayout();
@@ -139,6 +140,7 @@
             ProfilePicture.SizeMode = PictureBoxSizeMode.Zoom;
             ProfilePicture.TabIndex = 19;
             ProfilePicture.TabStop = false;
+            ProfilePicture.Click += ProfilePicture_Click;
             // 
             // usernameSpot
             // 
@@ -165,6 +167,12 @@
             QuizNumberIndicator.TabIndex = 21;
             QuizNumberIndicator.Text = "Youve done XX quizzes!";
             QuizNumberIndicator.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            openFileDialog1.Filter = "Image files(*.jpeg; *.bmp; *.png; *.jpg)| *.jpeg; *.bmp; *.png; *.jpg";
+            openFileDialog1.Title = "Choose a profile picture!";
             // 
             // Home
             // 
@@ -200,5 +208,6 @@
         private PictureBox ProfilePicture;
         private Label usernameSpot;
         private Label QuizNumberIndicator;
+        private OpenFileDialog openFileDialog1;
     }
 }

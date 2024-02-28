@@ -24,7 +24,7 @@ namespace Coursework
             var dt = new DataTable();
             dt.Columns.Add("Profile Picture", typeof(Image));
             dt.Columns.Add("Username");
-            dt.Columns.Add("Quizzes Done");
+            dt.Columns.Add("Quizzes Done", typeof(int));
 
             using (var parser = new Microsoft.VisualBasic.FileIO.TextFieldParser("userDatabase.csv"))
             {
@@ -36,7 +36,7 @@ namespace Coursework
                     if (fields != null)
                     {
                         string username = fields[0];
-                        string score = fields[4];
+                        string score = fields[3];
                         Image? profilePicture = null;
                         switch (fields[2])
                         {
@@ -56,7 +56,11 @@ namespace Coursework
                                 profilePicture = Properties.Resources.Pig;
                                 break;
                             case "c":
-                                profilePicture = Image.FromFile(fields[3]);
+                                var files = System.IO.Directory.EnumerateFiles(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ProfilePictures"), $"{username.ToLower()}*", SearchOption.TopDirectoryOnly);
+                                using (Image temp = Image.FromFile(files.First()))
+                                {
+                                    profilePicture = new Bitmap(temp);
+                                }
                                 break;
                         }
                         // Resize the image if it is not null
@@ -94,7 +98,7 @@ namespace Coursework
             byAlphabet.BackColor = Color.FromArgb(255, 182, 166);
             byAge.BackColor = Color.FromArgb(255, 182, 166);
             var dt = (DataTable)profileGrid.DataSource;
-            dt.DefaultView.Sort = "Quizzes Done DESC";
+            dt.DefaultView.Sort = ("Quizzes Done DESC");
             profileGrid.DataSource = dt.DefaultView.ToTable();
         }
 
@@ -114,6 +118,58 @@ namespace Coursework
             byAlphabet.BackColor = Color.FromArgb(255, 182, 166);
             byRuns.BackColor = Color.FromArgb(255, 182, 166);
             LoadDataFromCsv();
+        }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Home(activePlayer).Show();
+        }
+
+        private void editEnable_Click(object sender, EventArgs e)
+        {
+            new AdminPopup().Show();
+        }
+
+        private void Submit_Click(object sender, EventArgs e)
+        {
+            //LoadDataFromCsv();
+            Submit.Hide();
+            profileGrid.AllowUserToAddRows = false;
+            profileGrid.AllowUserToDeleteRows = false;
+            profileGrid.ShowEditingIcon = false;
+            profileGrid.ReadOnly = true;
+            profileGrid.Columns[1].ReadOnly = false;
+            editEnable.Show();
+            byAlphabet.Show();
+            byRuns.Show();
+            byAge.Show();
+            byAge.BackColor = Color.FromArgb(255, 182, 166);
+            byAlphabet.BackColor = Color.White;
+            byRuns.BackColor = Color.White;
+            profileGrid.Columns.Remove("passwords");
+
+        }
+        public void EditEnable()
+        {
+            LoadDataFromCsv();
+            Submit.Show();
+            profileGrid.AllowUserToAddRows = true;
+            profileGrid.AllowUserToDeleteRows = true;
+            profileGrid.ShowEditingIcon = true;
+            profileGrid.ReadOnly = false;
+            profileGrid.Columns[1].ReadOnly = true;
+            editEnable.Visible = false;
+            byAge.BackColor = Color.White;
+            byAlphabet.BackColor = Color.FromArgb(255, 182, 166);
+            byRuns.BackColor = Color.FromArgb(255, 182, 166);
+            byAlphabet.Visible = false;
+            byRuns.Visible = false;
+            byAge.Visible = false;
+            profileGrid.Columns.Add("passwords", "Password");
+
+
+
         }
     }
 }

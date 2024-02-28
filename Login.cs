@@ -13,6 +13,7 @@ namespace Coursework
 {
     public partial class Login : Form
     {
+        public static player activeplayer;
         public Login()
         {
             InitializeComponent();
@@ -40,24 +41,24 @@ namespace Coursework
         {
             bool done = false;
             int i = 0;
-
             try
             {
                 foreach (string itemline in File.ReadLines("userDatabase.csv"))
                 {
-                    if (!done)
+                    if (!done && itemline != null)
                     {
-                        if (itemline.Split(',')[0] == UsernameF.Text)
+                        if (itemline.Split(',')[0] == UsernameF.Text.ToLower())
                         {
                             if (itemline.Split(',')[1] == PasswordF.Text)
                             {
                                 done = true;
-                                player activeplayer = new player(UsernameF.Text, PasswordF.Text);
+                                activeplayer = new player(UsernameF.Text, PasswordF.Text);
                                 activeplayer.defaultPFP = Convert.ToChar((itemline.Split(',')[2]));
-                                activeplayer.pathToCustomPFP = itemline.Split(',')[3];
-                                activeplayer.runCount = Convert.ToInt32(itemline.Split(',')[4]);
-                                new Home(activeplayer).Show();
+                                //activeplayer.pathToCustomPFP = itemline.Split(',')[3];
+                                activeplayer.runCount = Convert.ToInt32(itemline.Split(',')[3]);
                                 this.Close();
+                                done = true; break;
+
                             }
                         }
                     }
@@ -130,7 +131,10 @@ namespace Coursework
                     }
                 }
             }
-
+            if (done)
+            {
+                new Home(activeplayer).Show();
+            }
         }
     }
 }

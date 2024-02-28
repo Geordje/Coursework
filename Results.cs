@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Coursework.Properties;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,13 +24,15 @@ namespace Coursework
         private bool isShowing = false;
         public Results(player activePassthrough, string difficulty)
         {
+            Ready.timeKeeperInstance.Stop();
             int thisScore = scoreGenerator.GenerateScore(timeLeft, difficulty, activePassthrough);
             InitializeComponent();
             activePlayer = activePassthrough;
             correctIndicator.Text = $"{activePlayer.currentScore.ToString()}/20";
             activePlayer.AccumulativeReset();
-            timeTaken.Text = (90 - timeLeft).ToString();
+            timeTaken.Text = (150 - timeLeft).ToString();
             scoreIndicator.Text = $"Score: {thisScore.ToString()}";
+            new System.Media.SoundPlayer(Resources.Done).Play();
             if (thisScore > activePlayer.topWildScore)
             {
                 topScore.Text = $"New top score!";

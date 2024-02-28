@@ -17,7 +17,6 @@ namespace Coursework
         public int topWildScore { get; set; }
         public int topBaseScore { get; set; }
         public char defaultPFP { get; set; }
-        public string pathToCustomPFP { get; set; }
         public Image ProfilePicture { get; set; }
         public int runCount { get; set; }
 
@@ -27,7 +26,7 @@ namespace Coursework
             this.password = pass;
             this.currentScore = 0;
             this.runCount = 0;
-            this.pathToCustomPFP = "none";
+            if (!File.Exists(@"scores.bin")) { File.WriteAllText("scores.bin", ""); }
             using (StreamReader reader = new StreamReader("scores.bin"))
             {
                 string line;
@@ -58,6 +57,7 @@ namespace Coursework
         }
         public void AccumulativeReset()
         {
+            Ready.timeKeeperInstance = null;
             this.currentScore = 0;
             this.runCount++;
             var lines = File.ReadAllLines("userDatabase.csv").ToList();
@@ -84,11 +84,11 @@ namespace Coursework
         }
         public void CreateDatabaseForPlayer()
         {
-            File.WriteAllText("userDatabase.csv", (this.username.ToLower() + "," + this.password + "," + this.defaultPFP + "," + this.pathToCustomPFP + "," + "0" + Environment.NewLine));
+            File.WriteAllText("userDatabase.csv", (this.username + "," + this.password + "," + this.defaultPFP + "," + "0" + Environment.NewLine));
         }
         public void AddToDatabase()
         {
-            File.AppendAllText("userDatabase.csv",(this.username.ToLower() + "," + this.password + ","  + this.defaultPFP + "," + this.pathToCustomPFP + ","+ "0" + Environment.NewLine));
+            File.AppendAllText("userDatabase.csv",(this.username + "," + this.password + ","  + this.defaultPFP + ","+ "0" + Environment.NewLine));
         }
 
 
