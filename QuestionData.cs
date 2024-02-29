@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace Coursework
@@ -14,6 +15,8 @@ namespace Coursework
         public List<questionInfo> results { get; set; }
         public static Form newMulti;
         public static Form newTrueFalse;
+        public static Form newWritten;
+        public static Form newDragDrop;
         static int qnum=1;
         private static List<Form> openForms = new List<Form>();
         public static void PlayQuestion(QuestionData thisQuestionData, player activePlayer)
@@ -48,12 +51,13 @@ namespace Coursework
                 }
                 else if (currentQ.type == "dragdrop")
                 {
-
+                    var dragdropForm = new dragAndDrop(currentQ, activePlayer);
+                    openForms.Add(dragdropForm);
+                    dragdropForm.Show();
                 }
             }
             catch(ArgumentOutOfRangeException)
-            {
-
+            { 
                 QuizEnd(activePlayer);
             }
             catch (Exception e)
@@ -71,7 +75,14 @@ namespace Coursework
             {
                 form.Close();
             }
-            new Results(activePlayer, Categories.Difficulty).Show();
+            if (Quiz_Type.mode == "base")
+            {
+                new Results(activePlayer, "base").Show();
+            }
+            else
+            {
+                new Results(activePlayer, Categories.Difficulty).Show();
+            }
             qnum = 1;
         }
 

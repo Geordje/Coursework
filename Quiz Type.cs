@@ -19,7 +19,7 @@ namespace Coursework
         {
             InitializeComponent();
             activePlayer = activepassthrough;
-            topScores.Text= $"Your top WildCard score: {activePlayer.topWildScore}\r\nYour top Base Quiz score: {activePlayer.topBaseScore}\r\n";
+            topScores.Text = $"Your top WildCard score: {activePlayer.topWildScore}\r\nYour top Base Quiz score: {activePlayer.topBaseScore}\r\n";
         }
 
         private void Back_Click(object sender, EventArgs e)
@@ -47,6 +47,13 @@ namespace Coursework
             this.Close();
             mode = "wildcard";
             new Categories(activePlayer, "hard").Show();
+        }
+
+        private void bQuizButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            mode = "base";
+            new Ready(activePlayer).Show();
         }
     }
 }

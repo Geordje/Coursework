@@ -91,6 +91,7 @@
             bQuizButton.TabIndex = 19;
             bQuizButton.Text = "Base Quiz";
             bQuizButton.UseVisualStyleBackColor = false;
+            bQuizButton.Click += bQuizButton_Click;
             // 
             // eWildcard
             // 

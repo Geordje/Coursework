@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Net;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
@@ -16,6 +17,10 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
 using static System.Windows.Forms.DataFormats;
+using CsvHelper;
+
+using System.Formats.Asn1;
+using System.Globalization;
 
 namespace Coursework
 {
@@ -25,41 +30,54 @@ namespace Coursework
         public static string difficulty;
         public static int category;
         private static int seconds;
+        public static bool uncategorised;
         public static bool timeOutRan = false;
         public static QuestionData thisQuestionData = new QuestionData();
         public static timeKeeper timeKeeperInstance = new timeKeeper();
 
         public Ready(player activePassthrough)
         {
-            activePlayer = activePassthrough;
-            //ready screen for the base quiz
+            InitializeComponent();
+            uncategorised = false;
             timeKeeperInstance = new timeKeeper();
             timeKeeperInstance.TimeUp += TimeUp;
-            InitializeComponent();
-            string[] line;
-            FileStream aFile = new FileStream("baseQuiz.csv", FileMode.Open);
-            StreamReader s = new StreamReader(aFile);
-            int i = 0;
+            startTimer.Start();
+            activePlayer = activePassthrough;
             seconds = 0;
-            while (s.ReadLine() != null)
+            using (var reader = new StreamReader("baseQuiz.csv"))
+            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
-                if (i != 0)
+                var allRecords = new List<questionInfo>();
+                csv.Read();
+                csv.ReadHeader();
+                while (csv.Read())
                 {
-                    line = s.ReadLine().Split(",");
-                    thisQuestionData.results[i].type = line[0];
-                    thisQuestionData.results[i].question = line[1];
-                    thisQuestionData.results[i].correct_answer = line[2];
-                    thisQuestionData.results[i].incorrect_answers.Add(line[3] + "," + line[4] + "," + line[5]);
-                }
-                i++;
+                    var record = new questionInfo
+                    {
+                        question = csv.GetField("Question"),
+                        type = csv.GetField("QuestionType"),
+                        correct_answer = csv.GetField("Correct Answer/Group"),
+                        incorrect_answers = new List<string> {
+                            csv.GetField("IncorrectAnswer1"),
+                            csv.GetField("IncorrectAnswer2"),
+                            csv.GetField("IncorrectAnswer3")
+                        }
+                    };
 
+                    allRecords.Add(record);
+                }
+
+                var random = new Random();
+                var selectedRecords = allRecords.OrderBy(x => random.Next()).Take(20).ToList();
+
+                thisQuestionData.results = selectedRecords;
             }
-            s.Close();
         }
         public Ready(player activePassthrough, string difficultyPassthrough, int categoryPassthrough)
         {
             InitializeComponent();
             //ready screen for wildcard
+            uncategorised = false;
             timeKeeperInstance = new timeKeeper();
             timeKeeperInstance.TimeUp += TimeUp;
             startTimer.Start();
@@ -85,6 +103,7 @@ namespace Coursework
         {
             InitializeComponent();
             //ready screen for wildcardUncategorised
+            uncategorised = true;
             timeKeeperInstance = new timeKeeper();
             timeKeeperInstance.TimeUp += TimeUp;
             startTimer.Start();

@@ -27,6 +27,10 @@ namespace Coursework
             {
                 difficultyMultiplier = 1.8;
             }
+            else
+            {
+                difficultyMultiplier = 1;
+            }
             return Convert.ToInt32((activePlayer.currentScore * 90) * (1 + timeSaved * 0.01) * difficultyMultiplier);
         }
     }

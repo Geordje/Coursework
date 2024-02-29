@@ -57,7 +57,8 @@ namespace Coursework
                                 //activeplayer.pathToCustomPFP = itemline.Split(',')[3];
                                 activeplayer.runCount = Convert.ToInt32(itemline.Split(',')[3]);
                                 this.Close();
-                                done = true; break;
+                                done = true; 
+                                break;
 
                             }
                         }

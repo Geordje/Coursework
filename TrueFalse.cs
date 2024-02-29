@@ -25,6 +25,15 @@ namespace Coursework
             Title.Text = $"Question {currentQ.questionNo}";
             Ready.timeKeeperInstance.TimeUpdated += TimerInstance_TimeUpdated;
             timeLeft.Text = Ready.timeKeeperInstance.GetRemainingTimeInSeconds().ToString();
+            if (Ready.uncategorised)
+            {
+                categoryIndicator.Show();
+                categoryIndicator.Text = $"Category: {currentQ.category}";
+            }
+            else
+            {
+                categoryIndicator.Hide();
+            }
         }
 
         private void trueCard_Click(object sender, EventArgs e)

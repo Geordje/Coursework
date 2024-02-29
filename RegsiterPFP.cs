@@ -121,7 +121,15 @@ namespace Coursework
                 {
                     if (lines[i].Contains(activePlayer.username))
                     {
-                        lines[i].Split(",")[2] = activePlayer.defaultPFP.ToString();
+                        MessageBox.Show(activePlayer.defaultPFP.ToString());
+
+                        //string newLine = lines[i].Split(",")[2];
+                        MessageBox.Show(lines[i]);
+                        MessageBox.Show(lines[i].Split(',')[2]);
+                        MessageBox.Show(activePlayer.defaultPFP.ToString());
+                        lines[i] = $@"{activePlayer.username},{lines[i].Split(',')[1]},{activePlayer.defaultPFP},{lines[i].Split(',')[3]}";
+
+                        //lines[i].Split(",")[2] = activePlayer.defaultPFP.ToString();
                     }
                 }
                 File.WriteAllLines("userDatabase.csv", lines);

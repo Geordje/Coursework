@@ -28,6 +28,15 @@ namespace Coursework
             questionText.Text = currentQ.question;
             Title.Text = $"Question {currentQ.questionNo}";
             timeLeft.Text = Ready.timeKeeperInstance.GetRemainingTimeInSeconds().ToString();
+            if (Ready.uncategorised)
+            {
+                categoryIndicator.Show();
+                categoryIndicator.Text = $"Category: {currentQ.category}";
+            }
+            else
+            {
+                categoryIndicator.Hide();
+            }
 
 
             if (r == 0)

@@ -83,7 +83,7 @@
 
         private Label readyText;
         private PictureBox pictureBox1;
-        private System.Windows.Forms.Timer startTimer;
         private System.Windows.Forms.Timer mainTimer;
+        public System.Windows.Forms.Timer startTimer;
     }
 }

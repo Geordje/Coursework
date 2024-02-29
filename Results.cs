@@ -19,8 +19,8 @@ namespace Coursework
     public partial class Results : Form
     {
         player activePlayer;
+        static string popUpText;
         int timeLeft = Ready.timeKeeperInstance.GetRemainingTimeInSeconds();
-        string popUpText = $"Your score is calculated by the time taken to complete the quiz, the difficulty of the quiz, and the amount of questions answered correctly!\nThis is done using the following formula: (Correct Guesses x 90) x(1 + Time Saved x 0.01) x Difficulty Multiplier";
         private bool isShowing = false;
         public Results(player activePassthrough, string difficulty)
         {
@@ -33,19 +33,41 @@ namespace Coursework
             timeTaken.Text = (150 - timeLeft).ToString();
             scoreIndicator.Text = $"Score: {thisScore.ToString()}";
             new System.Media.SoundPlayer(Resources.Done).Play();
-            if (thisScore > activePlayer.topWildScore)
+            if (Quiz_Type.mode == "wildcard")
             {
-                topScore.Text = $"New top score!";
+                if (thisScore > activePlayer.topWildScore)
+                {
+                    topScore.Text = $"New top score!";
+                }
+                else
+                {
+                    topScore.Text = $"Your top score: {activePlayer.topWildScore}";
+                }
+                popUpText = $"Your score is calculated by the time taken to complete the wildcard quiz, the difficulty of the wildcard quiz, and the amount of questions answered correctly!\nThis is done using the following formula: (Correct Guesses x 90) x(1 + Time Saved x 0.01) x Difficulty Multiplier";
             }
             else
             {
-                if (Quiz_Type.mode == "wildcard")
-                    topScore.Text = $"Your top score: {activePlayer.topWildScore}";
+                if (thisScore > activePlayer.topBaseScore)
+                {
+                    topScore.Text = $"New top score!";
+                }
                 else
+                {
                     topScore.Text = $"Your top score: {activePlayer.topBaseScore}";
+                }
+                popUpText = $"Your score is calculated by the time taken to complete the wildcard quiz, the difficulty of the wildcard quiz, and the amount of questions answered correctly!\nThis is done using the following formula: (Correct Guesses x 90) x(1 + Time Saved x 0.01)";
+
             }
             activePlayer.UpdateScoresBinFile(thisScore, Quiz_Type.mode);
-            difficultyMultiplierSlot.Text = $"Difficulty Multiplier: {scoreGenerator.difficultyMultiplier}X";
+            if (Quiz_Type.mode == "wildcard")
+            {
+                difficultyMultiplierSlot.Show();
+                difficultyMultiplierSlot.Text = $"Difficulty Multiplier: {scoreGenerator.difficultyMultiplier}X";
+            }
+            else
+            {
+                difficultyMultiplierSlot.Hide();
+            }
 
             
 

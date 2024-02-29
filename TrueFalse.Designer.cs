@@ -28,114 +28,129 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Title = new System.Windows.Forms.Label();
-            this.timeLeft = new System.Windows.Forms.Label();
-            this.questionText = new System.Windows.Forms.Label();
-            this.trueCard = new System.Windows.Forms.PictureBox();
-            this.falseCard = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trueCard)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.falseCard)).BeginInit();
-            this.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            Title = new Label();
+            timeLeft = new Label();
+            questionText = new Label();
+            trueCard = new PictureBox();
+            falseCard = new PictureBox();
+            categoryIndicator = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)trueCard).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)falseCard).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Coursework.Properties.Resources.image__8_;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 90);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 42;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.image__8_;
+            pictureBox1.Location = new Point(0, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(131, 90);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 42;
+            pictureBox1.TabStop = false;
             // 
             // Title
             // 
-            this.Title.BackColor = System.Drawing.Color.Transparent;
-            this.Title.Font = new System.Drawing.Font("Itim", 46F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Title.ForeColor = System.Drawing.Color.White;
-            this.Title.Location = new System.Drawing.Point(194, 29);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(397, 74);
-            this.Title.TabIndex = 43;
-            this.Title.Text = "Question x.";
-            this.Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            Title.BackColor = Color.Transparent;
+            Title.Font = new Font("Itim", 46F, FontStyle.Regular, GraphicsUnit.Point);
+            Title.ForeColor = Color.White;
+            Title.Location = new Point(194, 29);
+            Title.Name = "Title";
+            Title.Size = new Size(397, 74);
+            Title.TabIndex = 43;
+            Title.Text = "Question x.";
+            Title.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // timeLeft
             // 
-            this.timeLeft.BackColor = System.Drawing.Color.Transparent;
-            this.timeLeft.Font = new System.Drawing.Font("Itim", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.timeLeft.ForeColor = System.Drawing.Color.White;
-            this.timeLeft.Location = new System.Drawing.Point(37, 45);
-            this.timeLeft.Name = "timeLeft";
-            this.timeLeft.Size = new System.Drawing.Size(59, 33);
-            this.timeLeft.TabIndex = 44;
-            this.timeLeft.Text = "150";
-            this.timeLeft.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            timeLeft.BackColor = Color.Transparent;
+            timeLeft.Font = new Font("Itim", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            timeLeft.ForeColor = Color.White;
+            timeLeft.Location = new Point(37, 45);
+            timeLeft.Name = "timeLeft";
+            timeLeft.Size = new Size(59, 33);
+            timeLeft.TabIndex = 44;
+            timeLeft.Text = "150";
+            timeLeft.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // questionText
             // 
-            this.questionText.BackColor = System.Drawing.Color.Transparent;
-            this.questionText.Font = new System.Drawing.Font("Itim", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.questionText.ForeColor = System.Drawing.Color.White;
-            this.questionText.Location = new System.Drawing.Point(40, 105);
-            this.questionText.Name = "questionText";
-            this.questionText.Size = new System.Drawing.Size(704, 171);
-            this.questionText.TabIndex = 45;
-            this.questionText.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in" +
-    "cididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud" +
-    " exercitation ullamco";
-            this.questionText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            questionText.BackColor = Color.Transparent;
+            questionText.Font = new Font("Itim", 26F, FontStyle.Regular, GraphicsUnit.Point);
+            questionText.ForeColor = Color.White;
+            questionText.Location = new Point(40, 105);
+            questionText.Name = "questionText";
+            questionText.Size = new Size(704, 171);
+            questionText.TabIndex = 45;
+            questionText.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco";
+            questionText.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // trueCard
             // 
-            this.trueCard.BackColor = System.Drawing.Color.Transparent;
-            this.trueCard.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.trueCard.Image = global::Coursework.Properties.Resources.image__9_;
-            this.trueCard.Location = new System.Drawing.Point(93, 287);
-            this.trueCard.Name = "trueCard";
-            this.trueCard.Size = new System.Drawing.Size(224, 272);
-            this.trueCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.trueCard.TabIndex = 46;
-            this.trueCard.TabStop = false;
-            this.trueCard.Click += new System.EventHandler(this.trueCard_Click);
+            trueCard.BackColor = Color.Transparent;
+            trueCard.Cursor = Cursors.Hand;
+            trueCard.Image = Properties.Resources.image__9_;
+            trueCard.Location = new Point(93, 287);
+            trueCard.Name = "trueCard";
+            trueCard.Size = new Size(224, 272);
+            trueCard.SizeMode = PictureBoxSizeMode.Zoom;
+            trueCard.TabIndex = 46;
+            trueCard.TabStop = false;
+            trueCard.Click += trueCard_Click;
             // 
             // falseCard
             // 
-            this.falseCard.BackColor = System.Drawing.Color.Transparent;
-            this.falseCard.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.falseCard.Image = global::Coursework.Properties.Resources.False1;
-            this.falseCard.Location = new System.Drawing.Point(470, 279);
-            this.falseCard.Name = "falseCard";
-            this.falseCard.Size = new System.Drawing.Size(244, 288);
-            this.falseCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.falseCard.TabIndex = 47;
-            this.falseCard.TabStop = false;
-            this.falseCard.Click += new System.EventHandler(this.falseCard_Click);
+            falseCard.BackColor = Color.Transparent;
+            falseCard.Cursor = Cursors.Hand;
+            falseCard.Image = Properties.Resources.False1;
+            falseCard.Location = new Point(470, 279);
+            falseCard.Name = "falseCard";
+            falseCard.Size = new Size(244, 288);
+            falseCard.SizeMode = PictureBoxSizeMode.Zoom;
+            falseCard.TabIndex = 47;
+            falseCard.TabStop = false;
+            falseCard.Click += falseCard_Click;
+            // 
+            // categoryIndicator
+            // 
+            categoryIndicator.BackColor = Color.FromArgb(255, 182, 166);
+            categoryIndicator.BorderStyle = BorderStyle.FixedSingle;
+            categoryIndicator.Dock = DockStyle.Bottom;
+            categoryIndicator.FlatStyle = FlatStyle.Flat;
+            categoryIndicator.Font = new Font("Itim", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            categoryIndicator.ForeColor = Color.FromArgb(179, 63, 38);
+            categoryIndicator.Location = new Point(0, 532);
+            categoryIndicator.Name = "categoryIndicator";
+            categoryIndicator.Size = new Size(784, 29);
+            categoryIndicator.TabIndex = 48;
+            categoryIndicator.Text = "Category: XXXXXXXXXXXX";
+            categoryIndicator.TextAlign = ContentAlignment.MiddleCenter;
+            categoryIndicator.Visible = false;
             // 
             // TrueFalse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.BackgroundImage = global::Coursework.Properties.Resources.Background;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.questionText);
-            this.Controls.Add(this.falseCard);
-            this.Controls.Add(this.trueCard);
-            this.Controls.Add(this.timeLeft);
-            this.Controls.Add(this.Title);
-            this.Controls.Add(this.pictureBox1);
-            this.DoubleBuffered = true;
-            this.Name = "TrueFalse";
-            this.Text = "TrueFalse";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trueCard)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.falseCard)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(179, 63, 38);
+            BackgroundImage = Properties.Resources.Background;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(784, 561);
+            Controls.Add(categoryIndicator);
+            Controls.Add(questionText);
+            Controls.Add(falseCard);
+            Controls.Add(trueCard);
+            Controls.Add(timeLeft);
+            Controls.Add(Title);
+            Controls.Add(pictureBox1);
+            DoubleBuffered = true;
+            Name = "TrueFalse";
+            Text = "TrueFalse";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)trueCard).EndInit();
+            ((System.ComponentModel.ISupportInitialize)falseCard).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -145,5 +160,7 @@
         private PictureBox trueCard;
         private PictureBox falseCard;
         public Label timeLeft;
+        private Label label1;
+        private Label categoryIndicator;
     }
 }

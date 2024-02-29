@@ -157,6 +157,7 @@ namespace Coursework
             else
             {
                 player activePlayer = new player(UsernameF.Text, PasswordF.Text);
+                activePlayer.defaultPFP = 'x';
 
                 try
                 {
