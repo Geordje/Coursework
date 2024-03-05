@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Splashscreen));
             LoadClock = new System.Windows.Forms.Timer(components);
             pictureBox1 = new PictureBox();
             loadingIndicator = new Label();
@@ -85,6 +86,7 @@
             Controls.Add(pictureBox1);
             Cursor = Cursors.AppStarting;
             Font = new Font("Itim", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             Name = "Splashscreen";
             StartPosition = FormStartPosition.CenterScreen;

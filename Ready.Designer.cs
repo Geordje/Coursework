@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ready));
             readyText = new Label();
             pictureBox1 = new PictureBox();
             startTimer = new System.Windows.Forms.Timer(components);
@@ -73,8 +74,10 @@
             Controls.Add(readyText);
             Controls.Add(pictureBox1);
             Cursor = Cursors.AppStarting;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Ready";
-            Text = " ";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = " Ready?";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }

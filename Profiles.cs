@@ -36,7 +36,7 @@ namespace Coursework
                     if (fields != null)
                     {
                         string username = fields[0];
-                        string score = fields[3];
+                        string runs = fields[3];
                         Image? profilePicture = null;
                         switch (fields[2])
                         {
@@ -67,7 +67,7 @@ namespace Coursework
                         if (profilePicture != null)
                         {
                             profilePicture = ResizeImage(profilePicture, 50, 50);
-                            dt.Rows.Add(profilePicture, username, score);
+                            dt.Rows.Add(profilePicture, username, runs);
                         }
                         // Add the row to the DataTable
                     }
@@ -131,11 +131,31 @@ namespace Coursework
             new AdminPopup().Show();
         }
 
+        private bool CheckForComma(DataGridView grid)
+        {
+            foreach (DataGridViewRow row in grid.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    if (cell.Value != null && cell.Value.ToString().Contains(","))
+                    {
+                        MessageBox.Show($"Please remove the comma from the cell: {cell.Value.ToString()}", "Comma Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
         private void Submit_Click(object sender, EventArgs e)
         {
-            //LoadDataFromCsv();
+            if (CheckForComma(profileGrid))
+            {
+                return;
+            }
+
+            SaveDataToCsv();
             Submit.Hide();
-            profileGrid.AllowUserToAddRows = false;
             profileGrid.AllowUserToDeleteRows = false;
             profileGrid.ShowEditingIcon = false;
             profileGrid.ReadOnly = true;
@@ -148,13 +168,47 @@ namespace Coursework
             byAlphabet.BackColor = Color.White;
             byRuns.BackColor = Color.White;
             profileGrid.Columns.Remove("passwords");
+        }
 
+        public void SaveDataToCsv()
+        {
+            StringBuilder csvContent = new StringBuilder();
+
+            // commits the changes to the CSV file
+            foreach (DataGridViewRow row in profileGrid.Rows)
+            {
+                if (row.Cells["Username"].Value == null)
+                {
+                    continue;
+                }
+                string username = row.Cells["Username"].Value.ToString();
+                string password = row.Cells["passwords"].Value.ToString();
+                string runs = row.Cells["Quizzes Done"].Value.ToString();
+
+                string pfpChar = row.Cells[2].Value.ToString();
+
+                // Find matching username row and keep the pfpChar value
+                foreach (string line in File.ReadLines("userDatabase.csv"))
+                {
+                    string[] fields = line.Split(',');
+                    if (fields[0] == username)
+                    {
+                        pfpChar = fields[2];
+                        break;
+                    }
+                }
+
+                csvContent.AppendLine($"{username},{password},{pfpChar},{runs}");
+                //leaves pfp char unchanged
+            }
+
+            // Writes the content to the file
+            File.WriteAllText("userDatabase.csv", csvContent.ToString());
         }
         public void EditEnable()
         {
             LoadDataFromCsv();
             Submit.Show();
-            profileGrid.AllowUserToAddRows = true;
             profileGrid.AllowUserToDeleteRows = true;
             profileGrid.ShowEditingIcon = true;
             profileGrid.ReadOnly = false;
@@ -168,7 +222,31 @@ namespace Coursework
             byAge.Visible = false;
             profileGrid.Columns.Add("passwords", "Password");
 
+            // Add passwords from userDatabase.csv
+            foreach (DataGridViewRow row in profileGrid.Rows)
+            {
+                if(row.Cells["Username"].Value?.ToString() != null)
+                {
+                    string username = row.Cells["Username"].Value.ToString();
+                    string password = GetPasswordFromCsv(username);
+                    row.Cells["passwords"].Value = password;
+                }
+            }
+        }
 
+        public string GetPasswordFromCsv(string username)
+        {
+            string[] lines = File.ReadAllLines("userDatabase.csv");
+            foreach (string line in lines)
+            {
+                string[] fields = line.Split(',');
+                if (fields[0] == username)
+                {
+                    return fields[1];
+                }
+                
+            }
+            return null;
 
         }
     }

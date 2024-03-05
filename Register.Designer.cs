@@ -95,7 +95,7 @@
             coolButton1.Margin = new Padding(3, 2, 3, 2);
             coolButton1.Name = "coolButton1";
             coolButton1.Size = new Size(202, 68);
-            coolButton1.TabIndex = 7;
+            coolButton1.TabIndex = 4;
             coolButton1.Text = "Register";
             coolButton1.UseVisualStyleBackColor = false;
             coolButton1.Click += coolButton1_Click;
@@ -110,7 +110,7 @@
             UsernameF.Name = "UsernameF";
             UsernameF.PlaceholderText = "Username";
             UsernameF.Size = new Size(571, 32);
-            UsernameF.TabIndex = 8;
+            UsernameF.TabIndex = 1;
             // 
             // PasswordF
             // 
@@ -121,8 +121,8 @@
             PasswordF.Margin = new Padding(3, 2, 3, 2);
             PasswordF.Name = "PasswordF";
             PasswordF.PlaceholderText = "Password";
-            PasswordF.Size = new Size(467, 32);
-            PasswordF.TabIndex = 9;
+            PasswordF.Size = new Size(571, 32);
+            PasswordF.TabIndex = 2;
             PasswordF.UseSystemPasswordChar = true;
             // 
             // CPasswordF
@@ -134,8 +134,8 @@
             CPasswordF.Margin = new Padding(3, 2, 3, 2);
             CPasswordF.Name = "CPasswordF";
             CPasswordF.PlaceholderText = "Confirm Password";
-            CPasswordF.Size = new Size(467, 32);
-            CPasswordF.TabIndex = 10;
+            CPasswordF.Size = new Size(571, 32);
+            CPasswordF.TabIndex = 3;
             CPasswordF.UseSystemPasswordChar = true;
             // 
             // pDisclaimer
@@ -187,6 +187,7 @@
             // 
             // Register
             // 
+            AcceptButton = coolButton1;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(179, 63, 38);
@@ -202,8 +203,10 @@
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Register";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Register";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();

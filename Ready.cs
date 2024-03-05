@@ -58,7 +58,7 @@ namespace Coursework
                         type = csv.GetField("QuestionType"),
                         correct_answer = csv.GetField("Correct Answer/Group"),
                         incorrect_answers = new List<string> {
-                            csv.GetField("IncorrectAnswer1"),
+                            csv.GetField("IncorrectAnswer1/FormatHelper"),
                             csv.GetField("IncorrectAnswer2"),
                             csv.GetField("IncorrectAnswer3")
                         }
@@ -69,8 +69,27 @@ namespace Coursework
 
                 var random = new Random();
                 var selectedRecords = allRecords.OrderBy(x => random.Next()).Take(20).ToList();
-
                 thisQuestionData.results = selectedRecords;
+
+                //remove one non drag drop question per drag drop question as drag drops are worth 2 points
+                List<questionInfo> itemsToRemove = new List<questionInfo>();
+                foreach (var questionItem in thisQuestionData.results)
+                {
+                    if (questionItem.type == "dragdrop")
+                    {
+                        questionInfo nonDragDropQuestion = thisQuestionData.results[random.Next(thisQuestionData.results.Count())];
+                        while (nonDragDropQuestion.type == "dragdrop")
+                        {
+                            nonDragDropQuestion = thisQuestionData.results[random.Next(thisQuestionData.results.Count())];
+                        }
+                        itemsToRemove.Add(nonDragDropQuestion);
+                    }
+                }
+                foreach (var item in itemsToRemove)
+                {
+                    thisQuestionData.results.Remove(item);
+                }
+
             }
         }
         public Ready(player activePassthrough, string difficultyPassthrough, int categoryPassthrough)

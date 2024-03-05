@@ -118,6 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="image (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tenQuizzes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tenQuizzes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hundredQuizzes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hundredQuizzes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Game_Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Game Start.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -133,8 +142,8 @@
   <data name="image (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ArrowNoBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArrowNoBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,17 +151,20 @@
   <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Pencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="False" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\False.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Done" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Done.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Pencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RedArrowDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RedArrowDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Hippo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hippo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,8 +184,14 @@
   <data name="False1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\False1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="image (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Trophy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Trophy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ArrowNoBackground Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArrowNoBackground Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image (9)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,8 +202,14 @@
   <data name="Tiger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Tiger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="thirtyQuizzes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thirtyQuizzes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ticking-clock 10 seconds" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ticking-clock 10 seconds.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="fiftyQuizzes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fiftyQuizzes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loadinggif" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\loadinggif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,8 +226,14 @@
   <data name="LoadingAnimation" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LoadingAnimation.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-eye-240" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-eye-240.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DragDrop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DragDrop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="oneQuiz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\oneQuiz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RedArrowUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RedArrowUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ticking-clock 10 seconds.mp3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ticking-clock 10 seconds.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -214,7 +244,10 @@
   <data name="Crossed Eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Crossed Eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DragDrop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DragDrop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-eye-240" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-eye-240.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="treeHint" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\treeHint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_coursework_1_1player" xml:lang="en-US">
+<title>Coursework.player Class Reference</title>
+<indexterm><primary>Coursework.player</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_coursework_1_1player_1aed6b1bb2972e06ebc660f4e39ce6cba9"/><emphasis role="strong">player</emphasis> (string name, string pass)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1player_1a1beeb1108e49774c8fe970b0033f4216"/>void <emphasis role="strong">AccumulativeReset</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1player_1aa640b4d96dcf58ab31a1f003fe8a04ac"/>void <emphasis role="strong">Accumulate</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1player_1af5269367aa3777178db03036de8724d9"/>void <emphasis role="strong">CreateDatabaseForPlayer</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1player_1a79e4855ee7d95931868d37dfc81e8f32"/>void <emphasis role="strong">AddToDatabase</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1player_1abe423ab579f073b03f4ed034790bdf36"/>void <emphasis role="strong">UpdateScoresBinFile</emphasis> (int newScore, string mode)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_coursework_1_1player_1a5a8497e4c61bd813955aeb69348c35c6"/>string <emphasis role="strong">username</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1player_1a9bce27bf8710bc241c9f2ada756c66d9"/>string <emphasis role="strong">password</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1player_1a5f3a4dc38bf8ca94d42440cf0ec2cd27"/>int <emphasis role="strong">currentScore</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1player_1adda85b665ad1c989a0f253f185737040"/>int <emphasis role="strong">topWildScore</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1player_1aeee939f35630ebdc3190a4c5fa58fa9f"/>int <emphasis role="strong">topBaseScore</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1player_1a64787e5a15ef5de49b60d05803070184"/>char <emphasis role="strong">defaultPFP</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1player_1a1ed25fb4e694c6d7cba1a99dd2239cd9"/>Image <emphasis role="strong">ProfilePicture</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1player_1a296c53cb5d1d05251d2b23da042ecbdd"/>int <emphasis role="strong">runCount</emphasis><computeroutput> [get, set]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following file:</para>
+Player.cs</section>

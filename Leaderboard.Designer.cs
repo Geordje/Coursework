@@ -29,106 +29,144 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Leaderboard));
-            this.Back = new System.Windows.Forms.PictureBox();
-            this.baseQuiz = new Coursework.CoolButton();
-            this.profileGrid = new System.Windows.Forms.DataGridView();
-            this.Wildcard = new Coursework.CoolButton();
-            this.Title = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.Back)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profileGrid)).BeginInit();
-            this.SuspendLayout();
+            Back = new PictureBox();
+            baseQuiz = new CoolButton();
+            profileGrid = new DataGridView();
+            Wildcard = new CoolButton();
+            Title = new Label();
+            Ascending = new Button();
+            Descending = new Button();
+            ((System.ComponentModel.ISupportInitialize)Back).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)profileGrid).BeginInit();
+            SuspendLayout();
             // 
             // Back
             // 
-            this.Back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Back.Image = ((System.Drawing.Image)(resources.GetObject("Back.Image")));
-            this.Back.Location = new System.Drawing.Point(12, 11);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(84, 79);
-            this.Back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Back.TabIndex = 51;
-            this.Back.TabStop = false;
+            Back.Cursor = Cursors.Hand;
+            Back.Image = (Image)resources.GetObject("Back.Image");
+            Back.Location = new Point(12, 11);
+            Back.Name = "Back";
+            Back.Size = new Size(84, 79);
+            Back.SizeMode = PictureBoxSizeMode.Zoom;
+            Back.TabIndex = 51;
+            Back.TabStop = false;
+            Back.Click += Back_Click;
             // 
             // baseQuiz
             // 
-            this.baseQuiz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
-            this.baseQuiz.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.baseQuiz.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
-            this.baseQuiz.FlatAppearance.BorderSize = 5;
-            this.baseQuiz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.baseQuiz.Font = new System.Drawing.Font("Itim", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.baseQuiz.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.baseQuiz.Location = new System.Drawing.Point(416, 93);
-            this.baseQuiz.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.baseQuiz.Name = "baseQuiz";
-            this.baseQuiz.Size = new System.Drawing.Size(220, 46);
-            this.baseQuiz.TabIndex = 50;
-            this.baseQuiz.Text = "Base Quiz";
-            this.baseQuiz.UseVisualStyleBackColor = false;
+            baseQuiz.BackColor = Color.FromArgb(255, 182, 166);
+            baseQuiz.Cursor = Cursors.Hand;
+            baseQuiz.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
+            baseQuiz.FlatAppearance.BorderSize = 5;
+            baseQuiz.FlatStyle = FlatStyle.Flat;
+            baseQuiz.Font = new Font("Itim", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            baseQuiz.ForeColor = Color.FromArgb(179, 63, 38);
+            baseQuiz.Location = new Point(416, 93);
+            baseQuiz.Margin = new Padding(3, 2, 3, 2);
+            baseQuiz.Name = "baseQuiz";
+            baseQuiz.Size = new Size(220, 46);
+            baseQuiz.TabIndex = 50;
+            baseQuiz.Text = "Base Quiz";
+            baseQuiz.UseVisualStyleBackColor = false;
+            baseQuiz.Click += baseQuiz_Click;
             // 
             // profileGrid
             // 
-            this.profileGrid.AllowUserToOrderColumns = true;
-            this.profileGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.profileGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.profileGrid.BackgroundColor = System.Drawing.Color.White;
-            this.profileGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.profileGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
-            this.profileGrid.Location = new System.Drawing.Point(12, 164);
-            this.profileGrid.Name = "profileGrid";
-            this.profileGrid.RowTemplate.Height = 25;
-            this.profileGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.profileGrid.ShowEditingIcon = false;
-            this.profileGrid.Size = new System.Drawing.Size(760, 385);
-            this.profileGrid.TabIndex = 49;
+            profileGrid.AllowUserToOrderColumns = true;
+            profileGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            profileGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            profileGrid.BackgroundColor = Color.White;
+            profileGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            profileGrid.GridColor = Color.FromArgb(255, 182, 166);
+            profileGrid.Location = new Point(12, 164);
+            profileGrid.Name = "profileGrid";
+            profileGrid.RowTemplate.Height = 25;
+            profileGrid.ScrollBars = ScrollBars.Vertical;
+            profileGrid.ShowEditingIcon = false;
+            profileGrid.Size = new Size(760, 385);
+            profileGrid.TabIndex = 49;
             // 
             // Wildcard
             // 
-            this.Wildcard.BackColor = System.Drawing.Color.White;
-            this.Wildcard.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Wildcard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(182)))), ((int)(((byte)(166)))));
-            this.Wildcard.FlatAppearance.BorderSize = 5;
-            this.Wildcard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Wildcard.Font = new System.Drawing.Font("Itim", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Wildcard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.Wildcard.Location = new System.Drawing.Point(149, 93);
-            this.Wildcard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Wildcard.Name = "Wildcard";
-            this.Wildcard.Size = new System.Drawing.Size(220, 46);
-            this.Wildcard.TabIndex = 48;
-            this.Wildcard.Text = "Wildcard!";
-            this.Wildcard.UseVisualStyleBackColor = false;
+            Wildcard.BackColor = Color.White;
+            Wildcard.Cursor = Cursors.Hand;
+            Wildcard.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
+            Wildcard.FlatAppearance.BorderSize = 5;
+            Wildcard.FlatStyle = FlatStyle.Flat;
+            Wildcard.Font = new Font("Itim", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            Wildcard.ForeColor = Color.FromArgb(179, 63, 38);
+            Wildcard.Location = new Point(149, 93);
+            Wildcard.Margin = new Padding(3, 2, 3, 2);
+            Wildcard.Name = "Wildcard";
+            Wildcard.Size = new Size(220, 46);
+            Wildcard.TabIndex = 48;
+            Wildcard.Text = "Wildcard!";
+            Wildcard.UseVisualStyleBackColor = false;
+            Wildcard.Click += Wildcard_Click;
             // 
             // Title
             // 
-            this.Title.AutoSize = true;
-            this.Title.BackColor = System.Drawing.Color.Transparent;
-            this.Title.Font = new System.Drawing.Font("Itim", 44F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Title.ForeColor = System.Drawing.Color.White;
-            this.Title.Location = new System.Drawing.Point(220, 14);
-            this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(345, 71);
-            this.Title.TabIndex = 46;
-            this.Title.Text = "Leaderboard";
+            Title.AutoSize = true;
+            Title.BackColor = Color.Transparent;
+            Title.Font = new Font("Itim", 44F, FontStyle.Regular, GraphicsUnit.Point);
+            Title.ForeColor = Color.White;
+            Title.Location = new Point(220, 14);
+            Title.Name = "Title";
+            Title.Size = new Size(345, 71);
+            Title.TabIndex = 46;
+            Title.Text = "Leaderboard";
+            // 
+            // Ascending
+            // 
+            Ascending.BackColor = Color.FromArgb(255, 182, 166);
+            Ascending.BackgroundImage = Properties.Resources.RedArrowUp;
+            Ascending.BackgroundImageLayout = ImageLayout.Zoom;
+            Ascending.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
+            Ascending.FlatAppearance.BorderSize = 4;
+            Ascending.FlatStyle = FlatStyle.Flat;
+            Ascending.Location = new Point(674, 93);
+            Ascending.Name = "Ascending";
+            Ascending.Size = new Size(46, 46);
+            Ascending.TabIndex = 52;
+            Ascending.UseVisualStyleBackColor = false;
+            Ascending.Click += Ascending_Click;
+            // 
+            // Descending
+            // 
+            Descending.BackColor = Color.White;
+            Descending.BackgroundImage = Properties.Resources.RedArrowDown;
+            Descending.BackgroundImageLayout = ImageLayout.Zoom;
+            Descending.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
+            Descending.FlatAppearance.BorderSize = 4;
+            Descending.FlatStyle = FlatStyle.Flat;
+            Descending.Location = new Point(726, 93);
+            Descending.Name = "Descending";
+            Descending.Size = new Size(46, 46);
+            Descending.TabIndex = 53;
+            Descending.UseVisualStyleBackColor = false;
+            Descending.Click += Descending_Click;
             // 
             // Leaderboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
-            this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.Back);
-            this.Controls.Add(this.baseQuiz);
-            this.Controls.Add(this.profileGrid);
-            this.Controls.Add(this.Wildcard);
-            this.Controls.Add(this.Title);
-            this.Name = "Leaderboard";
-            this.Text = "Leaderboard";
-            ((System.ComponentModel.ISupportInitialize)(this.Back)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.profileGrid)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(179, 63, 38);
+            ClientSize = new Size(784, 561);
+            Controls.Add(Descending);
+            Controls.Add(Ascending);
+            Controls.Add(Back);
+            Controls.Add(baseQuiz);
+            Controls.Add(profileGrid);
+            Controls.Add(Wildcard);
+            Controls.Add(Title);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "Leaderboard";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Leaderboard";
+            ((System.ComponentModel.ISupportInitialize)Back).EndInit();
+            ((System.ComponentModel.ISupportInitialize)profileGrid).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -138,5 +176,7 @@
         private DataGridView profileGrid;
         private CoolButton Wildcard;
         private Label Title;
+        private Button Ascending;
+        private Button Descending;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPopup));
             this.Hide = new System.Windows.Forms.PictureBox();
             this.PasswordF = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -59,7 +60,7 @@
             this.PasswordF.Name = "PasswordF";
             this.PasswordF.PlaceholderText = "Password";
             this.PasswordF.Size = new System.Drawing.Size(340, 20);
-            this.PasswordF.TabIndex = 24;
+            this.PasswordF.TabIndex = 1;
             this.PasswordF.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.PasswordF.UseSystemPasswordChar = true;
             // 
@@ -99,7 +100,7 @@
             this.Enter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Enter.Name = "Enter";
             this.Enter.Size = new System.Drawing.Size(100, 31);
-            this.Enter.TabIndex = 28;
+            this.Enter.TabIndex = 2;
             this.Enter.Text = "Enter";
             this.Enter.UseVisualStyleBackColor = false;
             this.Enter.Click += new System.EventHandler(this.Enter_Click);
@@ -117,12 +118,14 @@
             this.Cancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(100, 31);
-            this.Cancel.TabIndex = 29;
+            this.Cancel.TabIndex = 3;
             this.Cancel.Text = "Cancel";
             this.Cancel.UseVisualStyleBackColor = false;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // AdminPopup
             // 
+            this.AcceptButton = this.Enter;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(63)))), ((int)(((byte)(38)))));
@@ -133,8 +136,10 @@
             this.Controls.Add(this.Hide);
             this.Controls.Add(this.PasswordF);
             this.Controls.Add(this.pictureBox3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminPopup";
-            this.Text = "AdminPopup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Admin Entry";
             ((System.ComponentModel.ISupportInitialize)(this.Hide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);

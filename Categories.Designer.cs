@@ -254,8 +254,9 @@
             Controls.Add(Gaming);
             Controls.Add(backButton);
             DoubleBuffered = true;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Categories";
-            Text = "Categories";
+            Text = "Category Select";
             ((System.ComponentModel.ISupportInitialize)backButton).EndInit();
             ResumeLayout(false);
             PerformLayout();

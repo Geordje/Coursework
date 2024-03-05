@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_coursework_1_1_home" xml:lang="en-US">
+<title>Coursework.Home Class Reference</title>
+<indexterm><primary>Coursework.Home</primary></indexterm>
+<para>Inheritance diagram for Coursework.Home:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_coursework_1_1_home.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_home_1a60d4974186fdd73ab26f64abc4471f52"/><emphasis role="strong">Home</emphasis> (<link linkend="_class_coursework_1_1player">player</link> activePassthrough)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_home_1a7297458a2c81f07fa0c647729ec9be31"/>static <link linkend="_class_coursework_1_1player">player</link> <emphasis role="strong">activePlayer</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_home_1ad3bbed8b1183a07f11dfeea2f3e5891f"/>static <link linkend="_class_coursework_1_1_profiles">Profiles</link> <emphasis role="strong">profilePage</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_home_1aecdcc27c2c7f6c2563cab957b2dbe938"/>static <link linkend="_class_coursework_1_1_leaderboard">Leaderboard</link> <emphasis role="strong">leaderboardPage</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_coursework_1_1_home_1a548dc15296d353461e30654444d7273d">Dispose</link> (bool disposing)</para>
+
+<para>Clean up any resources being used. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_coursework_1_1_home_1a548dc15296d353461e30654444d7273d"/><section>
+    <title>Dispose()</title>
+<indexterm><primary>Dispose</primary><secondary>Coursework.Home</secondary></indexterm>
+<indexterm><primary>Coursework.Home</primary><secondary>Dispose</secondary></indexterm>
+<para><computeroutput>override void Coursework.Home.Dispose (bool disposing)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Clean up any resources being used. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>disposing</entry><entry>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Home.csHome.Designer.cs</section>
+</section>

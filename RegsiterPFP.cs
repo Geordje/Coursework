@@ -117,19 +117,11 @@ namespace Coursework
             {
 
                 var lines = File.ReadAllLines("userDatabase.csv");
-                for (int i = 0; i < lines.Length; i++)
+                foreach (string line in lines)
                 {
-                    if (lines[i].Contains(activePlayer.username))
+                    if (line.Split(',')[0] == activePlayer.username)
                     {
-                        MessageBox.Show(activePlayer.defaultPFP.ToString());
-
-                        //string newLine = lines[i].Split(",")[2];
-                        MessageBox.Show(lines[i]);
-                        MessageBox.Show(lines[i].Split(',')[2]);
-                        MessageBox.Show(activePlayer.defaultPFP.ToString());
-                        lines[i] = $@"{activePlayer.username},{lines[i].Split(',')[1]},{activePlayer.defaultPFP},{lines[i].Split(',')[3]}";
-
-                        //lines[i].Split(",")[2] = activePlayer.defaultPFP.ToString();
+                        lines[Array.IndexOf(lines, line)] = $"{activePlayer.username},{activePlayer.password},{activePlayer.defaultPFP},{activePlayer.runCount}";
                     }
                 }
                 File.WriteAllLines("userDatabase.csv", lines);

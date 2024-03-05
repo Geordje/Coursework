@@ -118,8 +118,10 @@
             Controls.Add(registerButton);
             Controls.Add(Subheading);
             Controls.Add(Title);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Prompt";
-            Text = "Prompt";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Boot";
             ((System.ComponentModel.ISupportInitialize)close).EndInit();
             ResumeLayout(false);
             PerformLayout();

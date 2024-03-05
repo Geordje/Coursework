@@ -112,7 +112,7 @@ namespace Coursework
                         }
                         catch (Exception)
                         {
-                            MessageBox.Show("Databaes cannot be changed, likely opened elsewhere", "Database cannot be changed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Database cannot be changed, likely opened elsewhere", "Database cannot be changed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     if (result2 == DialogResult.No)
@@ -134,6 +134,7 @@ namespace Coursework
             }
             if (done)
             {
+                this.Close();
                 new Home(activeplayer).Show();
             }
         }

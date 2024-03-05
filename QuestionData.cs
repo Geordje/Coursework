@@ -47,7 +47,9 @@ namespace Coursework
                 }
                 else if (currentQ.type == "written")
                 {
-
+                    var writtenForm = new Written(currentQ, activePlayer);
+                    openForms.Add(writtenForm);
+                    writtenForm.Show();
                 }
                 else if (currentQ.type == "dragdrop")
                 {

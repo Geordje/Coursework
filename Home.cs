@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CsvHelper.Configuration.Attributes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace Coursework
     {
         public static player activePlayer;
         public static Profiles profilePage;
+        public static Leaderboard leaderboardPage;
 
         public Home(player activePassthrough)
         {
@@ -48,6 +50,26 @@ namespace Coursework
             }
             ProfilePicture.Image = activePlayer.ProfilePicture;
             QuizNumberIndicator.Text = $"Quizzes completed: {activePlayer.runCount}";
+            if (activePlayer.runCount >= 1)
+            {
+                oneQuiz.BackgroundImage = Properties.Resources.oneQuiz;
+            }
+            if (activePlayer.runCount >= 10)
+            {
+                tenQuizzes.BackgroundImage = Properties.Resources.tenQuizzes;
+            }
+            if (activePlayer.runCount >= 30)
+            {
+                thirtyQuizzes.BackgroundImage = Properties.Resources.thirtyQuizzes;
+            }
+            if (activePlayer.runCount >= 50)
+            {
+                fiftyQuizzes.BackgroundImage = Properties.Resources.fiftyQuizzes;
+            }
+            if (activePlayer.runCount >= 100)
+            {
+                hundredQuizzes.BackgroundImage = Properties.Resources.hundredQuizzes;
+            }
         }
         private void logOut_Click(object sender, EventArgs e)
         {
@@ -95,14 +117,41 @@ namespace Coursework
                         }
                     }
                     File.WriteAllLines("userDatabase.csv", lines);
-                    string pathToImage = openFileDialog1.FileName;
-                    string destinationFilePath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ProfilePictures"), activePlayer.username.ToLower() + Path.GetExtension(openFileDialog1.FileName));
-                    File.Copy(pathToImage, destinationFilePath, true);
-                    activePlayer.ProfilePicture = Image.FromFile(destinationFilePath);
-                    ProfilePicture.Image = activePlayer.ProfilePicture;
+                    try
+                    {
+                        var files = Directory.EnumerateFiles(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ProfilePictures"), $"{activePlayer.username.ToLower()}*", SearchOption.TopDirectoryOnly);
+                        if (files.Any())
+                        {
+                            File.Delete(files.First());
+                        }
+                        string pathToImage = openFileDialog1.FileName;
+                        string destinationFilePath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ProfilePictures"), activePlayer.username.ToLower() + Path.GetExtension(openFileDialog1.FileName));
+                        File.Copy(pathToImage, destinationFilePath, true);
+                        activePlayer.ProfilePicture = Image.FromFile(destinationFilePath);
+                        ProfilePicture.Image = activePlayer.ProfilePicture;
+                    }
+                    catch (FileNotFoundException)
+                    {
+                        string pathToImage = openFileDialog1.FileName;
+                        string destinationFilePath = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ProfilePictures"), activePlayer.username.ToLower() + Path.GetExtension(openFileDialog1.FileName));
+                        File.Copy(pathToImage, destinationFilePath, true);
+                        activePlayer.ProfilePicture = Image.FromFile(destinationFilePath);
+                        ProfilePicture.Image = activePlayer.ProfilePicture;
+                    }
+                    catch (IOException)
+                    {
+                        MessageBox.Show("Please close the current profile picture before retrying.", "Error Continuing", MessageBoxButtons.OK, MessageBoxIcon.Error); return;
+                    }
                 }
             }
-            
+
+        }
+
+        private void leaderboardButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            leaderboardPage = new Leaderboard(activePlayer);
+            leaderboardPage.Show();
         }
     }
 }

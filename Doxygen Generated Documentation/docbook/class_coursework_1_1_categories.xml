@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_coursework_1_1_categories" xml:lang="en-US">
+<title>Coursework.Categories Class Reference</title>
+<indexterm><primary>Coursework.Categories</primary></indexterm>
+<para>Inheritance diagram for Coursework.Categories:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_coursework_1_1_categories.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_categories_1a857304b48f4e8b6deab537d1ea8aec9e"/><emphasis role="strong">Categories</emphasis> (<link linkend="_class_coursework_1_1player">player</link> activePassthrough, string difficultyPassthrough)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_categories_1ae6053557d5fe2c9d22e2204a6ef989fc"/>static <link linkend="_class_coursework_1_1player">player</link> <emphasis role="strong">activePlayer</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_categories_1a03c7f87bd35ad80686652f5e025f7c3e"/>static string <emphasis role="strong">Difficulty</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_coursework_1_1_categories_1a9410fcd162ea83438f10947dafbd0c81">Dispose</link> (bool disposing)</para>
+
+<para>Clean up any resources being used. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_coursework_1_1_categories_1a9410fcd162ea83438f10947dafbd0c81"/><section>
+    <title>Dispose()</title>
+<indexterm><primary>Dispose</primary><secondary>Coursework.Categories</secondary></indexterm>
+<indexterm><primary>Coursework.Categories</primary><secondary>Dispose</secondary></indexterm>
+<para><computeroutput>override void Coursework.Categories.Dispose (bool disposing)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Clean up any resources being used. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>disposing</entry><entry>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Categories.csCategories.Designer.cs</section>
+</section>

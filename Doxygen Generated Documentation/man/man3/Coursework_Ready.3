@@ -1,0 +1,83 @@
+.TH "Coursework.Ready" 3 "Version final" "coursework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Coursework.Ready
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Form\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBReady\fP (\fBplayer\fP activePassthrough)"
+.br
+.ti -1c
+.RI "\fBReady\fP (\fBplayer\fP activePassthrough, string difficultyPassthrough, int categoryPassthrough)"
+.br
+.ti -1c
+.RI "\fBReady\fP (\fBplayer\fP activePassthrough, string difficultyPassthrough)"
+.br
+.ti -1c
+.RI "void \fBstartTimer_Tick\fP (object sender, EventArgs e)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "System\&.Windows\&.Forms\&.Timer \fBstartTimer\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBplayer\fP \fBactivePlayer\fP"
+.br
+.ti -1c
+.RI "static string \fBdifficulty\fP"
+.br
+.ti -1c
+.RI "static int \fBcategory\fP"
+.br
+.ti -1c
+.RI "static bool \fBuncategorised\fP"
+.br
+.ti -1c
+.RI "static bool \fBtimeOutRan\fP = false"
+.br
+.ti -1c
+.RI "static \fBQuestionData\fP \fBthisQuestionData\fP = new \fBQuestionData\fP()"
+.br
+.ti -1c
+.RI "static \fBtimeKeeper\fP \fBtimeKeeperInstance\fP = new \fBtimeKeeper\fP()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "override void \fBDispose\fP (bool disposing)"
+.br
+.RI "Clean up any resources being used\&. "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "override void Coursework\&.Ready\&.Dispose (bool disposing)\fR [protected]\fP"
+
+.PP
+Clean up any resources being used\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdisposing\fP true if managed resources should be disposed; otherwise, false\&.
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for coursework from the source code\&.

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_coursework_1_1multiple_choice" xml:lang="en-US">
+<title>Coursework.multipleChoice Class Reference</title>
+<indexterm><primary>Coursework.multipleChoice</primary></indexterm>
+<para>Inheritance diagram for Coursework.multipleChoice:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_coursework_1_1multiple_choice.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_coursework_1_1multiple_choice_1a5d8c37da0d98ce8f0e1d9476f287c46a"/><emphasis role="strong">multipleChoice</emphasis> (<link linkend="_class_coursework_1_1question_info">questionInfo</link> currentQ, <link linkend="_class_coursework_1_1player">player</link> activePassthrough)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_coursework_1_1multiple_choice_1a6683b71db6243a2e3ac6fb4f394203ac"/>Label <emphasis role="strong">timeLeft</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_coursework_1_1multiple_choice_1a5409cd6054c8aa5dd4341239134b88a2">Dispose</link> (bool disposing)</para>
+
+<para>Clean up any resources being used. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_coursework_1_1multiple_choice_1a5409cd6054c8aa5dd4341239134b88a2"/><section>
+    <title>Dispose()</title>
+<indexterm><primary>Dispose</primary><secondary>Coursework.multipleChoice</secondary></indexterm>
+<indexterm><primary>Coursework.multipleChoice</primary><secondary>Dispose</secondary></indexterm>
+<para><computeroutput>override void Coursework.multipleChoice.Dispose (bool disposing)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Clean up any resources being used. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>disposing</entry><entry>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+multipleChoice.csmultipleChoice.Designer.cs</section>
+</section>

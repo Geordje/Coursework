@@ -63,6 +63,26 @@ namespace Coursework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ArrowNoBackground {
+            get {
+                object obj = ResourceManager.GetObject("ArrowNoBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap ArrowNoBackground_Down {
+            get {
+                object obj = ResourceManager.GetObject("ArrowNoBackground Down", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Background {
             get {
                 object obj = ResourceManager.GetObject("Background", resourceCulture);
@@ -189,6 +209,16 @@ namespace Coursework.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap fiftyQuizzes {
+            get {
+                object obj = ResourceManager.GetObject("fiftyQuizzes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         public static System.IO.UnmanagedMemoryStream Game_Start {
@@ -203,6 +233,16 @@ namespace Coursework.Properties {
         public static System.Drawing.Bitmap Hippo {
             get {
                 object obj = ResourceManager.GetObject("Hippo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap hundredQuizzes {
+            get {
+                object obj = ResourceManager.GetObject("hundredQuizzes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,6 +273,16 @@ namespace Coursework.Properties {
         public static System.Drawing.Bitmap image__1_ {
             get {
                 object obj = ResourceManager.GetObject("image (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap image__7_ {
+            get {
+                object obj = ResourceManager.GetObject("image (7)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -299,6 +349,16 @@ namespace Coursework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap oneQuiz {
+            get {
+                object obj = ResourceManager.GetObject("oneQuiz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Pattern {
             get {
                 object obj = ResourceManager.GetObject("Pattern", resourceCulture);
@@ -339,6 +399,46 @@ namespace Coursework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap RedArrowDown {
+            get {
+                object obj = ResourceManager.GetObject("RedArrowDown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap RedArrowUp {
+            get {
+                object obj = ResourceManager.GetObject("RedArrowUp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap tenQuizzes {
+            get {
+                object obj = ResourceManager.GetObject("tenQuizzes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap thirtyQuizzes {
+            get {
+                object obj = ResourceManager.GetObject("thirtyQuizzes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Tick {
             get {
                 object obj = ResourceManager.GetObject("Tick", resourceCulture);
@@ -371,6 +471,16 @@ namespace Coursework.Properties {
         public static System.Drawing.Bitmap Tiger {
             get {
                 object obj = ResourceManager.GetObject("Tiger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap treeHint {
+            get {
+                object obj = ResourceManager.GetObject("treeHint", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

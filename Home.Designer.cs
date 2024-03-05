@@ -28,18 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             Title = new Label();
-            logInButton = new CoolButton();
+            leaderboardButton = new CoolButton();
             profilesButton = new CoolButton();
-            coolButton1 = new CoolButton();
             Start = new CoolButton();
             logOut = new PictureBox();
             ProfilePicture = new PictureBox();
             usernameSpot = new Label();
             QuizNumberIndicator = new Label();
             openFileDialog1 = new OpenFileDialog();
+            tenQuizzes = new PictureBox();
+            thirtyQuizzes = new PictureBox();
+            fiftyQuizzes = new PictureBox();
+            oneQuiz = new PictureBox();
+            hundredQuizzes = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)logOut).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ProfilePicture).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tenQuizzes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)thirtyQuizzes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)fiftyQuizzes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)oneQuiz).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hundredQuizzes).BeginInit();
             SuspendLayout();
             // 
             // Title
@@ -54,21 +64,22 @@
             Title.TabIndex = 12;
             Title.Text = "Trivia Deck";
             // 
-            // logInButton
+            // leaderboardButton
             // 
-            logInButton.BackColor = Color.White;
-            logInButton.Cursor = Cursors.Hand;
-            logInButton.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
-            logInButton.FlatAppearance.BorderSize = 5;
-            logInButton.FlatStyle = FlatStyle.Flat;
-            logInButton.Font = new Font("Itim", 25F, FontStyle.Regular, GraphicsUnit.Point);
-            logInButton.ForeColor = Color.FromArgb(179, 63, 38);
-            logInButton.Location = new Point(440, 355);
-            logInButton.Name = "logInButton";
-            logInButton.Size = new Size(254, 73);
-            logInButton.TabIndex = 15;
-            logInButton.Text = "Leaderboard";
-            logInButton.UseVisualStyleBackColor = false;
+            leaderboardButton.BackColor = Color.White;
+            leaderboardButton.Cursor = Cursors.Hand;
+            leaderboardButton.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
+            leaderboardButton.FlatAppearance.BorderSize = 5;
+            leaderboardButton.FlatStyle = FlatStyle.Flat;
+            leaderboardButton.Font = new Font("Itim", 25F, FontStyle.Regular, GraphicsUnit.Point);
+            leaderboardButton.ForeColor = Color.FromArgb(179, 63, 38);
+            leaderboardButton.Location = new Point(440, 355);
+            leaderboardButton.Name = "leaderboardButton";
+            leaderboardButton.Size = new Size(254, 73);
+            leaderboardButton.TabIndex = 15;
+            leaderboardButton.Text = "Leaderboard";
+            leaderboardButton.UseVisualStyleBackColor = false;
+            leaderboardButton.Click += leaderboardButton_Click;
             // 
             // profilesButton
             // 
@@ -86,22 +97,6 @@
             profilesButton.Text = "Profiles";
             profilesButton.UseVisualStyleBackColor = false;
             profilesButton.Click += profilesButton_Click;
-            // 
-            // coolButton1
-            // 
-            coolButton1.BackColor = Color.White;
-            coolButton1.Cursor = Cursors.Hand;
-            coolButton1.FlatAppearance.BorderColor = Color.FromArgb(255, 182, 166);
-            coolButton1.FlatAppearance.BorderSize = 5;
-            coolButton1.FlatStyle = FlatStyle.Flat;
-            coolButton1.Font = new Font("Itim", 25F, FontStyle.Regular, GraphicsUnit.Point);
-            coolButton1.ForeColor = Color.FromArgb(179, 63, 38);
-            coolButton1.Location = new Point(265, 449);
-            coolButton1.Name = "coolButton1";
-            coolButton1.Size = new Size(254, 73);
-            coolButton1.TabIndex = 16;
-            coolButton1.Text = "Runner";
-            coolButton1.UseVisualStyleBackColor = false;
             // 
             // Start
             // 
@@ -161,9 +156,9 @@
             QuizNumberIndicator.BackColor = Color.Transparent;
             QuizNumberIndicator.Font = new Font("Itim", 16F, FontStyle.Regular, GraphicsUnit.Point);
             QuizNumberIndicator.ForeColor = Color.White;
-            QuizNumberIndicator.Location = new Point(6, 511);
+            QuizNumberIndicator.Location = new Point(6, 516);
             QuizNumberIndicator.Name = "QuizNumberIndicator";
-            QuizNumberIndicator.Size = new Size(258, 41);
+            QuizNumberIndicator.Size = new Size(250, 41);
             QuizNumberIndicator.TabIndex = 21;
             QuizNumberIndicator.Text = "Youve done XX quizzes!";
             QuizNumberIndicator.TextAlign = ContentAlignment.MiddleLeft;
@@ -174,25 +169,87 @@
             openFileDialog1.Filter = "Image files(*.jpeg; *.bmp; *.png; *.jpg)| *.jpeg; *.bmp; *.png; *.jpg";
             openFileDialog1.Title = "Choose a profile picture!";
             // 
+            // tenQuizzes
+            // 
+            tenQuizzes.BackgroundImage = Properties.Resources.image__7_;
+            tenQuizzes.BackgroundImageLayout = ImageLayout.Zoom;
+            tenQuizzes.Location = new Point(56, 482);
+            tenQuizzes.Name = "tenQuizzes";
+            tenQuizzes.Size = new Size(40, 40);
+            tenQuizzes.TabIndex = 22;
+            tenQuizzes.TabStop = false;
+            // 
+            // thirtyQuizzes
+            // 
+            thirtyQuizzes.BackgroundImage = Properties.Resources.image__7_;
+            thirtyQuizzes.BackgroundImageLayout = ImageLayout.Zoom;
+            thirtyQuizzes.Location = new Point(102, 482);
+            thirtyQuizzes.Name = "thirtyQuizzes";
+            thirtyQuizzes.Size = new Size(40, 40);
+            thirtyQuizzes.TabIndex = 23;
+            thirtyQuizzes.TabStop = false;
+            // 
+            // fiftyQuizzes
+            // 
+            fiftyQuizzes.BackgroundImage = Properties.Resources.image__7_;
+            fiftyQuizzes.BackgroundImageLayout = ImageLayout.Zoom;
+            fiftyQuizzes.Location = new Point(148, 482);
+            fiftyQuizzes.Name = "fiftyQuizzes";
+            fiftyQuizzes.Size = new Size(40, 40);
+            fiftyQuizzes.TabIndex = 24;
+            fiftyQuizzes.TabStop = false;
+            // 
+            // oneQuiz
+            // 
+            oneQuiz.BackgroundImage = Properties.Resources.image__7_;
+            oneQuiz.BackgroundImageLayout = ImageLayout.Zoom;
+            oneQuiz.Location = new Point(10, 482);
+            oneQuiz.Name = "oneQuiz";
+            oneQuiz.Size = new Size(40, 40);
+            oneQuiz.TabIndex = 25;
+            oneQuiz.TabStop = false;
+            // 
+            // hundredQuizzes
+            // 
+            hundredQuizzes.BackgroundImage = Properties.Resources.image__7_;
+            hundredQuizzes.BackgroundImageLayout = ImageLayout.Zoom;
+            hundredQuizzes.Location = new Point(194, 482);
+            hundredQuizzes.Name = "hundredQuizzes";
+            hundredQuizzes.Size = new Size(40, 40);
+            hundredQuizzes.TabIndex = 26;
+            hundredQuizzes.TabStop = false;
+            // 
             // Home
             // 
+            AcceptButton = Start;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(179, 63, 38);
             ClientSize = new Size(784, 561);
+            Controls.Add(hundredQuizzes);
+            Controls.Add(oneQuiz);
+            Controls.Add(fiftyQuizzes);
+            Controls.Add(thirtyQuizzes);
+            Controls.Add(tenQuizzes);
             Controls.Add(QuizNumberIndicator);
             Controls.Add(usernameSpot);
             Controls.Add(ProfilePicture);
             Controls.Add(logOut);
             Controls.Add(Start);
-            Controls.Add(coolButton1);
-            Controls.Add(logInButton);
+            Controls.Add(leaderboardButton);
             Controls.Add(profilesButton);
             Controls.Add(Title);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Home";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Home";
             ((System.ComponentModel.ISupportInitialize)logOut).EndInit();
             ((System.ComponentModel.ISupportInitialize)ProfilePicture).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tenQuizzes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)thirtyQuizzes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)fiftyQuizzes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)oneQuiz).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hundredQuizzes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -200,7 +257,7 @@
         #endregion
 
         private Label Title;
-        private CoolButton logInButton;
+        private CoolButton leaderboardButton;
         private CoolButton profilesButton;
         private CoolButton coolButton1;
         private CoolButton Start;
@@ -209,5 +266,10 @@
         private Label usernameSpot;
         private Label QuizNumberIndicator;
         private OpenFileDialog openFileDialog1;
+        private PictureBox tenQuizzes;
+        private PictureBox thirtyQuizzes;
+        private PictureBox fiftyQuizzes;
+        private PictureBox oneQuiz;
+        private PictureBox hundredQuizzes;
     }
 }

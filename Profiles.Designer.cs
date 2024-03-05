@@ -95,6 +95,8 @@
             // 
             // profileGrid
             // 
+            profileGrid.AllowUserToAddRows = false;
+            profileGrid.AllowUserToDeleteRows = false;
             profileGrid.AllowUserToOrderColumns = true;
             profileGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             profileGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -212,7 +214,9 @@
             Controls.Add(byAge);
             Controls.Add(byAlphabet);
             Controls.Add(Title);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Profiles";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Profiles";
             ((System.ComponentModel.ISupportInitialize)profileGrid).EndInit();
             ((System.ComponentModel.ISupportInitialize)Back).EndInit();

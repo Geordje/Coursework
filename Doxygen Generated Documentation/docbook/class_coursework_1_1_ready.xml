@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_coursework_1_1_ready" xml:lang="en-US">
+<title>Coursework.Ready Class Reference</title>
+<indexterm><primary>Coursework.Ready</primary></indexterm>
+<para>Inheritance diagram for Coursework.Ready:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_coursework_1_1_ready.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_ready_1ab9837493d5790b0c47645020ba6b9445"/><emphasis role="strong">Ready</emphasis> (<link linkend="_class_coursework_1_1player">player</link> activePassthrough)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_ready_1a08e764a792bf443f65397720bdb10ea1"/><emphasis role="strong">Ready</emphasis> (<link linkend="_class_coursework_1_1player">player</link> activePassthrough, string difficultyPassthrough, int categoryPassthrough)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_ready_1aab328669f0e1a0802f35b03ee890ef34"/><emphasis role="strong">Ready</emphasis> (<link linkend="_class_coursework_1_1player">player</link> activePassthrough, string difficultyPassthrough)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_ready_1a872ab65a3ad52abb682f7218ead2c655"/>void <emphasis role="strong">startTimer_Tick</emphasis> (object sender, EventArgs e)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_ready_1a84d5242ba91036d87feac25fdf003b24"/>System.Windows.Forms.Timer <emphasis role="strong">startTimer</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_ready_1a7b304b0e346dcc2cdda44347ef823c5e"/>static <link linkend="_class_coursework_1_1player">player</link> <emphasis role="strong">activePlayer</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_ready_1ab65052e00607af3f87b938369b10b133"/>static string <emphasis role="strong">difficulty</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_ready_1a49c37af3c612874c8beb9f9a73ae3d39"/>static int <emphasis role="strong">category</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_ready_1a3a397d60b884083aef6e99f287ee98b2"/>static bool <emphasis role="strong">uncategorised</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_ready_1ac9f2882db2a47e6c322245803d83165c"/>static bool <emphasis role="strong">timeOutRan</emphasis> = false</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_ready_1a77099f8ae201bffb1bc00175e7cbc3d5"/>static <link linkend="_class_coursework_1_1_question_data">QuestionData</link> <emphasis role="strong">thisQuestionData</emphasis> = new <link linkend="_class_coursework_1_1_question_data">QuestionData</link>()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_ready_1a5b99d9b5b56a8e4617f96e5d95d65081"/>static <link linkend="_class_coursework_1_1time_keeper">timeKeeper</link> <emphasis role="strong">timeKeeperInstance</emphasis> = new <link linkend="_class_coursework_1_1time_keeper">timeKeeper</link>()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_coursework_1_1_ready_1a66368a67cb73d5d1d115f84e5a1a3b0e">Dispose</link> (bool disposing)</para>
+
+<para>Clean up any resources being used. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_coursework_1_1_ready_1a66368a67cb73d5d1d115f84e5a1a3b0e"/><section>
+    <title>Dispose()</title>
+<indexterm><primary>Dispose</primary><secondary>Coursework.Ready</secondary></indexterm>
+<indexterm><primary>Coursework.Ready</primary><secondary>Dispose</secondary></indexterm>
+<para><computeroutput>override void Coursework.Ready.Dispose (bool disposing)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Clean up any resources being used. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>disposing</entry><entry>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Ready.csReady.Designer.cs</section>
+</section>

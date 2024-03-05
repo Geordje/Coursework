@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespace_coursework" xml:lang="en-US">
+<title>Coursework Namespace Reference</title>
+<indexterm><primary>Coursework</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_coursework_1_1_admin_popup">AdminPopup</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1_categories">Categories</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1_cool_button">CoolButton</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1drag_and_drop">dragAndDrop</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1_home">Home</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1_leaderboard">Leaderboard</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1_login">Login</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1multiple_choice">multipleChoice</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1player">player</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1_profiles">Profiles</link></para>
+</listitem>
+            <listitem><para>class <emphasis role="strong">Program</emphasis></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1_prompt">Prompt</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1_question_data">QuestionData</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1question_info">questionInfo</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1_quiz___type">Quiz_Type</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1_ready">Ready</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1_register">Register</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1_register_p_f_p">RegisterPFP</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1_results">Results</link></para>
+</listitem>
+            <listitem><para>class <emphasis role="strong">scoreGenerator</emphasis></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1_splashscreen">Splashscreen</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1time_keeper">timeKeeper</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1_true_false">TrueFalse</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_coursework_1_1_written">Written</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

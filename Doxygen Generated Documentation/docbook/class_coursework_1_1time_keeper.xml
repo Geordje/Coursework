@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_coursework_1_1time_keeper" xml:lang="en-US">
+<title>Coursework.timeKeeper Class Reference</title>
+<indexterm><primary>Coursework.timeKeeper</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_coursework_1_1time_keeper_1a755ccdc75937b9c91d15474cf319a40f"/>void <emphasis role="strong">Start</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1time_keeper_1a67cf1871d04c32f2464e832aa4fe5544"/>void <emphasis role="strong">PlaySound</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1time_keeper_1ad09fdce605431bbba83f2527e4cd1d70"/>void <emphasis role="strong">Stop</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1time_keeper_1af656e88f18500bfa749d1eef7bfa9693"/>int <emphasis role="strong">GetRemainingTimeInSeconds</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Events    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_coursework_1_1time_keeper_1a5870b5fe0aa3f8ce7858a8273e946c66"/>EventHandler <emphasis role="strong">TimeUp</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1time_keeper_1a628bea732e6171a95673c4e726a27a09"/>EventHandler&lt; int &gt; <emphasis role="strong">TimeUpdated</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following file:</para>
+timeKeeper.cs</section>

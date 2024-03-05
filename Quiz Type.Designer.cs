@@ -182,8 +182,10 @@
             Controls.Add(Back);
             Controls.Add(Title);
             Controls.Add(pictureBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Quiz_Type";
-            Text = "Quiz_Type";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Quiz Type";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)Back).EndInit();
             ResumeLayout(false);

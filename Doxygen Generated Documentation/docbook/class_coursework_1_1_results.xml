@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_coursework_1_1_results" xml:lang="en-US">
+<title>Coursework.Results Class Reference</title>
+<indexterm><primary>Coursework.Results</primary></indexterm>
+<para>Inheritance diagram for Coursework.Results:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_coursework_1_1_results.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_results_1a0dabb9371116daa599b41a42f00ecaf1"/><emphasis role="strong">Results</emphasis> (<link linkend="_class_coursework_1_1player">player</link> activePassthrough, string difficulty)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_results_1a9e80924ba5f7d75421ab6c3bffd1ba16"/>static string <emphasis role="strong">AddSuffix</emphasis> (int num)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_coursework_1_1_results_1a3603df66051140b34dfbb83e3a17f7fc">Dispose</link> (bool disposing)</para>
+
+<para>Clean up any resources being used. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_coursework_1_1_results_1a3603df66051140b34dfbb83e3a17f7fc"/><section>
+    <title>Dispose()</title>
+<indexterm><primary>Dispose</primary><secondary>Coursework.Results</secondary></indexterm>
+<indexterm><primary>Coursework.Results</primary><secondary>Dispose</secondary></indexterm>
+<para><computeroutput>override void Coursework.Results.Dispose (bool disposing)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Clean up any resources being used. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>disposing</entry><entry>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Results.csResults.Designer.cs</section>
+</section>

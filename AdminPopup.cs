@@ -31,5 +31,10 @@ namespace Coursework
                 MessageBox.Show("Editing mode on, submit once done", "Editing turned on", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
         }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

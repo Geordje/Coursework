@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(multipleChoice));
             questionText = new Label();
             timeLeft = new Label();
             Title = new Label();
@@ -233,8 +234,10 @@
             Controls.Add(Title);
             Controls.Add(pictureBox1);
             DoubleBuffered = true;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "multipleChoice";
-            Text = "multipleChoice";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Multiple Choice";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();

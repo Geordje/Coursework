@@ -1,10 +1,12 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Coursework.Properties;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,18 +19,28 @@ namespace Coursework
         public static player activePlayer;
         private List<Panel> dropPoints;
         private List<Panel> draggables;
-        private List<Label> dragTexts;
+        private List<System.Windows.Forms.Label> dragTexts;
         private List<PictureBox> dragPictures;
         private List<PictureBox> dropPictures;
+        private Control currentDraggable;
+        private Dictionary<Panel, Point> originalLocations = new Dictionary<Panel, Point>();
+        private Dictionary<Panel, string> panelToRandomisedDrag = new Dictionary<Panel, string>();
+        private Dictionary<Panel, string> dropPointToRandomisedDrop = new Dictionary<Panel, string>();
+        private static int amountCorrect = 0;
+        private static int guesses = 0;
+
+
+
         public dragAndDrop(questionInfo currentQ, player activePassthrough)
         {
+            guesses = 0;
+            amountCorrect = 0;
             InitializeComponent();
-
             Ready.timeKeeperInstance.TimeUpdated += TimerInstance_TimeUpdated;
             activePlayer = activePassthrough;
             questionText.Text = currentQ.question;
 
-            Title.Text = $"Question Number: {currentQ.questionNo.ToString()}";
+            Title.Text = $"Question: {currentQ.questionNo.ToString()}";
             timeLeft.Text = Ready.timeKeeperInstance.GetRemainingTimeInSeconds().ToString();
 
             Random rng = new Random();
@@ -36,14 +48,20 @@ namespace Coursework
             string[] randomisedDrops = currentQ.correct_answer.Split('-').OrderBy(x => Guid.NewGuid()).ToArray();
 
             draggables = new List<Panel> { draggable1, draggable2, draggable3, draggable4 };
+
             dropPoints = new List<Panel> { dropPoint1, dropPoint2, dropPoint3, dropPoint4 };
-            dragTexts = new List<Label> { dragLabel1, dragLabel2, dragLabel3, dragLabel4 };
+            dragTexts = new List<System.Windows.Forms.Label> { dragLabel1, dragLabel2, dragLabel3, dragLabel4 };
             dragPictures = new List<PictureBox> { draggablePicture1, draggablePicture2, draggablePicture3, draggablePicture4 };
             dropPictures = new List<PictureBox> { dropPointPicture1, dropPointPicture2, dropPointPicture3, dropPointPicture4 };
 
             for (int x = 0; x <= 3; x++)
             {
-                draggables[x].MouseDown += Draggable_MouseDown;
+                dropPoints[x].AllowDrop = true;
+                dropPoints[x].DragOver += DropPoint_DragOver;
+                originalLocations[draggables[x]] = draggables[x].Location;
+                panelToRandomisedDrag[draggables[x]] = randomisedDrags[x];
+                dropPointToRandomisedDrop[dropPoints[x]] = randomisedDrags[x];
+                dropPictures[x].Image = new Bitmap(Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DragDropImages"), $"{randomisedDrags[x]}Answer.jpg"));
                 try
                 {
                     dragPictures[x].Image = new Bitmap(Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DragDropImages"), $"{randomisedDrags[x]}.jpg"));
@@ -51,101 +69,86 @@ namespace Coursework
                 }
                 catch
                 {
-                    // Inside the for loop
                     dragPictures[x].Hide();
                     dragTexts[x].Text = randomisedDrags[x];
                 }
             }
-            for (int x = 0; x <= 3; x++)
-            {
-                draggables[x].MouseDown += Draggable_MouseDown;
-                dropPoints[x].DragEnter += DropPoint_DragEnter;
-                dropPoints[x].DragDrop += DropPoint_DragDrop;
-                dropPictures[x].Image = new Bitmap(Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DragDropImages"), $"{randomisedDrags[x]}Answer.jpg"));
-            }
-            
         }
-
-
-        private void Draggable_MouseDown(object sender, MouseEventArgs e)
+        private void DropPoint_DragOver(object sender, DragEventArgs e)
         {
-            Control control = (Control)sender;
-
-            int offsetX = e.X;
-            int offsetY = e.Y;
-
-            control.DoDragDrop(control, DragDropEffects.Move);
-
-            Point originalLocation = control.Location; // Store the original location of the control
-
-            control.MouseMove += (ss, ee) =>
-            {
-                if (ee.Button == MouseButtons.Left)
-                {
-                    int newX = ee.X + control.Left - offsetX;
-                    int newY = ee.Y + control.Top - offsetY;
-
-                    control.Left = newX;
-                    control.Top = newY;
-                }
-            };
-
-            control.MouseUp += (ss, ee) =>
-            {
-                control.MouseMove -= (ss, ee) => { }; // Remove the mouse move event handler
-
-                if (!IsDropped(control)) // Check if the control is dropped onto a drop point
-                {
-                    // If not dropped, return the control to its original location
-                    control.Location = originalLocation;
-                }
-            };
+            e.Effect = DragDropEffects.Move;
         }
 
-        bool IsDropped(Control control)
+        private bool IsDropped(Panel panel, Panel dropPoint)
         {
-            foreach (Panel dropPoint in dropPoints)
-            {
-                if (dropPoint.ClientRectangle.IntersectsWith(control.Bounds))
-                {
-                    return true;
-                }
-            }
-            return false;
+            Point centerPoint = new Point(panel.Left + panel.Width / 2, panel.Top + panel.Height / 2);
+            return dropPoint.Bounds.Contains(centerPoint);
         }
 
-
-        private void DropPoint_DragEnter(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(typeof(Control)))
-            {
-                e.Effect = DragDropEffects.Move;
-            }
-            else
-            {
-                e.Effect = DragDropEffects.None;
-            }
-        }
-
-        private void DropPoint_DragDrop(object sender, DragEventArgs e)
-        {
-            Control control = (Control)e.Data.GetData(typeof(Control));
-            Panel dropPoint = (Panel)sender;
-            dropPoint.Controls.Add(control);
-        }
         void TimerInstance_TimeUpdated(object sender, int remainingTimeInSeconds)
         {
             timeLeft.Text = remainingTimeInSeconds.ToString();
         }
-
-        private void dragAndDrop_MouseDown(object sender, MouseEventArgs e)
+        private void Draggable_MouseDown(object sender, MouseEventArgs e)
         {
-
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                Panel panel = (Panel)sender;
+                MouseDownLocation = e.Location;
+                panel.Capture = true;
+            }
         }
 
-        private void dragAndDrop_MouseMove(object sender, MouseEventArgs e)
+        private void Draggable_MouseMove(object sender, MouseEventArgs e)
         {
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
+            {
+                Panel panel = (Panel)sender;
+                panel.Left = e.X + panel.Left - MouseDownLocation.X;
+                panel.Top = e.Y + panel.Top - MouseDownLocation.Y;
+            }
+        }
 
+        private void Draggable_MouseUp(object sender, MouseEventArgs e)
+        {
+            Panel panel = (Panel)sender;
+            panel.Capture = false;
+
+            for (int i = 0; i < dropPoints.Count; i++)
+            {
+                var dropPoint = dropPoints[i];
+                if (IsDropped(panel, dropPoint))
+                {
+                    if (panelToRandomisedDrag[panel] == dropPointToRandomisedDrop[dropPoint])
+                    {
+                        amountCorrect++;
+                        if (amountCorrect == 2 || amountCorrect == 4)
+                        {
+                            activePlayer.Accumulate();
+                        }
+                        else
+                        {
+                            new System.Media.SoundPlayer(Resources.Correct_Ding).Play();
+                        }
+                        panel.Visible = false;
+                        dropPictures[i].Image = new Bitmap(Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "DragDropImages"), $"{panelToRandomisedDrag[panel]}Correct.jpg"));
+                    }
+                    else
+                    {
+                        new System.Media.SoundPlayer(Resources.Incorrect).Play();
+                        panel.Visible = false;
+                    }
+                    guesses++;
+                    if (guesses == 4)
+                    {
+                        this.Close();
+                        QuestionData.PlayQuestion(Ready.thisQuestionData, activePlayer);
+                    }
+                    return;
+                }
+            }
+
+            panel.Location = originalLocations[panel];
         }
     }
 }

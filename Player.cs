@@ -12,7 +12,7 @@ namespace Coursework
     public class player
     {
         public string username { get; set; }
-        private string password { get; set; }
+        public string password { get; set; }
         public int currentScore { get; set; }
         public int topWildScore { get; set; }
         public int topBaseScore { get; set; }

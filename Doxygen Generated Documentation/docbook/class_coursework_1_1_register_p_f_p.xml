@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_coursework_1_1_register_p_f_p" xml:lang="en-US">
+<title>Coursework.RegisterPFP Class Reference</title>
+<indexterm><primary>Coursework.RegisterPFP</primary></indexterm>
+<para>Inheritance diagram for Coursework.RegisterPFP:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_coursework_1_1_register_p_f_p.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_register_p_f_p_1a779860f4c6bdff2aa6f7eb4516a788ef"/><emphasis role="strong">RegisterPFP</emphasis> (<link linkend="_class_coursework_1_1player">player</link> activePassthrough)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_register_p_f_p_1a4d1ddc92ed5d9ba9012c5c696e5b89d5"/>void <emphasis role="strong">Custom_Click</emphasis> (object sender, EventArgs e)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_register_p_f_p_1ade86f5df9b81d434635754122fe2d42d"/>void <emphasis role="strong">Confirm_Click</emphasis> (object sender, EventArgs e)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_register_p_f_p_1adab5f9d487538e5bb51df391720555a3"/><link linkend="_class_coursework_1_1player">player</link> <emphasis role="strong">activePlayer</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_coursework_1_1_register_p_f_p_1a886620fcda59b9a3108e55ae8888c138">Dispose</link> (bool disposing)</para>
+
+<para>Clean up any resources being used. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_coursework_1_1_register_p_f_p_1a886620fcda59b9a3108e55ae8888c138"/><section>
+    <title>Dispose()</title>
+<indexterm><primary>Dispose</primary><secondary>Coursework.RegisterPFP</secondary></indexterm>
+<indexterm><primary>Coursework.RegisterPFP</primary><secondary>Dispose</secondary></indexterm>
+<para><computeroutput>override void Coursework.RegisterPFP.Dispose (bool disposing)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Clean up any resources being used. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>disposing</entry><entry>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+RegsiterPFP.csRegsiterPFP.Designer.cs</section>
+</section>

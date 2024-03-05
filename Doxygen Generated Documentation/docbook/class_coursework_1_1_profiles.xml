@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_coursework_1_1_profiles" xml:lang="en-US">
+<title>Coursework.Profiles Class Reference</title>
+<indexterm><primary>Coursework.Profiles</primary></indexterm>
+<para>Inheritance diagram for Coursework.Profiles:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_coursework_1_1_profiles.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_profiles_1acfa6cea20d59b29617fa544d32b10696"/><emphasis role="strong">Profiles</emphasis> (<link linkend="_class_coursework_1_1player">player</link> activePassthrough)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_profiles_1a583aacf8a238e6939bd075a4c6166967"/>void <emphasis role="strong">LoadDataFromCsv</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_profiles_1a0e4619994a2b3b710249b9e2d9864e88"/>void <emphasis role="strong">SaveDataToCsv</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_profiles_1a1d96b5472285e71ef1dd724ab219a708"/>void <emphasis role="strong">EditEnable</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_profiles_1a16de6172a92e3a29bfbbe02578c31c1a"/>string <emphasis role="strong">GetPasswordFromCsv</emphasis> (string username)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_profiles_1aa03d64fd4f82afc93985cf580343358d"/>DataGridView <emphasis role="strong">profileGrid</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_profiles_1a59009f2f5ec355df99179cb7e3e4de65"/><link linkend="_class_coursework_1_1_cool_button">CoolButton</link> <emphasis role="strong">Submit</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_coursework_1_1_profiles_1abb7ddf10c2c5bc861f1d8e0c7ec506cb"/>PictureBox <emphasis role="strong">editEnable</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>override void <link linkend="_class_coursework_1_1_profiles_1aed4867be1dfb98ec1d1e0af51d9d2fa1">Dispose</link> (bool disposing)</para>
+
+<para>Clean up any resources being used. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_coursework_1_1_profiles_1aed4867be1dfb98ec1d1e0af51d9d2fa1"/><section>
+    <title>Dispose()</title>
+<indexterm><primary>Dispose</primary><secondary>Coursework.Profiles</secondary></indexterm>
+<indexterm><primary>Coursework.Profiles</primary><secondary>Dispose</secondary></indexterm>
+<para><computeroutput>override void Coursework.Profiles.Dispose (bool disposing)<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>Clean up any resources being used. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>disposing</entry><entry>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+Profiles.csProfiles.Designer.cs</section>
+</section>

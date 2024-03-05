@@ -199,9 +199,10 @@
             Controls.Add(Tiger);
             Controls.Add(Hippo);
             Font = new Font("Itim", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "RegisterPFP";
-            StartPosition = FormStartPosition.CenterParent;
-            Text = "RegsiterPFP";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Profile Picture Select";
             ((System.ComponentModel.ISupportInitialize)Hippo).EndInit();
             ((System.ComponentModel.ISupportInitialize)Tiger).EndInit();
             ((System.ComponentModel.ISupportInitialize)Dog).EndInit();

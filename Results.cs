@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Formats.Asn1.AsnWriter;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace Coursework
@@ -28,11 +29,13 @@ namespace Coursework
             int thisScore = scoreGenerator.GenerateScore(timeLeft, difficulty, activePassthrough);
             InitializeComponent();
             activePlayer = activePassthrough;
-            correctIndicator.Text = $"{activePlayer.currentScore.ToString()}/20";
+            correctIndicator.Text = $"Points: {activePlayer.currentScore.ToString()}/20";
             activePlayer.AccumulativeReset();
             timeTaken.Text = (150 - timeLeft).ToString();
             scoreIndicator.Text = $"Score: {thisScore.ToString()}";
             new System.Media.SoundPlayer(Resources.Done).Play();
+
+
             if (Quiz_Type.mode == "wildcard")
             {
                 if (thisScore > activePlayer.topWildScore)
@@ -59,6 +62,39 @@ namespace Coursework
 
             }
             activePlayer.UpdateScoresBinFile(thisScore, Quiz_Type.mode);
+
+            string[] lines = File.ReadAllLines("scores.bin");
+            int rank = 1;
+            int otherAttempts=0;
+            foreach (string line in lines)
+            {
+                string[] data = line.Split(',');
+                string otherUsername = data[0];
+                int otherTopScore;
+                if( difficulty == "base")
+                {
+                    otherTopScore = int.Parse(data[2]);
+                }
+                else
+                {
+                    otherTopScore = int.Parse(data[1]);
+                }
+                if(otherTopScore>0)
+                {
+                    otherAttempts++;
+                }
+                if (otherUsername != activePlayer.username)
+                {
+                    if (thisScore < otherTopScore)
+                    {
+                        rank++;
+                    }
+                }
+            }
+            
+            placementIndicator.Text = $"This would place you {rank.ToString()}{AddSuffix(rank)} of the {otherAttempts.ToString()} players!";
+            placingAgain.Text = rank.ToString();
+
             if (Quiz_Type.mode == "wildcard")
             {
                 difficultyMultiplierSlot.Show();
@@ -68,9 +104,6 @@ namespace Coursework
             {
                 difficultyMultiplierSlot.Hide();
             }
-
-            
-
         }
 
         private void returnHome_Click(object sender, EventArgs e)
@@ -79,6 +112,25 @@ namespace Coursework
             new Home(activePlayer).Show();
         }
 
+        public static string AddSuffix(int num)
+        {
+            switch (num)
+            {
+                case 11: return "th";
+                case 12: return "th";
+                case 13: return "th";
+                default: break;
+                
+            }
+            switch(num.ToString().Last())
+            {
+                case '1': return "st";
+                case '2': return "nd";
+                case '3': return "rd";
+                default: return "th";
+            }
+
+        }
 
         private void toolTip1_Popup(object sender, PopupEventArgs e)
         {
