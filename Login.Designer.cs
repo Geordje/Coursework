@@ -142,6 +142,7 @@
             Hide.SizeMode = PictureBoxSizeMode.Zoom;
             Hide.TabIndex = 23;
             Hide.TabStop = false;
+            Hide.MouseCaptureChanged += Hide_MouseCaptureChanged;
             Hide.MouseDown += Hide_MouseDown;
             Hide.MouseLeave += Hide_MouseCaptureChanged;
             Hide.MouseUp += Hide_MouseCaptureChanged;

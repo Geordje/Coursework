@@ -104,9 +104,9 @@ namespace Coursework
             {
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    activePlayer.ProfilePicture = null;
+                    activePlayer.ProfilePicture.Dispose();
                     ProfilePicture.Image = null;
-
+                    activePlayer.ProfilePicture = null;
                     activePlayer.defaultPFP = 'c';
                     var lines = File.ReadAllLines("userDatabase.csv");
                     for (int i = 0; i < lines.Length; i++)
